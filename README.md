@@ -1,37 +1,25 @@
-## Welcome to GitHub Pages
+## Energy Blockchain tools & libaries
 
-You can use the [editor on GitHub](https://github.com/energychain/energy-js-org/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+This site will be used to distribute the commandline tools and integration libaries that work in tandem with Fury Energy Blockchain:
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### [Meter Point Operation command line tool](https://github.com/energychain/BusinessObject-MeterPointOperation)
 
-### Markdown
+Operation of an Energy Meter Point utilizing [STROMDAO Business Object](https://github.com/energychain/StromDAO-BusinessObject) for the Fury Energy Blockchain.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### [Fury app deploy skeleton](https://github.com/energychain/fury.skeleton)
 
-```markdown
-Syntax highlighted code block
+Skeleton to rapid prototype Fury Energy Blockchain based applications, designed to work with the [STROMDAO Business Object](https://github.com/energychain/StromDAO-BusinessObject).
 
-# Header 1
-## Header 2
-### Header 3
+### [STROMDAO Business Object](https://github.com/energychain/StromDAO-BusinessObject)
 
-- Bulleted
-- List
+Abstract BusinessObject for Fury Energy Blockchain. Abstraction layer between distributed ledger technology and business logic providing energy market related entities and use cases.
+configuration file.
 
-1. Numbered
-2. List
+#### Support / Contact / Impressum
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/energychain/energy-js-org/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+STROMDAO LTD
+132-134 Great Ancoats Sreet, 
+Suite 33854 Advantage Business Centre, 
+Manchester, England, M4 6DE
+Company number 10466125
+Registered in England and Wales, no 10466125
