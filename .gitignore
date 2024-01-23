@@ -133,3 +133,4 @@ framework/runtime.publicKey.pem
 framework/keys
 framework/dist
 brain.js
+build.cmd
