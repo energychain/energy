@@ -1,0 +1,119 @@
+<!DOCTYPE html><html data-bs-theme="light" lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"><title>Essay: EAF-10</title><meta property="og:image" content="https://stromdao-eaf.js.org/assets/img/Icon SD_512.png"><meta name="description" content="Eine Plattform, die speziell für innovative Strommärkte entwickelt wurde, um die Implementierung und Verwaltung dynamischer Stromtarife zu ermöglichen. Die Plattform nutzt modulare Microservices, um eine flexible und anpassungsfähige Integration von Energiemarktmechanismen zu ermöglichen .Das Framework hilft Akteuren, auf Veränderungen im Verbrauchsverhalten und schwankende Energieerzeugung effizient zu reagieren. Es ermöglicht ihnen, eine optimierte Tarifgestaltung zu erreichen, die sowohl für die Verbraucher als auch für die Energieversorger von Vorteil ist."><meta property="og:type" content="website"><meta name="twitter:title" content="Essay: EAF-10"><link rel="icon" type="image/png" sizes="16x16" href="/assets/img/Icon%20SD_16.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/img/Icon%20SD_16.png" media="(prefers-color-scheme: dark)"><link rel="icon" type="image/png" sizes="32x32" href="/assets/img/Icon%20SD_32.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/img/Icon%20SD_32.png" media="(prefers-color-scheme: dark)"><link rel="icon" type="image/png" sizes="512x512" href="/assets/img/Icon%20SD_512.png"><link rel="icon" type="image/png" sizes="512x512" href="/assets/img/Icon%20SD_512.png"><link rel="icon" type="image/png" sizes="512x512" href="/assets/img/Icon%20SD_512.png"><link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css"><link rel="stylesheet" href="/assets/fonts/font-awesome.min.css"></head><body><header><nav class="navbar navbar-expand-md bg-light shadow" style="margin-bottom: 30px;"><div class="container-fluid"><a href="https://stromdao.de/" rel="author" target="_blank"><img src="/assets/img/Icon%20SD_32.png" style="padding-top: 3px;margin-right: 20px;"></a><a class="navbar-brand" href="../"><strong>E</strong>nergy<strong> A</strong>pplication<strong> F</strong>ramework</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" id="navcol-1"><ul class="navbar-nav"><li class="nav-item"></li><li class="nav-item"></li><li class="nav-item"></li><li class="nav-item col-6" style="padding-left: 15px;"><form class="ms-auto" action="./uc_assets.html" method="get"><div class="input-group"></div></form></li></ul></div><button class="btn btn-dark" id="helpButton" type="button"><i class="fa fa-book"></i></button></div></nav></header><div class="container" style="margin-top: 75px;"><section><div class="card"><div class="card-body"><h1>Essay: EAF-10</h1><p><a href="https://stromdao.de/"><img src="https://static.corrently.cloud/stromdao_988.png" alt="STROMDAO logo"></a></p>
+<p><a href="https://codecov.io/gh/energychain/STROMDAO_EAFs"><img src="https://codecov.io/gh/energychain/STROMDAO_EAFs/graph/badge.svg?token=O04DB3uPAJ" alt="codecov"></a>
+<img src="https://img.shields.io/github/issues/energychain/STROMDAO_EAFs" alt="GitHub issues"></p>
+<h1>EAFs - Zählerstandsgangmessung für dynamische Stromtarife</h1>
+<p><strong>Referenzimplementierung der STROMDAO GmbH</strong></p>
+<p>Das STROMDAO Energy Application Framework (EAF) adressiert die Aspekte der Implementierung dynamischer Tarife wie folgt:</p>
+<ol>
+<li><p><strong>Datenerfassung</strong>: Das EAF von STROMDAO nutzt Verbrauchsdaten und Erzeugungsprognosen, um die dynamische Preisgestaltung umzusetzen. Zusätzlich wird in Deutschland der GrünstromIndex genutzt, um Tarifsegmente auf der Basis der tatsächlichen regionalen Erzeugungsbedingungen abzuleiten. Das Framework integriert Daten aus verschiedenen Quellen, um eine validierte und präzise Grundlage für dynamische Tarife zu schaffen.</p>
+</li>
+<li><p><strong>Analyse und Prognose</strong>: Das Framework verfügt über einen eingebauten Prognosemechanismus, der einen Konsens zwischen Erzeugungs- und Verbrauchsprognosen erreicht. Dies reduziert Risiken sowohl für die Versorger als auch für die Verbraucher durch einen transparenten Prognose- und Analyseprozess, der direkt in das Framework integriert ist.</p>
+</li>
+<li><p><strong>Preisanpassungsalgorithmus</strong>: Mit einem Open-Source-Algorithmus arbeitet das EAF mit festgelegten Preissegmenten. Hier liegt der Schwerpunkt darauf, Stunden (konfigurierbar) genau  diesen Segmenten zuzuweisen, um konsistente dynamische Tarife zu gewährleisten, ohne häufige Neuberechnungen der Preise vornehmen zu müssen.</p>
+</li>
+<li><p><strong>Tarifsegmentierung</strong>: Die dynamische Preisgestaltung im Rahmen des EAF basiert auf festen Preisen für definierte Segmente, wie zum Beispiel für „Nebenzeiten“ und „Hauptzeiten“, anstatt auf schwankenden Preisen im Tagesverlauf. Dies ermöglicht das Angebot eines dynamischen Stromtarifs auch bei vorhandener Strompreisbremse oder ähnlichen Preissteuerrungen, die mit einem vollflexiblen Preis nicht vereinbar sind. </p>
+</li>
+<li><p><strong>Veröffentlichung und Benachrichtigung</strong>: Das Framework nutzt eine OpenAPI-Schnittstelle, wodurch eine breite Palette an Client-Anwendungen, Websites oder Energiemanagementsystemen Zugang zu den Preisinformationen erhält. Dies macht die dynamischen Tarife weitreichend zugänglich und leicht zu integrieren.</p>
+</li>
+<li><p><strong>Abrechnung und Abwicklung</strong>: Das EAF von STROMDAO ist so konzipiert, dass es Abrechnungs- und Abwicklungsdaten direkt als Unterzählerablesungen an Enterprise-Resource-Planning-(ERP)-Systeme über offene Standards liefert. Diese nahtlose Integration vereinfacht die finanziellen Prozesse im Zusammenhang mit dynamischen Tarifen.</p>
+</li>
+<li><p><strong>Berichterstattung und Optimierung</strong>: Die eingebaute Berichtsfunktion unterstützt Versorger dabei, Preisstrategien kontinuierlich zu überwachen und das Nachfrageverhalten ihrer Stromkunden zu bewerten. Dies erleichtert einen laufenden Optimierungsprozess und ermöglicht es den Versorgern, ihre dynamischen Tarifmodelle anzupassen und zu verbessern.</p>
+</li>
+</ol>
+<p>Das STROMDAO EAF umfasst somit ein vollständiges Paket an Dienstleistungen und Funktionalitäten, die für die Implementierung und Verwaltung dynamischer Tarife erforderlich sind, und gewährleistet Effizienz, Transparenz und Benutzerfreundlichkeit sowohl für Versorger als auch für Verbraucher. Zudem wird auf offene Standards gesetzt, um Interoperabilität und breite Anwendung zu fördern.</p>
+<p>Umsetzung für die Einführung eines netzdienlichen dynamischen Stromtarifs folgend des <a href="https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/SmartMeter/Stufenmodell/Energiewirtschaftliche_Anwendungsfaelle.pdf?__blob=publicationFile&v=5">EAF-10 Dynamische Tarife für Elektrizität</a>:</p>
+<blockquote>
+<p>Der Verbraucher oder Erzeuger erhält kurzfristig für bestimmte Zeitfenster variable Tarife durch den Energielieferanten oder Aggregator, der diese über den Messstellenbetreiber durch das iMSys zur Verfügung stellt. Dies sind ereignisvariable Tarife, da sie, anders als bei den zeitvariablen Tarifen, nicht wiederkehrend in bestimmten Zeitfenstern auftreten, sondern einmalig und damit ereignishaft für ein bestimmtes Zeitfenster gesetzt werden. Der Verbraucher oder Erzeuger kann auf diese ereignisvariablen Tarife reagieren, wenn er über flexible Verbrauchs-, Erzeugungs- oder Speicheranlagen verfügt, und somit seine Energiekosten optimieren. Neben dem Anzeigen der Tarifereignisse wird durch Zusammenspiel von iMSys und Backend auch die zeitaufgelöste und transparente Abrechnung sichergestellt.</p>
+</blockquote>
+<h3>Umsetzung in STROMDAO EAF</h3>
+<p>Das STROMDAO Energy Application Framework (EAF) stellt eine innovative Plattform für Stromanbieter dar, um dynamische, ereignisvariable Stromtarife zu implementieren und anzubieten. Mit Blick auf die Verpflichtung der Energieversorger, bis zum Jahr 2025 einen dynamischen Tarif zur Verfügung zu stellen, bietet das STROMDAO EAF folgende Funktionen:</p>
+<ul>
+<li><p><strong>Tarifaktualisierung</strong>: Automatisiertes Update der Tarife, konfigurierbar bis zu 15-minütigen Intervallen, und Stabilisierung der Preise für festgelegte Zeiteinheiten über eine API zuverlässig abrufbar.</p>
+</li>
+<li><p><strong>Integration mit Messstellenbetreibern</strong>: Durch die Nutzung von etablierten Kommunikationsstandards wie AS4 und die Integration über CLS-Kanäle, bietet das EAF eine flexible Anbindung an existierende iMSys oder Leseköpfe.</p>
+</li>
+<li><p><strong>Tarifgestaltung</strong>: EAF erlaubt Stromanbietern, Tarife präzise zu segmentieren und situativ anzupassen, wodurch auf spezifische Markt- und Netzgegebenheiten schnell und effizient reagiert werden kann.</p>
+</li>
+<li><p><strong>Abrechnungsintegration</strong>: Durch eine direkte Anbindung zu ERP-Systemen mittels OBIS-Codes für jeden Tarifsegment-Unterzähler wird eine einfache, kompatible und transparente Abrechnung sichergestellt.</p>
+</li>
+<li><p><strong>Skalierbare Echtzeit-Datenverarbeitung</strong>: EAFs Microservice-Architektur ermöglicht eine flexible Anpassung an wachsende Teilnehmerzahlen sowie die Aufrechterhaltung hoher Durchsatzraten für die Prozesse von Datenerfassung, Tarifverwaltung und Abrechnung.</p>
+</li>
+<li><p><strong>Benutzerfreundliche und sichere Infrastruktur</strong>: Die EAF bietet eine intuitive Benutzeroberfläche für die Anbindung an Kundensysteme und bewahrt die Sicherheit der Daten durch fortschrittliche Verfahren zur Datenverarbeitung.</p>
+</li>
+</ul>
+<p>So unterstützt das STROMDAO EAF Energieversorger dabei, ihren Kunden maßgeschneiderte Tarifmodelle anzubieten, die eine Reaktion auf spezifische Ereignisse und Marktsituationen erlauben. Dies fördert eine aktivere Teilnahme am Energiemarkt und trägt zu effizienterem Energieverbrauch und -erzeugung bei. Mit diesem fortschrittlichen Ansatz hilft das EAF Energieversorgern, Innovationstreiber zu sein und den gesetzlichen Anforderungen eines dynamischen Energiesektors gerecht zu werden.</p>
+<h2>🌟 Features</h2>
+<ul>
+<li><strong>Datenerfassung</strong>:<ul>
+<li>Nutzt Verbrauchsdaten und Erzeugungsprognosen für die Preisbildung</li>
+<li>Integriert den <a href="https://gruenstromindex.de/">GrünstromIndex</a> zur regionalen Tarifanpassung in Deutschland</li>
+</ul>
+</li>
+<li><strong>Analyse und Prognose</strong>:  <ul>
+<li>In-built Forecasting-Mechanismus für transparente und konsensbasierte Prognosen</li>
+<li>Risikominimierung für Versorger und Verbraucher</li>
+</ul>
+</li>
+<li><strong>Preisanpassungsalgorithmus</strong>:<ul>
+<li>Open-Source-Algorithmen für die Zuweisung von Preissegmenten</li>
+</ul>
+</li>
+<li><strong>Tarifsegmentierung</strong>:<ul>
+<li>Arbeitet mit festen Preissegmenten statt volatilem Tarif-Fluktuieren</li>
+<li>Segmentierung nach Nutzungszeiten wie Neben- und Hauptzeiten</li>
+</ul>
+</li>
+<li><strong>Veröffentlichung und Benachrichtigung</strong>:<ul>
+<li>Bereitstellung einer OpenAPI-Schnittstelle für breiten Zugriff</li>
+<li>Einfache Integration in diverse Client-Anwendungen und Energiemanagementsysteme</li>
+</ul>
+</li>
+<li><strong>Abrechnung und Abwicklung</strong>:<ul>
+<li>Direkte Integration in ERP-Systeme über offene Standards</li>
+<li>Genauigkeit durch Lieferung als Unterzählerablesungen zur Abrechnungsbildung</li>
+</ul>
+</li>
+<li><strong>Berichterstattung und Optimierung</strong>:<ul>
+<li>Kontinuierliches Monitoring der Tarifpolitik möglich</li>
+<li>Berücksichtigung des Nachfrageverhaltens zur Verbesserung der Preisstrategien</li>
+</ul>
+</li>
+<li><strong>Benutzerfreundlichkeit und Interoperabilität</strong>:<ul>
+<li>Konzipiert für einfache Handhabung und Nutzung</li>
+<li>Förderung von Standards, die die Zusammenarbeit und gemeinsame Nutzung erleichtern</li>
+</ul>
+</li>
+</ul>
+<h2>Repository Struktur</h2>
+<ul>
+<li><code>/framework/</code> - Laufzeitumgebung von STROMDAO EAF basierend auf der Moleculer Service Microservice Umgebung.</li>
+<li><code>/framework/public</code> - Statische Entwickler UI (Zugriff via <a href="./<a href="https://localhost:3000/%5D%5D">https://localhost:3000/.html"><a href="https://localhost:3000/%5D%5D">https://localhost:3000/</a></a>).</li>
+<li><code>/framework/public_metering</code> - Statische MeterPointOperations UI (Zugriff via <a href="./<a href="https://localhost:3001/%5D%5D">https://localhost:3001/.html"><a href="https://localhost:3001/%5D%5D">https://localhost:3001/</a></a>).</li>
+<li><code>/framework/public_pwa</code> - Endanwender APP (Zugriff via <a href="./<a href="https://localhost:3002/%5D%5D">https://localhost:3002/.html"><a href="https://localhost:3002/%5D%5D">https://localhost:3002/</a></a>) <a href="./framework/public_pwa/README.md">README</a>.</li>
+<li><code>/framework/services</code> - Implementierung der einzelnen Micro Services.</li>
+<li><code>/framework/test</code> - Unit und Coverage Tests der Micro Services. Ausführen via <code>npm run test</code>.</li>
+<li><code>/framework/dynamicsignal</code> - Beispiele für die Implementierung von Preissignale zur Verwendung in Stromtarifen.</li>
+</ul>
+<h2>Demo</h2>
+<p><a href="https://gitpod.io/#https://github.com/energychain/STROMDAO_EAFs"><img src="https://gitpod.io/button/open-in-gitpod.svg" alt="Open in Gitpod"></a></p>
+<!-- LICENSE -->
+<h2>License</h2>
+<p>Distributed under the Apache-2.0 License. See <a href="./LICENSE">License</a> for more information.</p>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<h2><a href="./IMPRINT.md">Maintainer / Imprint</a></h2>
+<addr>
+STROMDAO GmbH  <br/>
+Gerhard Weiser Ring 29  <br/>
+69256 Mauer  <br/>
+Germany  <br/>
+  <br/>
++49 6226 968 009 0  <br/>
+  <br/>
+dev@stromdao.com  <br/>
+  <br/>
+Handelsregister: HRB 728691 (Amtsgericht Mannheim)<br/>
+  <br/>
+https://stromdao.de/<br/>
+</addr>
+</div></div></section><footer class="footer mt-auto py-3 bg-white" style="margin-bottom: 25px;"><p class="text-center">powered by <a href="https://stromdao.de/">STROMDAO</a></p><div class="offcanvas offcanvas-end w-75" tabindex="-1" data-bs-backdrop="false" id="helpBar"><div class="offcanvas-header"><a class="link-body-emphasis d-flex align-items-center me-md-auto mb-3 mb-md-0 text-decoration-none" href="/"><i class="fa fa-book me-3" style="font-size: 25px;"></i><span class="fs-4">Dokumentation</span></a><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="offcanvas"></button></div><div class="offcanvas-body d-flex flex-column justify-content-between p-0"><div><hr class="my-0"><div class="list-group list-group-flush border-bottom scrollarea" id="helpGroup"><a class="list-group-item list-group-item-action active py-3 lh-tight" href="#" aria-current="true"><div class="d-flex justify-content-between align-items-center w-100"><strong class="mb-1">List group item heading</strong><small>Wed</small></div><div class="col-10 mb-1 small"><span>Some placeholder content in a paragraph below the heading and date.</span></div></a></div></div></div><div class="d-flex justify-content-center bg-light order-2 w-100" style="padding-top: 5px;padding-bottom: 5px;padding-right: 5px;padding-left: 5px;"><form id="goHelp-1" class="w-100"><div class="input-group float-none"><input class="form-control" type="search" id="search-input-1" name="search-input"><button class="btn btn-dark" type="submit"><i class="fa fa-book"></i></button></div></form></div></div><div class="modal fade" role="dialog" tabindex="-1" id="modalHelp"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="helpTitle">Modal Title</h4><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button></div><div class="modal-body" id="markdownhelp"><p>...</p></div><div class="modal-footer"><button class="btn btn-light" type="button" data-bs-dismiss="modal">Close</button><button class="btn btn-primary" type="button">Save</button></div></div></div></div></footer></div><script src="/assets/js/jquery.min.js"></script><script src="/assets/bootstrap/js/bootstrap.min.js"></script><script src="/assets/js/script.min.js"></script></body></html>

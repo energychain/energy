@@ -1,0 +1,74 @@
+<!DOCTYPE html><html data-bs-theme="light" lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"><title>jaeger-tracing</title><meta property="og:image" content="https://stromdao-eaf.js.org/assets/img/Icon SD_512.png"><meta name="description" content="Eine Plattform, die speziell für innovative Strommärkte entwickelt wurde, um die Implementierung und Verwaltung dynamischer Stromtarife zu ermöglichen. Die Plattform nutzt modulare Microservices, um eine flexible und anpassungsfähige Integration von Energiemarktmechanismen zu ermöglichen .Das Framework hilft Akteuren, auf Veränderungen im Verbrauchsverhalten und schwankende Energieerzeugung effizient zu reagieren. Es ermöglicht ihnen, eine optimierte Tarifgestaltung zu erreichen, die sowohl für die Verbraucher als auch für die Energieversorger von Vorteil ist."><meta property="og:type" content="website"><meta name="twitter:title" content="jaeger-tracing"><link rel="icon" type="image/png" sizes="16x16" href="/assets/img/Icon%20SD_16.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/img/Icon%20SD_16.png" media="(prefers-color-scheme: dark)"><link rel="icon" type="image/png" sizes="32x32" href="/assets/img/Icon%20SD_32.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/img/Icon%20SD_32.png" media="(prefers-color-scheme: dark)"><link rel="icon" type="image/png" sizes="512x512" href="/assets/img/Icon%20SD_512.png"><link rel="icon" type="image/png" sizes="512x512" href="/assets/img/Icon%20SD_512.png"><link rel="icon" type="image/png" sizes="512x512" href="/assets/img/Icon%20SD_512.png"><link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css"><link rel="stylesheet" href="/assets/fonts/font-awesome.min.css"></head><body><header><nav class="navbar navbar-expand-md bg-light shadow" style="margin-bottom: 30px;"><div class="container-fluid"><a href="https://stromdao.de/" rel="author" target="_blank"><img src="/assets/img/Icon%20SD_32.png" style="padding-top: 3px;margin-right: 20px;"></a><a class="navbar-brand" href="../"><strong>E</strong>nergy<strong> A</strong>pplication<strong> F</strong>ramework</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" id="navcol-1"><ul class="navbar-nav"><li class="nav-item"></li><li class="nav-item"></li><li class="nav-item"></li><li class="nav-item col-6" style="padding-left: 15px;"><form class="ms-auto" action="./uc_assets.html" method="get"><div class="input-group"></div></form></li></ul></div><button class="btn btn-dark" id="helpButton" type="button"><i class="fa fa-book"></i></button></div></nav></header><div class="container" style="margin-top: 75px;"><section><div class="card"><div class="card-body"><h1>jaeger-tracing</h1><p>Um <a href="https://www.jaegertracing.io/">Jaeger Tracing</a> im STROMDAO EAF zu nutzen, folgen Sie diesen Schritten:</p>
+<p><img src="https://static.corrently.cloud/stromdao-eaf/jaeger1.png" alt="Service Trace des EAF"></p>
+<ol>
+<li><p><strong>Jaeger Tracing Service starten</strong>: Führen Sie den folgenden Docker-Befehl aus, um den Jaeger Tracing Service zu starten:</p>
+<pre><code class="language-bash">docker run --rm --name jaeger \
+  -e COLLECTOR_ZIPKIN_HOST_PORT=:9411 \
+  -p 6831:6831/udp \
+  -p 6832:6832/udp \
+  -p 5778:5778 \
+  -p 16686:16686 \
+  -p 4317:4317 \
+  -p 4318:4318 \
+  -p 14250:14250 \
+  -p 14268:14268 \
+  -p 14269:14269 \
+  -p 9411:9411 \
+  jaegertracing/all-in-one:1.53
+</code></pre>
+</li>
+<li><p><strong>Jaeger-Client installieren</strong>: Installieren Sie den Jaeger-Client für Node.js im Verzeichnis <code>./framework/</code> mit folgendem Befehl:</p>
+<pre><code class="language-bash">npm install --save jaeger-client
+</code></pre>
+</li>
+<li><p><strong>Konfiguration anpassen</strong>: Ändern Sie die Tracing-Konfiguration in der Datei <code>moleculer.config.js</code> wie folgt:</p>
+<ul>
+<li>Ersetzen Sie den vorhandenen Tracing-Eintrag:<pre><code class="language-javascript">// Vorherige Konfiguration
+...
+tracing: {
+     enabled: true,
+     exporter: &quot;Laboratory&quot;
+ },
+...
+</code></pre>
+</li>
+<li>Mit der neuen Konfiguration für Jaeger:<pre><code class="language-javascript">// Neue Konfiguration für Jaeger
+...
+tracing: {
+       enabled: true,
+       exporter: {
+           type: &quot;Jaeger&quot;,
+           options: {
+               // HTTP Reporter endpoint. If set, HTTP Reporter will be used.
+               endpoint: null,
+               // UDP Sender host option.
+               host: &quot;localhost&quot;,
+               // UDP Sender port option.
+               port: 6832,
+               // Jaeger Sampler configuration.
+               sampler: {
+                   // Sampler type. More info: https://www.jaegertracing.io/docs/latest/sampling/
+                   type: &quot;Const&quot;,
+                   // Sampler specific options.
+                   options: {}
+               },
+               // Additional options for `Jaeger.Tracer`
+               tracerOptions: {},
+               // Default tags. They will be added into all span tags.
+               defaultTags: null
+           }
+       }
+   },
+...
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p><strong>Framework neu starten</strong>: Starten Sie das STROMDAO EAF Framework neu, zum Beispiel mit:</p>
+<pre><code class="language-bash">npm start
+</code></pre>
+</li>
+</ol>
+<p>Indem Sie diese Änderungen vornehmen, wird das STROMDAO EAF so konfiguriert, dass es mit Jaeger für das Tracing kommunizieren kann. Nach dem Neustart des Frameworks sollten Sie in der Lage sein, über den Jaeger UI auf Port 16686 (<a href="http://localhost:16686">http://localhost:16686</a>) die Trace-Daten zu betrachten und zu analysieren, wie die verschiedenen Microservices des EAF miteinander interagieren.</p>
+<p><img src="https://static.corrently.cloud/stromdao-eaf/jaeger2.png" alt="Service Trace des EAF"></p>
+</div></div></section><footer class="footer mt-auto py-3 bg-white" style="margin-bottom: 25px;"><p class="text-center">powered by <a href="https://stromdao.de/">STROMDAO</a></p><div class="offcanvas offcanvas-end w-75" tabindex="-1" data-bs-backdrop="false" id="helpBar"><div class="offcanvas-header"><a class="link-body-emphasis d-flex align-items-center me-md-auto mb-3 mb-md-0 text-decoration-none" href="/"><i class="fa fa-book me-3" style="font-size: 25px;"></i><span class="fs-4">Dokumentation</span></a><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="offcanvas"></button></div><div class="offcanvas-body d-flex flex-column justify-content-between p-0"><div><hr class="my-0"><div class="list-group list-group-flush border-bottom scrollarea" id="helpGroup"><a class="list-group-item list-group-item-action active py-3 lh-tight" href="#" aria-current="true"><div class="d-flex justify-content-between align-items-center w-100"><strong class="mb-1">List group item heading</strong><small>Wed</small></div><div class="col-10 mb-1 small"><span>Some placeholder content in a paragraph below the heading and date.</span></div></a></div></div></div><div class="d-flex justify-content-center bg-light order-2 w-100" style="padding-top: 5px;padding-bottom: 5px;padding-right: 5px;padding-left: 5px;"><form id="goHelp-1" class="w-100"><div class="input-group float-none"><input class="form-control" type="search" id="search-input-1" name="search-input"><button class="btn btn-dark" type="submit"><i class="fa fa-book"></i></button></div></form></div></div><div class="modal fade" role="dialog" tabindex="-1" id="modalHelp"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="helpTitle">Modal Title</h4><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button></div><div class="modal-body" id="markdownhelp"><p>...</p></div><div class="modal-footer"><button class="btn btn-light" type="button" data-bs-dismiss="modal">Close</button><button class="btn btn-primary" type="button">Save</button></div></div></div></div></footer></div><script src="/assets/js/jquery.min.js"></script><script src="/assets/bootstrap/js/bootstrap.min.js"></script><script src="/assets/js/script.min.js"></script></body></html>
