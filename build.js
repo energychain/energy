@@ -47,7 +47,8 @@ for (const file of files) {
   const htmlFile = path.join("./docs", file.replace(".md", ".html"));
   myfiles.push( {
     file:"./docs/"+file.replace(".md", ".html"),
-    title:title
+    title:title,
+    url:"https://energy.js.org/docs/"+file.replace(".md", ".html")
   })
 
   
@@ -61,5 +62,14 @@ for (const file of files) {
         console.log(e);
     }
 }
-
+let sitemapXML = '<?xml version="1.0" encoding="UTF-8"?>\n';
+sitemapXML += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
+for (const file of myfiles) {
+  sitemapXML += '  <url>\n';
+  sitemapXML += `    <loc>${file.url}</loc>\n`;
+  sitemapXML += '  </url>\n';
+  sitemapXML += '\n';
+}
+sitemapXML += '</urlset>\n';
+fs.writeFileSync("./sitemap.xml", sitemapXML);
 fs.writeFileSync("./docs/files.json", JSON.stringify(myfiles));

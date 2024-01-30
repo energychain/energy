@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://energy.js.org/docs/.git</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/Abgrenzung-von-Verbrauchsdaten.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/API-first.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/Architektur-Authentifizierung-und-Autorisierung.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/Audit-Service.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/balancehelper.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/balancing-service.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/bilanz-zertifikat.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/bilanzierung.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/Bilanzierungspunkt.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/Clearing.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/CO2-Accounting.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/CONTRIBUTE.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/docker.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/dynamische-einspeisetarife.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/Dynamische-Stromtarife-‐-Von-der-Zählerablesung-bis-zur-Stromrechnung.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/EAF-10.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/EAF-5.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/EAF-AMR-CLIENT.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/Einheiten.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/Home.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/Inexogy.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/InfluxDB.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/jaeger-tracing.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/Metering.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/NachtragsBilanzierung.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/Nextcloud-Bridge.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/pm2.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/Prognosesystem.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/Projekt_Delfine.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/README.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/Self-sovereign-identities-(SSI)-digital-identities.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/service-balancing-addSettlement.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/service-clearing-commit.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/service-clearing-retrieve.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/service-debit-add.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/service-metering-updateReading.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/Settlement.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/Stromkollektiv.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/Strompreis-Signal.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/Stromprodukt.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/TAF-5.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/Tariff-Service.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/Top5-HerausforderungenDynamischeStromtarife.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/ubuntu.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/uc_assets.html</loc>
+  </url>
+
+</urlset>
