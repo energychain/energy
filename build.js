@@ -62,6 +62,21 @@ for (const file of files) {
         console.log(e);
     }
 }
+
+fs.writeFileSync("./docs/files.json", JSON.stringify(myfiles));
+// Read the contents of the current working directory.
+
+const fileshtml = fs.readdirSync("./");
+
+// Filter the files to only include those that end with .html.
+const htmlFiles = fileshtml.filter((file) => file.endsWith('.html'));
+
+for(const file of htmlFiles) {
+  myfiles.push({
+    url:"https://energy.js.org/"+file
+  });
+}
+
 let sitemapXML = '<?xml version="1.0" encoding="UTF-8"?>\n';
 sitemapXML += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
 for (const file of myfiles) {
@@ -72,4 +87,3 @@ for (const file of myfiles) {
 }
 sitemapXML += '</urlset>\n';
 fs.writeFileSync("./sitemap.xml", sitemapXML);
-fs.writeFileSync("./docs/files.json", JSON.stringify(myfiles));
