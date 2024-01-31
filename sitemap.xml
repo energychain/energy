@@ -9,6 +9,10 @@
   </url>
 
   <url>
+    <loc>https://energy.js.org/docs/Abrechnung-EV.html</loc>
+  </url>
+
+  <url>
     <loc>https://energy.js.org/docs/AenderungBilanzierung.html</loc>
   </url>
 
@@ -105,6 +109,10 @@
   </url>
 
   <url>
+    <loc>https://energy.js.org/docs/LICENSE</loc>
+  </url>
+
+  <url>
     <loc>https://energy.js.org/docs/Metering.html</loc>
   </url>
 
@@ -154,6 +162,166 @@
 
   <url>
     <loc>https://energy.js.org/docs/service-metering-updateReading.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/service_access.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/service_api-eaf.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/service_api-metering.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/service_api-pwa.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/service_asset.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/service_audit.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/service_auditrule_model.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/service_audit_model.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/service_balances_sealed_model.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/service_balance_settlements_active_model.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/service_balance_settlements_late_model.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/service_balancing.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/service_balancing_model.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/service_clearing.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/service_clearings_model.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/service_clientactivation.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/service_contract.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/service_contract_model.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/service_debit.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/service_debit_model.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/service_demometer.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/service_influx.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/service_invoice_model.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/service_lab.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/service_loadprofile.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/service_loadprofile_model.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/service_meritorder.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/service_meritorder_model.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/service_metering.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/service_nextcloud.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/service_openapi.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/service_prediction.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/service_price_model.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/service_readings_model.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/service_settlement.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/service_statement_model.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/service_statistics.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/service_tariff.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/service_tariff_model.html</loc>
+  </url>
+
+  <url>
+    <loc>https://energy.js.org/docs/service_wikihelp.html</loc>
   </url>
 
   <url>

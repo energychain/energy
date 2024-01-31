@@ -1,0 +1,174 @@
+<!DOCTYPE html><html data-bs-theme="light" lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"><title>LICENSE</title><meta property="og:image" content="https://stromdao-eaf.js.org/assets/img/Icon SD_512.png"><meta name="description" content="Eine Plattform, die speziell für innovative Strommärkte entwickelt wurde, um die Implementierung und Verwaltung dynamischer Stromtarife zu ermöglichen. Die Plattform nutzt modulare Microservices, um eine flexible und anpassungsfähige Integration von Energiemarktmechanismen zu ermöglichen .Das Framework hilft Akteuren, auf Veränderungen im Verbrauchsverhalten und schwankende Energieerzeugung effizient zu reagieren. Es ermöglicht ihnen, eine optimierte Tarifgestaltung zu erreichen, die sowohl für die Verbraucher als auch für die Energieversorger von Vorteil ist."><meta property="og:type" content="website"><meta name="twitter:title" content="LICENSE"><link rel="icon" type="image/png" sizes="16x16" href="/assets/img/Icon%20SD_16.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/img/Icon%20SD_16.png" media="(prefers-color-scheme: dark)"><link rel="icon" type="image/png" sizes="32x32" href="/assets/img/Icon%20SD_32.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/img/Icon%20SD_32.png" media="(prefers-color-scheme: dark)"><link rel="icon" type="image/png" sizes="512x512" href="/assets/img/Icon%20SD_512.png"><link rel="icon" type="image/png" sizes="512x512" href="/assets/img/Icon%20SD_512.png"><link rel="icon" type="image/png" sizes="512x512" href="/assets/img/Icon%20SD_512.png"><link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css"><link rel="stylesheet" href="/assets/fonts/font-awesome.min.css"></head><body><header><nav class="navbar navbar-expand-md bg-light shadow" style="margin-bottom: 30px;"><div class="container-fluid"><a href="https://stromdao.de/" rel="author" target="_blank"><img src="/assets/img/Icon%20SD_32.png" style="padding-top: 3px;margin-right: 20px;"></a><a class="navbar-brand" href="../"><strong>E</strong>nergy<strong> A</strong>pplication<strong> F</strong>ramework</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" id="navcol-1"><ul class="navbar-nav"><li class="nav-item"></li><li class="nav-item"></li><li class="nav-item"></li><li class="nav-item col-6" style="padding-left: 15px;"><form class="ms-auto" action="./uc_assets.html" method="get"><div class="input-group"></div></form></li></ul></div><button class="btn btn-dark" id="helpButton" type="button"><i class="fa fa-book"></i></button></div></nav></header><div class="container" style="margin-top: 75px;"><section><div class="card"><div class="card-body"><h1>LICENSE</h1><pre><code>                             Apache License
+                       Version 2.0, January 2004
+                    http://www.apache.org/licenses/
+</code></pre>
+<p>   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION</p>
+<ol>
+<li><p>Definitions.</p>
+<p>&quot;License&quot; shall mean the terms and conditions for use, reproduction,
+and distribution as defined by Sections 1 through 9 of this document.</p>
+<p>&quot;Licensor&quot; shall mean the copyright owner or entity authorized by
+the copyright owner that is granting the License.</p>
+<p>&quot;Legal Entity&quot; shall mean the union of the acting entity and all
+other entities that control, are controlled by, or are under common
+control with that entity. For the purposes of this definition,
+&quot;control&quot; means (i) the power, direct or indirect, to cause the
+direction or management of such entity, whether by contract or
+otherwise, or (ii) ownership of fifty percent (50%) or more of the
+outstanding shares, or (iii) beneficial ownership of such entity.</p>
+<p>&quot;You&quot; (or &quot;Your&quot;) shall mean an individual or Legal Entity
+exercising permissions granted by this License.</p>
+<p>&quot;Source&quot; form shall mean the preferred form for making modifications,
+including but not limited to software source code, documentation
+source, and configuration files.</p>
+<p>&quot;Object&quot; form shall mean any form resulting from mechanical
+transformation or translation of a Source form, including but
+not limited to compiled object code, generated documentation,
+and conversions to other media types.</p>
+<p>&quot;Work&quot; shall mean the work of authorship, whether in Source or
+Object form, made available under the License, as indicated by a
+copyright notice that is included in or attached to the work
+(an example is provided in the Appendix below).</p>
+<p>&quot;Derivative Works&quot; shall mean any work, whether in Source or Object
+form, that is based on (or derived from) the Work and for which the
+editorial revisions, annotations, elaborations, or other modifications
+represent, as a whole, an original work of authorship. For the purposes
+of this License, Derivative Works shall not include works that remain
+separable from, or merely link (or bind by name) to the interfaces of,
+the Work and Derivative Works thereof.</p>
+<p>&quot;Contribution&quot; shall mean any work of authorship, including
+the original version of the Work and any modifications or additions
+to that Work or Derivative Works thereof, that is intentionally
+submitted to Licensor for inclusion in the Work by the copyright owner
+or by an individual or Legal Entity authorized to submit on behalf of
+the copyright owner. For the purposes of this definition, &quot;submitted&quot;
+means any form of electronic, verbal, or written communication sent
+to the Licensor or its representatives, including but not limited to
+communication on electronic mailing lists, source code control systems,
+and issue tracking systems that are managed by, or on behalf of, the
+Licensor for the purpose of discussing and improving the Work, but
+excluding communication that is conspicuously marked or otherwise
+designated in writing by the copyright owner as &quot;Not a Contribution.&quot;</p>
+<p>&quot;Contributor&quot; shall mean Licensor and any individual or Legal Entity
+on behalf of whom a Contribution has been received by Licensor and
+subsequently incorporated within the Work.</p>
+</li>
+<li><p>Grant of Copyright License. Subject to the terms and conditions of
+this License, each Contributor hereby grants to You a perpetual,
+worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+copyright license to reproduce, prepare Derivative Works of,
+publicly display, publicly perform, sublicense, and distribute the
+Work and such Derivative Works in Source or Object form.</p>
+</li>
+<li><p>Grant of Patent License. Subject to the terms and conditions of
+this License, each Contributor hereby grants to You a perpetual,
+worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+(except as stated in this section) patent license to make, have made,
+use, offer to sell, sell, import, and otherwise transfer the Work,
+where such license applies only to those patent claims licensable
+by such Contributor that are necessarily infringed by their
+Contribution(s) alone or by combination of their Contribution(s)
+with the Work to which such Contribution(s) was submitted. If You
+institute patent litigation against any entity (including a
+cross-claim or counterclaim in a lawsuit) alleging that the Work
+or a Contribution incorporated within the Work constitutes direct
+or contributory patent infringement, then any patent licenses
+granted to You under this License for that Work shall terminate
+as of the date such litigation is filed.</p>
+</li>
+<li><p>Redistribution. You may reproduce and distribute copies of the
+Work or Derivative Works thereof in any medium, with or without
+modifications, and in Source or Object form, provided that You
+meet the following conditions:</p>
+<p>(a) You must give any other recipients of the Work or
+Derivative Works a copy of this License; and
+(b) You must cause any modified files to carry prominent notices
+stating that You changed the files; and
+(c) You must retain, in the Source form of any Derivative Works
+that You distribute, all copyright, patent, trademark, and
+attribution notices from the Source form of the Work,
+excluding those notices that do not pertain to any part of
+the Derivative Works; and
+(d) If the Work includes a &quot;NOTICE&quot; text file as part of its
+distribution, then any Derivative Works that You distribute must
+include a readable copy of the attribution notices contained
+within such NOTICE file, excluding those notices that do not
+pertain to any part of the Derivative Works, in at least one
+of the following places: within a NOTICE text file distributed
+as part of the Derivative Works; within the Source form or
+documentation, if provided along with the Derivative Works; or,
+within a display generated by the Derivative Works, if and
+wherever such third-party notices normally appear. The contents
+of the NOTICE file are for informational purposes only and
+do not modify the License. You may add Your own attribution
+notices within Derivative Works that You distribute, alongside
+or as an addendum to the NOTICE text from the Work, provided
+that such additional attribution notices cannot be construed
+as modifying the License.
+You may add Your own copyright statement to Your modifications and
+may provide additional or different license terms and conditions
+for use, reproduction, or distribution of Your modifications, or
+for any such Derivative Works as a whole, provided Your use,
+reproduction, and distribution of the Work otherwise complies with
+the conditions stated in this License.</p>
+</li>
+<li><p>Submission of Contributions. Unless You explicitly state otherwise,
+any Contribution intentionally submitted for inclusion in the Work
+by You to the Licensor shall be under the terms and conditions of
+this License, without any additional terms or conditions.
+Notwithstanding the above, nothing herein shall supersede or modify
+the terms of any separate license agreement you may have executed
+with Licensor regarding such Contributions.</p>
+</li>
+<li><p>Trademarks. This License does not grant permission to use the trade
+names, trademarks, service marks, or product names of the Licensor,
+except as required for reasonable and customary use in describing the
+origin of the Work and reproducing the content of the NOTICE file.</p>
+</li>
+<li><p>Disclaimer of Warranty. Unless required by applicable law or
+agreed to in writing, Licensor provides the Work (and each
+Contributor provides its Contributions) on an &quot;AS IS&quot; BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+implied, including, without limitation, any warranties or conditions
+of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+PARTICULAR PURPOSE. You are solely responsible for determining the
+appropriateness of using or redistributing the Work and assume any
+risks associated with Your exercise of permissions under this License.</p>
+</li>
+<li><p>Limitation of Liability. In no event and under no legal theory,
+whether in tort (including negligence), contract, or otherwise,
+unless required by applicable law (such as deliberate and grossly
+negligent acts) or agreed to in writing, shall any Contributor be
+liable to You for damages, including any direct, indirect, special,
+incidental, or consequential damages of any character arising as a
+result of this License or out of the use or inability to use the
+Work (including but not limited to damages for loss of goodwill,
+work stoppage, computer failure or malfunction, or any and all
+other commercial damages or losses), even if such Contributor
+has been advised of the possibility of such damages.</p>
+</li>
+<li><p>Accepting Warranty or Additional Liability. While redistributing
+the Work or Derivative Works thereof, You may choose to offer,
+and charge a fee for, acceptance of support, warranty, indemnity,
+or other liability obligations and/or rights consistent with this
+License. However, in accepting such obligations, You may act only
+on Your own behalf and on Your sole responsibility, not on behalf
+of any other Contributor, and only if You agree to indemnify,
+defend, and hold each Contributor harmless for any liability
+incurred by, or claims asserted against, such Contributor by reason
+of your accepting any such warranty or additional liability.</p>
+</li>
+</ol>
+<p>   END OF TERMS AND CONDITIONS</p>
+<p>   Copyright 2023 <a href="https://stromdao.de/">STROMDAO GmbH</a></p>
+<p>   Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at</p>
+<pre><code>   http://www.apache.org/licenses/LICENSE-2.0
+</code></pre>
+<p>   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.</p>
+</div></div></section><footer class="footer mt-auto py-3 bg-white" style="margin-bottom: 25px;"><p class="text-center">powered by <a href="https://stromdao.de/">STROMDAO</a></p><div class="offcanvas offcanvas-end w-75" tabindex="-1" data-bs-backdrop="false" id="helpBar"><div class="offcanvas-header"><a class="link-body-emphasis d-flex align-items-center me-md-auto mb-3 mb-md-0 text-decoration-none" href="/"><i class="fa fa-book me-3" style="font-size: 25px;"></i><span class="fs-4">Dokumentation</span></a><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="offcanvas"></button></div><div class="offcanvas-body d-flex flex-column justify-content-between p-0"><div><hr class="my-0"><div class="list-group list-group-flush border-bottom scrollarea" id="helpGroup" data-static="true"><a class="list-group-item list-group-item-action py-3 lh-tight" href="docs/Abgrenzung-von-Verbrauchsdaten.html" aria-current="true"><div class="d-flex justify-content-between align-items-center w-100"><strong class="mb-1">Abgrenzung von Verbrauchsdaten</strong></div><div class="col-10 mb-1 small"><span>Herausforderung der sekundengenauen Abrechnung</span></div></a><a class="list-group-item list-group-item-action py-3 lh-tight" href="/dynamische-stromtarife.html" aria-current="true"><div class="d-flex justify-content-between align-items-center w-100"><strong class="mb-1">Dynamische Stromtarife</strong></div><div class="col-10 mb-1 small"><span>Netzdienliche Stromtarife für private Haushalte und Kleingewerbe</span></div></a><a class="list-group-item list-group-item-action py-3 lh-tight" href="/mieterstrom.html" aria-current="true"><div class="d-flex justify-content-between align-items-center w-100"><strong class="mb-1">Mieterstrom</strong></div><div class="col-10 mb-1 small"><span>Mieter direkt mit Strom aus dezentralen Erzeugungsanlagen im Gebäude versorgen</span></div></a><a class="list-group-item list-group-item-action py-3 lh-tight askAi" aria-current="true" question="Wie funktioniert Peer2Peer Stromhandel mit dem EAF?"><div class="d-flex justify-content-between align-items-center w-100"><strong class="mb-1">Peer2Peer Stromhandel</strong></div><div class="col-10 mb-1 small"><span>Überschüssigen Strom untereinander handeln und gemeinsam Erzeugungsanlagen betreiben</span></div></a><a class="list-group-item list-group-item-action py-3 lh-tight askAi" aria-current="true" question="Wie kann man mit dem EAF ein Stromkollektiv umsetzen?"><div class="d-flex justify-content-between align-items-center w-100"><strong class="mb-1">Betrieb eines Stromkollektivs</strong></div><div class="col-10 mb-1 small"><span>Günstige Gemeinschaftstarife mit Dank eigener Erzeugung</span></div></a><a class="list-group-item list-group-item-action py-3 lh-tight askAi" aria-current="true" question="Wie unterstützt das EAF die E-Mobilität?"><div class="d-flex justify-content-between align-items-center w-100"><strong class="mb-1">Individualabrechnung eMobilität</strong></div><div class="col-10 mb-1 small"><span>Transparente Abrechnung der Ladevorgänge&nbsp;</span></div></a><a class="list-group-item list-group-item-action py-3 lh-tight askAi" aria-current="true" question="Was ist Stromlieferung an Dritte?"><div class="d-flex justify-content-between align-items-center w-100"><strong class="mb-1">Stromlieferung an Dritte</strong></div><div class="col-10 mb-1 small"><span>Unterversorgung mit Strom einfach uns sicher verwirklichen&nbsp;</span></div></a><a class="list-group-item list-group-item-action py-3 lh-tight askAi" aria-current="true" question="Wie kann eine Bilanzierung für ein Arealnetz aufgebaut werden?"><div class="d-flex justify-content-between align-items-center w-100"><strong class="mb-1">Areal Stromnetze</strong></div><div class="col-10 mb-1 small"><span>Unabhängige Bewirtschaftung mit dezentraler Energieversorgung</span></div></a><a class="list-group-item list-group-item-action py-3 lh-tight askAi" aria-current="true" question="Wie unterstützt das EAF dynamische Einspeisetarife?"><div class="d-flex justify-content-between align-items-center w-100"><strong class="mb-1">Dynamische Einspeisetarife</strong></div><div class="col-10 mb-1 small"><span>Marktpreisschwankungen durch dynamisches Angebot und Nachfrage berücksichtigen</span></div></a><a class="list-group-item list-group-item-action py-3 lh-tight" href="docs/Abgrenzung-von-Verbrauchsdaten.html" aria-current="true"><div class="d-flex justify-content-between align-items-center w-100"><strong class="mb-1">Bewirtschaftung Stationärer Energiespeicher</strong></div><div class="col-10 mb-1 small"><span>Ladung und Entladung von stationären Batteriespeichern steuern, um Lastspitzen auszugleichen</span></div></a><a class="list-group-item list-group-item-action py-3 lh-tight" href="docs/Abgrenzung-von-Verbrauchsdaten.html" aria-current="true"><div class="d-flex justify-content-between align-items-center w-100"><strong class="mb-1">Untermessung und Bilanzierung</strong></div><div class="col-10 mb-1 small"><span>Plattform führt die zentrale Erfassung, Aufbereitung und Auswertung der Messstellen&nbsp;&nbsp;</span></div></a><a class="list-group-item list-group-item-action py-3 lh-tight" href="docs/Abgrenzung-von-Verbrauchsdaten.html" aria-current="true"><div class="d-flex justify-content-between align-items-center w-100"><strong class="mb-1">Eigene Innovation umsetzen</strong></div><div class="col-10 mb-1 small"><span>Strom&nbsp;</span></div></a></div></div></div><div class="d-flex justify-content-center bg-light order-2 w-100" style="padding-top: 5px;padding-bottom: 5px;padding-right: 5px;padding-left: 5px;"><form id="goHelp2" class="w-100"><div class="input-group float-none"><input class="form-control" type="search" id="search-input" name="search-input"><button class="btn btn-dark" type="submit"><i class="fa fa-book"></i></button></div></form></div></div><div class="modal fade" role="dialog" tabindex="-1" id="modalHelp"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="helpTitle">Modal Title</h4><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button></div><div class="modal-body" id="markdownhelp"><p>...</p></div><div class="modal-footer"><button class="btn btn-light" type="button" data-bs-dismiss="modal">Close</button><button class="btn btn-primary" type="button">Save</button></div></div></div></div></footer></div><script src="/assets/js/jquery.min.js"></script><script src="/assets/bootstrap/js/bootstrap.min.js"></script><script src="/assets/js/script.min.js"></script></body></html>
