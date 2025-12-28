@@ -1,25 +1,119 @@
-## Energy Blockchain tools & libaries
+# The Energy Stack for JavaScript
 
-This site will be used to distribute the commandline tools and integration libaries that work in tandem with Fury Energy Blockchain:
+> **Build Energy Apps with Node.js** – Der Open-Source Standard für Marktkommunikation (MaKo), EDIFACT-Transformation und regulatorische Compliance in der deutschen Energiewirtschaft.
 
-### [Meter Point Operation command line tool](https://github.com/energychain/BusinessObject-MeterPointOperation)
+🌐 **[energy.js.org](https://energy.js.org)** | 📚 **[Documentation](https://corrently.io)** | 💼 **[Commercial Platform](https://enerchy.de)**
 
-Operation of an Energy Meter Point utilizing [STROMDAO Business Object](https://github.com/energychain/StromDAO-BusinessObject) for the Fury Energy Blockchain.
+---
 
-### [Fury app deploy skeleton](https://github.com/energychain/fury.skeleton)
+## 🚀 Quick Start
 
-Skeleton to rapid prototype Fury Energy Blockchain based applications, designed to work with the [STROMDAO Business Object](https://github.com/energychain/StromDAO-BusinessObject).
+```bash
+# Installation via npm
+npm install @energychain/willi-mako-client
 
-### [STROMDAO Business Object](https://github.com/energychain/StromDAO-BusinessObject)
+# Oder mit yarn
+yarn add @energychain/willi-mako-client
+```
 
-Abstract BusinessObject for Fury Energy Blockchain. Abstraction layer between distributed ledger technology and business logic providing energy market related entities and use cases.
-configuration file.
+```javascript
+// Erste Schritte
+import { WilliMako } from '@energychain/willi-mako-client';
 
-#### Support / Contact / Impressum
+const client = new WilliMako({
+  apiKey: process.env.WILLI_MAKO_API_KEY
+});
 
-STROMDAO LTD
-132-134 Great Ancoats Sreet, 
-Suite 33854 Advantage Business Centre, 
-Manchester, England, M4 6DE
-Company number 10466125
-Registered in England and Wales, no 10466125
+// EDIFACT Nachricht analysieren
+const analysis = await client.analyzeEdifact(edifactMessage);
+
+// Marktkommunikation recherchieren
+const info = await client.search('UTILMD Fristen');
+```
+
+---
+
+## 🎯 Was ist das Energy Stack?
+
+Unsere Technologie ist **kein Black-Box-System**. Sie basiert auf offenen Standards, die du selbst prüfen und nutzen kannst.
+
+### Der Willi Mako Client
+
+**Core Features:**
+- ✅ **Typed TypeScript Client** mit IntelliSense Support
+- ✅ **EDIFACT Support** für UTILMD, MSCONS, ORDERS, PRICAT, INVOIC
+- ✅ **Regulatorik-Updates "Built-in"** – BNetzA-Regeln automatisch berücksichtigt
+- ✅ **Marktkommunikation** gemäß GPKE, WiM, GeLi Gas Standards
+- ✅ **Compliance-Ready** für EnWG, StromNZV, StromNEV, EEG, MessEG
+- ✅ **Semantic Search** über Energiemarkt-Dokumentation
+- ✅ **BDEW MaKo Integration** mit aktuellen Prüfkatalogen
+- ✅ **OpenAI-kompatible API** mit automatischer RAG-Enhancement
+
+---
+
+## 🛠️ Build vs. Buy – Du entscheidest
+
+### Option A: Core (Open Source)
+- **Für:** Bastler & Deep Tech Integration
+- **Tool:** [Willi Mako Client](https://github.com/energychain/willi-mako-client)
+- **Kosten:** Free / MIT License
+- **Aufwand:** Du hostest, du wartest
+
+### Option B: Managed API (Developer Pro)
+- **Für:** App-Entwickler, die SLA brauchen
+- **Tool:** [Corrently API](https://corrently.io)
+- **Vorteil:** Hosted Infrastructure, Scalable
+- **Support:** Professional Support inklusive
+
+### Option C: Zero-Code (Business)
+- **Für:** Fachbereiche, die sofort Ergebnisse brauchen
+- **Tool:** [Enerchy.de](https://enerchy.de)
+- **Vorteil:** Ready-to-use Assistant
+- **Setup:** No Integration required
+
+---
+
+## 🌟 Ecosystem & Trust
+
+### Open Source Komponenten
+
+```
+@energychain/willi-mako-client
+@energychain/edifact-json-transformer
+@energychain/mako-semantic-search
+@energychain/bdew-codes
+@energychain/energy-data-models
+```
+
+### ✅ Used in production by STROMDAO
+
+Die kommerzielle Plattform **[enerchy.de](https://enerchy.de)** basiert auf genau diesem Open-Source-Code. Das gibt dir die Sicherheit, dass die Technologie produktionsreif und stabil ist.
+
+---
+
+## 📦 Repositories
+
+- **[Willi Mako Client](https://github.com/energychain/willi-mako-client)** – Core TypeScript Client
+- **[STROMDAO EAFs](https://github.com/energychain/STROMDAO_EAFs)** – Energy Application Framework
+
+---
+
+## 🎓 Warum energy.js.org?
+
+Die Nutzung der `js.org` Domain signalisiert der IT-Abteilung eines Stadtwerks: **"Das hier ist Standard-Technologie (JavaScript/Node.js), kein proprietärer Exot."**
+
+Das senkt die Hürde für den Einsatz von `enerchy.de` im Unternehmen massiv, da die "Shadow IT" Sorge ("Was nutzen meine Mitarbeiter da?") durch den Open-Source-Code entkräftet wird.
+
+---
+
+## 📝 License
+
+MIT License
+
+---
+
+## 🤝 Maintainer
+
+**Maintained by [STROMDAO](https://stromdao.de/)**
+
+Open Source · Made for the German Energy Market
