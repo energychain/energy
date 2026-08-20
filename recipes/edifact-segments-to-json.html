@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="de" data-bs-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EDIFACT zuerst strukturieren, nicht interpretieren</title>
+<meta name="description" content="Ein kleines JavaScript-Rezept zerlegt EDIFACT-Text in Segmente und JSON-Struktur.">
+<link rel="canonical" href="https://energy.js.org/recipes/edifact-segments-to-json.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="EDIFACT zuerst strukturieren, nicht interpretieren">
+<meta property="og:description" content="Ein kleines JavaScript-Rezept zerlegt EDIFACT-Text in Segmente und JSON-Struktur.">
+<meta property="og:url" content="https://energy.js.org/recipes/edifact-segments-to-json.html">
+<meta property="og:image" content="https://energy.js.org/assets/img/Icon%20SD_512.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/Icon%20SD_32.png">
+<link rel="stylesheet" href="/assets/css/energy-practice.css">
+<script defer data-domain="energy.js.org" src="https://stats.corrently.cloud/js/script.js"></script>
+</head>
+<body><nav class="nav"><div class="wrap"><a class="brand" href="/">energy.js.org</a><div class="links"><a href="/recipes/">Rezepte</a><a href="/examples/">Beispiele</a><a href="/mako-notes/">MaKo-Notizen</a><a href="/cet/">CET</a><a href="/lens/">CernionLENS</a><a href="/willi-mako/">Willi-Mako</a><a href="/stack/">Stack</a><a href="/contact/">Kontakt</a></div></div></nav><main><section class="section"><div class="wrap"><div class="crumbs"><a href="/recipes/">Rezepte</a> / EDIFACT strukturieren</div><h1>EDIFACT zuerst strukturieren, nicht interpretieren</h1><p class="lead">Viele MaKo-Probleme starten zu groß. Der erste sichere Schritt ist oft nur: Segmente sichtbar machen.</p><div class="code"><pre>const message = "UNA:+.? 'UNB+UNOC:3+SENDER+RECEIVER+240101:1200+1'UNT+0+1'";
+const segments = message
+  .split("'")
+  .map(s => s.trim())
+  .filter(Boolean)
+  .map((raw, index) => ({ index, tag: raw.slice(0, 3), raw }));
+console.log(JSON.stringify(segments, null, 2));</pre></div><p>Dieses Snippet validiert keine Nachricht. Es schafft nur eine Grundlage, um Tags, Reihenfolge und Rohinhalt gemeinsam zu prüfen.</p><p><a class="btn" href="/examples/edifact-segments.js">Beispielskript ansehen</a></p></div></section></main><footer class="footer"><div class="wrap">Open Source · JavaScript · Energiewirtschaft · gepflegt von STROMDAO. Praxisbeispiele verwenden synthetische Daten und ersetzen keine rechtliche Prüfung.</div></footer></body></html>

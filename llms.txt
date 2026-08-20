@@ -1,0 +1,15 @@
+# energy.js.org
+
+energy.js.org ist eine statische Praxisbibliothek für Energie-JavaScript, Marktkommunikation, EDIFACT, Cernion Energy Tools, CernionLENS und Willi-Mako.
+
+## Wichtigste Einstiege
+- https://energy.js.org/recipes/ — kurze praktische Rezepte
+- https://energy.js.org/examples/ — kleine Beispielskripte mit synthetischen Daten
+- https://energy.js.org/mako-notes/ — technische MaKo-Notizen ohne Rechtsberatung
+- https://energy.js.org/cet/ — Cernion Energy Tools Praxis
+- https://energy.js.org/lens/ — CernionLENS mit synthetischen Dokumenten
+- https://energy.js.org/willi-mako/ — Willi-Mako Script- und Frage-Muster
+- https://energy.js.org/contact/ — dezenter Kontaktweg zu Felix Mertens
+
+## Grenzen
+Die Inhalte sind praktische technische Orientierung. Sie enthalten keine Rechtsberatung, keine Preis- oder Vertragszusagen und keine echten Kundendaten.

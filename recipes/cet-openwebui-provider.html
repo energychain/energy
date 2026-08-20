@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="de" data-bs-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CET als OpenAI-kompatiblen Provider in Open WebUI testen</title>
+<meta name="description" content="Minimaler public-safe Prüfpfad für Cernion Energy Tools als OpenAI-kompatiblen Provider.">
+<link rel="canonical" href="https://energy.js.org/recipes/cet-openwebui-provider.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="CET als OpenAI-kompatiblen Provider in Open WebUI testen">
+<meta property="og:description" content="Minimaler public-safe Prüfpfad für Cernion Energy Tools als OpenAI-kompatiblen Provider.">
+<meta property="og:url" content="https://energy.js.org/recipes/cet-openwebui-provider.html">
+<meta property="og:image" content="https://energy.js.org/assets/img/Icon%20SD_512.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/Icon%20SD_32.png">
+<link rel="stylesheet" href="/assets/css/energy-practice.css">
+<script defer data-domain="energy.js.org" src="https://stats.corrently.cloud/js/script.js"></script>
+</head>
+<body><nav class="nav"><div class="wrap"><a class="brand" href="/">energy.js.org</a><div class="links"><a href="/recipes/">Rezepte</a><a href="/examples/">Beispiele</a><a href="/mako-notes/">MaKo-Notizen</a><a href="/cet/">CET</a><a href="/lens/">CernionLENS</a><a href="/willi-mako/">Willi-Mako</a><a href="/stack/">Stack</a><a href="/contact/">Kontakt</a></div></div></nav><main><section class="section"><div class="wrap"><div class="crumbs"><a href="/recipes/">Rezepte</a> / CET Provider</div><h1>CET als OpenAI-kompatiblen Provider in Open WebUI testen</h1><p class="lead">Ziel: verstehen, ob ein OpenAI-kompatibler Endpoint in einer bestehenden Developer-Oberfläche sauber angesprochen werden kann.</p><h2>Voraussetzungen</h2><ul class="list"><li>Ein Test-Token aus einem erlaubten Testkontext.</li><li>Keine echten Kundendaten in Prompts oder Dateien.</li><li>Open WebUI lokal oder in einer Testumgebung.</li></ul><h2>Minimaler Denkpfad</h2><div class="code"><pre>Provider URL: https://.../v1
+Model name:   ein freigegebenes Testmodell
+API key:      Test-Token
+Prompt:       "Erkläre den Unterschied zwischen Segment und Nachricht in EDIFACT."</pre></div><p class="note warn">Grenze: Dieses Rezept beschreibt nur die technische Kompatibilitätsprüfung. Es ist keine Aussage zu SLA, Datenschutz, Preisen oder Produktiveinsatz.</p><h2>Erwartetes Ergebnis</h2><p>Du kannst eine energiewirtschaftliche Testfrage stellen und die Antwort reproduzierbar dokumentieren, ohne interne Daten oder echte Marktkommunikation hochzuladen.</p></div></section></main><footer class="footer"><div class="wrap">Open Source · JavaScript · Energiewirtschaft · gepflegt von STROMDAO. Praxisbeispiele verwenden synthetische Daten und ersetzen keine rechtliche Prüfung.</div></footer></body></html>

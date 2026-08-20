@@ -1,0 +1,15 @@
+{
+  "document_type": "synthetic_grid_connection_note",
+  "source": "energy.js.org public fixture",
+  "contains_real_customer_data": false,
+  "text": "Anfrage zu einer Anschlussprüfung. Zeitraum offen. Anschlussleistung unklar. Messkonzept wird nachgereicht.",
+  "questions": [
+    "Welche Angaben fehlen für die nächste technische Prüfung?",
+    "Welche Rückfrage sollte zuerst gestellt werden?"
+  ],
+  "expected_observations": [
+    "fehlender Zeitraum",
+    "unklare Anschlussleistung",
+    "Messkonzept nicht final"
+  ]
+}

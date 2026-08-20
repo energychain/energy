@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://energy.js.org/sitemap.xml

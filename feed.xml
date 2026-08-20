@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>energy.js.org Praxisnotizen</title>
+  <link href="https://energy.js.org/feed.xml" rel="self" />
+  <link href="https://energy.js.org/" />
+  <updated>2026-08-20T00:00:00+02:00</updated>
+  <id>https://energy.js.org/</id>
+  <entry>
+    <title>energy.js.org als Praxisbibliothek reaktiviert</title>
+    <link href="https://energy.js.org/recipes/" />
+    <id>https://energy.js.org/recipes/</id>
+    <updated>2026-08-20T00:00:00+02:00</updated>
+    <summary>Neue statische Einstiege für Rezepte, Beispiele, MaKo-Notizen, CET, CernionLENS und Willi-Mako.</summary>
+  </entry>
+</feed>

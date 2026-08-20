@@ -1,407 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://energy.js.org/docs/.git</loc>
+    <loc>https://energy.js.org/</loc>
+    <lastmod>2026-08-20</lastmod>
   </url>
-
   <url>
-    <loc>https://energy.js.org/docs/Abgrenzung-von-Verbrauchsdaten.html</loc>
+    <loc>https://energy.js.org/recipes/</loc>
+    <lastmod>2026-08-20</lastmod>
   </url>
-
   <url>
-    <loc>https://energy.js.org/docs/Abrechnung-EV.html</loc>
+    <loc>https://energy.js.org/recipes/cet-openwebui-provider.html</loc>
+    <lastmod>2026-08-20</lastmod>
   </url>
-
   <url>
-    <loc>https://energy.js.org/docs/AenderungBilanzierung.html</loc>
+    <loc>https://energy.js.org/recipes/edifact-segments-to-json.html</loc>
+    <lastmod>2026-08-20</lastmod>
   </url>
-
   <url>
-    <loc>https://energy.js.org/docs/API-first.html</loc>
+    <loc>https://energy.js.org/recipes/willi-mako-question-script.html</loc>
+    <lastmod>2026-08-20</lastmod>
   </url>
-
   <url>
-    <loc>https://energy.js.org/docs/Architektur-Authentifizierung-und-Autorisierung.html</loc>
+    <loc>https://energy.js.org/examples/</loc>
+    <lastmod>2026-08-20</lastmod>
   </url>
-
   <url>
-    <loc>https://energy.js.org/docs/Audit-Service.html</loc>
+    <loc>https://energy.js.org/examples/edifact-segments.js</loc>
+    <lastmod>2026-08-20</lastmod>
   </url>
-
   <url>
-    <loc>https://energy.js.org/docs/balancehelper.html</loc>
+    <loc>https://energy.js.org/examples/lens-synthetic-doc.json</loc>
+    <lastmod>2026-08-20</lastmod>
   </url>
-
   <url>
-    <loc>https://energy.js.org/docs/balancing-service.html</loc>
+    <loc>https://energy.js.org/mako-notes/</loc>
+    <lastmod>2026-08-20</lastmod>
   </url>
-
   <url>
-    <loc>https://energy.js.org/docs/bilanz-zertifikat.html</loc>
+    <loc>https://energy.js.org/cet/</loc>
+    <lastmod>2026-08-20</lastmod>
   </url>
-
   <url>
-    <loc>https://energy.js.org/docs/bilanzierung.html</loc>
+    <loc>https://energy.js.org/lens/</loc>
+    <lastmod>2026-08-20</lastmod>
   </url>
-
   <url>
-    <loc>https://energy.js.org/docs/Bilanzierungspunkt.html</loc>
+    <loc>https://energy.js.org/willi-mako/</loc>
+    <lastmod>2026-08-20</lastmod>
   </url>
-
   <url>
-    <loc>https://energy.js.org/docs/Clearing.html</loc>
+    <loc>https://energy.js.org/stack/</loc>
+    <lastmod>2026-08-20</lastmod>
   </url>
-
   <url>
-    <loc>https://energy.js.org/docs/CO2-Accounting.html</loc>
+    <loc>https://energy.js.org/contact/</loc>
+    <lastmod>2026-08-20</lastmod>
   </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/CONTRIBUTE.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/Crossbalance.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/docker.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/dynamische-einspeisetarife.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/Dynamische-Stromtarife-‐-Von-der-Zählerablesung-bis-zur-Stromrechnung.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/EAF-10.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/EAF-5.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/EAF-AMR-CLIENT.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/Einheiten.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/ENWG14a-Abrechnung.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/ENWG14a-Anforderung.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/ENWG14a-Metering.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/ENWG14a-Qualifikation.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/ENWG14a-Tarifierung.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/ENWG14a.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/Home.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/Inexogy.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/InfluxDB.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/jaeger-tracing.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/LICENSE</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/Metering.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/NachtragsBilanzierung.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/Nextcloud-Bridge.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/pm2.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/Prognosesystem.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/Projekt_Delfine.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/README.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/Self-sovereign-identities-(SSI)-digital-identities.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/service-balancing-addSettlement.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/service-clearing-commit.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/service-clearing-retrieve.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/service-debit-add.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/service-metering-updateReading.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/service_access.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/service_api-eaf.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/service_api-metering.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/service_api-pwa.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/service_asset.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/service_audit.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/service_auditrule_model.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/service_audit_model.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/service_balances_sealed_model.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/service_balance_settlements_active_model.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/service_balance_settlements_late_model.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/service_balancing.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/service_balancing_model.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/service_clearing.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/service_clearings_model.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/service_clientactivation.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/service_contract.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/service_contract_model.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/service_debit.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/service_debit_model.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/service_demometer.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/service_influx.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/service_invoice_model.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/service_lab.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/service_loadprofile.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/service_loadprofile_model.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/service_meritorder.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/service_meritorder_model.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/service_metering.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/service_nextcloud.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/service_openapi.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/service_prediction.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/service_price_model.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/service_readings_model.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/service_settlement.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/service_statement_model.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/service_statistics.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/service_tariff.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/service_tariff_model.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/service_wikihelp.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/Settlement.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/Stromkollektiv.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/Strompreis-Signal.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/Stromprodukt.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/TAF-5.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/Tariff-Service.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/Top5-HerausforderungenDynamischeStromtarife.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/ubuntu.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/uc_assets.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/docs/Unternehmensberatung.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/dynamische-stromtarife.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/index.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/mieterstrom.html</loc>
-  </url>
-
-  <url>
-    <loc>https://energy.js.org/template.html</loc>
-  </url>
-
 </urlset>
