@@ -9,6 +9,10 @@
     <lastmod>2026-08-20</lastmod>
   </url>
   <url>
+    <loc>https://energy.js.org/recipes/klaerfall-json-queue.html</loc>
+    <lastmod>2026-08-21</lastmod>
+  </url>
+  <url>
     <loc>https://energy.js.org/recipes/cet-openwebui-provider.html</loc>
     <lastmod>2026-08-20</lastmod>
   </url>
@@ -23,6 +27,10 @@
   <url>
     <loc>https://energy.js.org/examples/</loc>
     <lastmod>2026-08-20</lastmod>
+  </url>
+  <url>
+    <loc>https://energy.js.org/examples/klaerfall-queue.js</loc>
+    <lastmod>2026-08-21</lastmod>
   </url>
   <url>
     <loc>https://energy.js.org/examples/edifact-segments.js</loc>

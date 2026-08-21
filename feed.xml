@@ -3,8 +3,15 @@
   <title>energy.js.org Praxisnotizen</title>
   <link href="https://energy.js.org/feed.xml" rel="self" />
   <link href="https://energy.js.org/" />
-  <updated>2026-08-20T00:00:00+02:00</updated>
+  <updated>2026-08-21T10:01:25+02:00</updated>
   <id>https://energy.js.org/</id>
+  <entry>
+    <title>Klärfälle als JSON-Queue modellieren</title>
+    <link href="https://energy.js.org/recipes/klaerfall-json-queue.html" />
+    <id>https://energy.js.org/recipes/klaerfall-json-queue.html</id>
+    <updated>2026-08-21T10:01:25+02:00</updated>
+    <summary>Ein synthetisches JavaScript-Beispiel macht offene Fragen, Evidenzstatus und nächste Prüfschritte als kleine Queue sichtbar.</summary>
+  </entry>
   <entry>
     <title>energy.js.org als Praxisbibliothek reaktiviert</title>
     <link href="https://energy.js.org/recipes/" />

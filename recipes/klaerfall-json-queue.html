@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="de" data-bs-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Klärfälle als kleine JSON-Queue modellieren</title>
+<meta name="description" content="Ein public-safe JavaScript-Rezept für nachvollziehbare Klärfälle: Frage, Owner, Evidenzstatus und nächster Prüfschritt als JSON.">
+<link rel="canonical" href="https://energy.js.org/recipes/klaerfall-json-queue.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Klärfälle als kleine JSON-Queue modellieren">
+<meta property="og:description" content="Ein public-safe JavaScript-Rezept für nachvollziehbare Klärfälle in Energie-Workflows.">
+<meta property="og:url" content="https://energy.js.org/recipes/klaerfall-json-queue.html">
+<meta property="og:image" content="https://energy.js.org/assets/img/Icon%20SD_512.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/Icon%20SD_32.png">
+<link rel="stylesheet" href="/assets/css/energy-practice.css">
+<script defer data-domain="energy.js.org" src="https://stats.corrently.cloud/js/script.js"></script>
+</head>
+<body><nav class="nav"><div class="wrap"><a class="brand" href="/">energy.js.org</a><div class="links"><a href="/recipes/">Rezepte</a><a href="/examples/">Beispiele</a><a href="/mako-notes/">MaKo-Notizen</a><a href="/cet/">CET</a><a href="/lens/">CernionLENS</a><a href="/willi-mako/">Willi-Mako</a><a href="/stack/">Stack</a><a href="/contact/">Kontakt</a></div></div></nav><main><section class="section"><div class="wrap"><div class="crumbs"><a href="/recipes/">Rezepte</a> / Klärfall-Queue</div><h1>Klärfälle als kleine JSON-Queue modellieren</h1><p class="lead">Wenn eine Fachfrage noch nicht entscheidungsreif ist, hilft oft keine größere Antwort, sondern eine kleinere Struktur: Was ist offen, wer prüft, welche Evidenz liegt vor?</p><p>Dieses Rezept abstrahiert das Cernion-Timeline-Muster einer Klärfall-Moderationsqueue in ein neutrales JavaScript-Beispiel. Es nutzt ausschließlich synthetische Daten und trifft keine fachliche oder rechtliche Entscheidung.</p><div class="code"><pre>const queue = [
+  {
+    id: "KF-001",
+    frage: "Ist der Datensatz vollständig genug für die nächste Prüfung?",
+    owner: "Fachteam",
+    datenstand: "synthetisch-2026-08",
+    evidenzstatus: "offen",
+    naechsterSchritt: "fehlende Felder markieren"
+  }
+];
+
+const offene = queue.filter(k => k.evidenzstatus !== "geklärt");
+console.table(offene.map(({ id, frage, owner, naechsterSchritt }) => ({
+  id, frage, owner, naechsterSchritt
+}))); </pre></div><h2>Warum das nützlich ist</h2><ul><li><strong>Reproduzierbar:</strong> Die offene Frage steht als Datenobjekt statt als Chat-Verlauf.</li><li><strong>Prüfbar:</strong> Evidenzstatus und Datenstand sind eigene Felder.</li><li><strong>Unaufgeregt:</strong> Das Script erzeugt eine Arbeitsliste, keine automatische Entscheidung.</li></ul><h2>Grenze</h2><p>Die Queue ist nur ein technisches Strukturmuster. Für echte Marktkommunikations-, Netz- oder Regulierungsfragen müssen Quellen, Zuständigkeiten und Prüfregeln fachlich festgelegt werden.</p><p><a class="btn" href="/examples/klaerfall-queue.js">Beispielskript ansehen</a></p></div></section></main><footer class="footer"><div class="wrap">Open Source · JavaScript · Energiewirtschaft · gepflegt von STROMDAO. Praxisbeispiele verwenden synthetische Daten und ersetzen keine rechtliche Prüfung.</div></footer></body></html>

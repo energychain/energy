@@ -2,9 +2,10 @@ const fs = require('fs');
 const path = require('path');
 const root = path.resolve(__dirname, '..');
 const required = [
-  'index.html', 'recipes/index.html', 'recipes/cet-openwebui-provider.html',
-  'recipes/edifact-segments-to-json.html', 'recipes/willi-mako-question-script.html',
-  'examples/index.html', 'mako-notes/index.html',
+  'index.html', 'recipes/index.html', 'recipes/klaerfall-json-queue.html',
+  'recipes/cet-openwebui-provider.html', 'recipes/edifact-segments-to-json.html',
+  'recipes/willi-mako-question-script.html', 'examples/index.html',
+  'examples/klaerfall-queue.js', 'mako-notes/index.html',
   'cet/index.html', 'lens/index.html', 'willi-mako/index.html', 'stack/index.html',
   'contact/index.html', 'sitemap.xml', 'robots.txt', 'llms.txt', 'feed.xml',
   'assets/css/energy-practice.css'
