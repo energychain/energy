@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="de" data-bs-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Willi-Mako Intent Dry-Run vor dem Tool-Aufruf</title>
+<meta name="description" content="Ein lokales JavaScript-Muster, um eine MaKo-Frage erst als Intent, Grenze und No-Call-Prüfung zu dokumentieren.">
+<link rel="canonical" href="https://energy.js.org/recipes/willi-mako-intent-dry-run.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Willi-Mako Intent Dry-Run vor dem Tool-Aufruf">
+<meta property="og:description" content="Ein lokales JavaScript-Muster, um eine MaKo-Frage erst als Intent, Grenze und No-Call-Prüfung zu dokumentieren.">
+<meta property="og:url" content="https://energy.js.org/recipes/willi-mako-intent-dry-run.html">
+<meta property="og:image" content="https://energy.js.org/assets/img/Icon%20SD_512.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/Icon%20SD_32.png">
+<link rel="stylesheet" href="/assets/css/energy-practice.css">
+<script defer data-domain="energy.js.org" src="https://stats.corrently.cloud/js/script.js"></script>
+</head>
+<body><nav class="nav"><div class="wrap"><a class="brand" href="/">energy.js.org</a><div class="links"><a href="/recipes/">Rezepte</a><a href="/examples/">Beispiele</a><a href="/mako-notes/">MaKo-Notizen</a><a href="/cet/">CET</a><a href="/lens/">CernionLENS</a><a href="/willi-mako/">Willi-Mako</a><a href="/stack/">Stack</a><a href="/contact/">Kontakt</a></div></div></nav><main><section class="section"><div class="wrap"><div class="crumbs"><a href="/recipes/">Rezepte</a> / Willi-Mako Intent Dry-Run</div><h1>Willi-Mako Intent Dry-Run vor dem Tool-Aufruf</h1><p class="lead">Bevor ein Assistent eine MaKo-Frage an ein Tool oder SDK gibt, sollte klar sein: Was ist die Absicht, welche Daten sind erlaubt und wann wird bewusst nicht aufgerufen?</p><div class="grid"><article class="card"><h3>Suchintention</h3><p><strong>Willi-Mako Intent Dry-Run</strong>: eine reproduzierbare Vorprüfung für Fachfragen, die später in einem Case-File, SDK-Aufruf oder Review-Protokoll nachvollziehbar bleiben sollen.</p></article><article class="card"><h3>Public-safe Evidenz</h3><p>Das öffentliche Willi-Mako-Client-README beschreibt den Client als Zugriffsschicht für Case-File-Workflows und grenzt echte Betreiber-, Kunden-, Mandanten- und Produktivdaten für Beispiele ausdrücklich aus.</p></article><article class="card"><h3>CTA</h3><p>Wenn aus dem Dry-Run ein belastbarer Integrationspfad werden soll: <a href="/contact/">Kontakt zu Felix Mertens</a> als fachlichen Ansprechpartner aufnehmen.</p></article></div><h2>Prinzip</h2><p>Der Dry-Run ruft keinen externen Dienst auf. Er erzeugt ein kleines JSON-Envelope mit Intent, erkannten Begriffen, Confidence, No-Call-Gründen und Grenzen. So bleibt die Frage prüfbar, ohne echte Fall- oder Kundendaten in öffentliche Beispiele zu ziehen.</p><div class="code"><pre>node examples/willi-mako-intent-dry-run.js</pre></div><h2>Minimalbeispiel</h2><div class="code"><pre>#!/usr/bin/env node
+/**
+ * Willi-Mako Intent Dry-Run
+ *
+ * This local example does not call willi.cernion.de and does not need a token.
+ * It turns a synthetic market-communication question into a reviewable intent
+ * envelope before any SDK/API call is considered.
+ */
+const question = 'Welche Prüfpunkte helfen bei einer unklaren UTILMD-Antwort?';
+
+const vocabulary = [
+  { tag: 'message_type', match: /UTILMD|MSCONS|APERAK|ORDERS/i },
+  { tag: 'clearing', match: /unklar|Klärfall|Antwort|Fehler|Abweichung/i },
+  { tag: 'master_data', match: /Marktlokation|Messlokation|Stammdaten|MaLo|MeLo/i },
+  { tag: 'deadline', match: /Frist|Termin|24[- ]?Stunden|Lieferantenwechsel/i }
+];
+
+function classifyIntent(text) {
+  const tags = vocabulary.filter((item) =&gt; item.match.test(text)).map((item) =&gt; item.tag);
+  const missing = [];
+  if (!tags.includes('message_type')) missing.push('Nachrichtentyp synthetisch benennen');
+  if (!tags.includes('clearing')) missing.push('Klärziel als Frage formulieren');
+
+  return {
+    surface: 'willi-mako',
+    mode: 'dry-run',
+    intent: tags.includes('clearing') ? 'mako_clearing_question' : 'mako_general_question',
+    tags,
+    confidence: tags.length &gt;= 2 ? 'medium' : 'low',
+    noCallReasons: missing,
+    safeQuestion: text,
+    boundaries: [
+      'synthetische oder generische Angaben verwenden',
+      'keine echten Kundennamen, Lieferstellen, Vertragsdaten oder Mandantenfälle',
+      'Antworten als fachliche Orientierung prüfen, nicht als Rechtsberatung behandeln'
+    ],
+    nextReviewStep: missing.length ? 'Frage vor API/SDK-Aufruf präzisieren' : 'Payload kann mit Review-Hinweis dokumentiert werden'
+  };
+}
+
+console.log(JSON.stringify(classifyIntent(question), null, 2));
+</pre></div><p class="note warn">Dieses Rezept ist technische Orientierung mit synthetischer Frage. Es ist keine Rechtsberatung, keine MaKo-Ausführungszusage und kein Ersatz für fachliche Prüfung im konkreten Fall.</p></div></section></main><footer class="footer"><div class="wrap">Open Source · JavaScript · Energiewirtschaft · gepflegt von STROMDAO. Praxisbeispiele verwenden synthetische Daten und ersetzen keine rechtliche Prüfung.</div></footer></body></html>

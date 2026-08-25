@@ -3,8 +3,15 @@
   <title>energy.js.org Praxisnotizen</title>
   <link href="https://energy.js.org/feed.xml" rel="self" />
   <link href="https://energy.js.org/" />
-  <updated>2026-08-21T10:01:25+02:00</updated>
+  <updated>2026-08-25T10:02:17+02:00</updated>
   <id>https://energy.js.org/</id>
+  <entry>
+    <title>Willi-Mako Intent Dry-Run vor dem Tool-Aufruf</title>
+    <link href="https://energy.js.org/recipes/willi-mako-intent-dry-run.html" />
+    <id>https://energy.js.org/recipes/willi-mako-intent-dry-run.html</id>
+    <updated>2026-08-25T10:02:17+02:00</updated>
+    <summary>Ein lokales JavaScript-Beispiel dokumentiert Intent, Grenzen und No-Call-Gründe für synthetische MaKo-Fragen.</summary>
+  </entry>
   <entry>
     <title>Klärfälle als JSON-Queue modellieren</title>
     <link href="https://energy.js.org/recipes/klaerfall-json-queue.html" />

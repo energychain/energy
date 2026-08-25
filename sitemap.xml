@@ -22,7 +22,7 @@
   </url>
   <url>
     <loc>https://energy.js.org/recipes/willi-mako-question-script.html</loc>
-    <lastmod>2026-08-20</lastmod>
+    <lastmod>2026-08-25</lastmod>
   </url>
   <url>
     <loc>https://energy.js.org/examples/</loc>
@@ -63,5 +63,13 @@
   <url>
     <loc>https://energy.js.org/contact/</loc>
     <lastmod>2026-08-20</lastmod>
+  </url>
+  <url>
+    <loc>https://energy.js.org/recipes/willi-mako-intent-dry-run.html</loc>
+    <lastmod>2026-08-25</lastmod>
+  </url>
+  <url>
+    <loc>https://energy.js.org/examples/willi-mako-intent-dry-run.js</loc>
+    <lastmod>2026-08-25</lastmod>
   </url>
 </urlset>
