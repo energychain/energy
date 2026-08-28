@@ -4,8 +4,10 @@ const root = path.resolve(__dirname, '..');
 const required = [
   'index.html', 'recipes/index.html', 'recipes/klaerfall-json-queue.html',
   'recipes/cet-openwebui-provider.html', 'recipes/edifact-segments-to-json.html',
-  'recipes/willi-mako-question-script.html', 'recipes/willi-mako-intent-dry-run.html', 'examples/index.html',
-  'examples/klaerfall-queue.js', 'examples/willi-mako-intent-dry-run.js', 'mako-notes/index.html',
+  'recipes/willi-mako-question-script.html', 'recipes/willi-mako-intent-dry-run.html',
+  'recipes/lens-synthetic-fixtures.html', 'examples/index.html',
+  'examples/klaerfall-queue.js', 'examples/willi-mako-intent-dry-run.js',
+  'examples/lens-fixture-check.js', 'mako-notes/index.html',
   'cet/index.html', 'lens/index.html', 'willi-mako/index.html', 'stack/index.html',
   'contact/index.html', 'sitemap.xml', 'robots.txt', 'llms.txt', 'feed.xml',
   'assets/css/energy-practice.css'

@@ -3,8 +3,15 @@
   <title>energy.js.org Praxisnotizen</title>
   <link href="https://energy.js.org/feed.xml" rel="self" />
   <link href="https://energy.js.org/" />
-  <updated>2026-08-25T10:02:17+02:00</updated>
+  <updated>2026-08-28T10:01:12+02:00</updated>
   <id>https://energy.js.org/</id>
+  <entry>
+    <title>CernionLENS Fixtures vor der Dokumentanalyse prüfen</title>
+    <link href="https://energy.js.org/recipes/lens-synthetic-fixtures.html" />
+    <id>https://energy.js.org/recipes/lens-synthetic-fixtures.html</id>
+    <updated>2026-08-28T10:01:12+02:00</updated>
+    <summary>Ein lokales JavaScript-Beispiel prüft synthetische Dokument-Fixtures auf Reviewbarkeit und public-safe Grenzen.</summary>
+  </entry>
   <entry>
     <title>Willi-Mako Intent Dry-Run vor dem Tool-Aufruf</title>
     <link href="https://energy.js.org/recipes/willi-mako-intent-dry-run.html" />

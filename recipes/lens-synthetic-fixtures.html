@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="de" data-bs-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CernionLENS Fixtures vor der Dokumentanalyse prüfen</title>
+<meta name="description" content="Ein lokales JavaScript-Muster prüft synthetische CernionLENS-Dokument-Fixtures vor Analyse, Demo oder Review.">
+<link rel="canonical" href="https://energy.js.org/recipes/lens-synthetic-fixtures.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="CernionLENS Fixtures vor der Dokumentanalyse prüfen">
+<meta property="og:description" content="Ein lokales JavaScript-Muster prüft synthetische CernionLENS-Dokument-Fixtures vor Analyse, Demo oder Review.">
+<meta property="og:url" content="https://energy.js.org/recipes/lens-synthetic-fixtures.html">
+<meta property="og:image" content="https://energy.js.org/assets/img/Icon%20SD_512.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/Icon%20SD_32.png">
+<link rel="stylesheet" href="/assets/css/energy-practice.css">
+<script defer data-domain="energy.js.org" src="https://stats.corrently.cloud/js/script.js"></script>
+</head>
+<body><nav class="nav"><div class="wrap"><a class="brand" href="/">energy.js.org</a><div class="links"><a href="/recipes/">Rezepte</a><a href="/examples/">Beispiele</a><a href="/mako-notes/">MaKo-Notizen</a><a href="/cet/">CET</a><a href="/lens/">CernionLENS</a><a href="/willi-mako/">Willi-Mako</a><a href="/stack/">Stack</a><a href="/contact/">Kontakt</a></div></div></nav><main><section class="section"><div class="wrap"><div class="crumbs"><a href="/recipes/">Rezepte</a> / CernionLENS Fixtures</div><h1>CernionLENS Fixtures vor der Dokumentanalyse prüfen</h1><p class="lead">Bevor ein Dokumentbeispiel in eine Analyse, Demo oder Review-Runde geht, sollte das Fixture selbst prüfbar sein: synthetisch, klar begrenzt und mit erwarteten Beobachtungen versehen.</p><div class="grid"><article class="card"><h3>Suchintention</h3><p><strong>CernionLENS synthetic fixture</strong>: ein kleines JSON-Dokument so vorbereiten, dass Dokumentanalyse öffentlich erklärt werden kann, ohne reale Unterlagen oder Kundendaten zu zeigen.</p></article><article class="card"><h3>Public-safe Evidenz</h3><p>Die Cernion-Timeline betont Evidence-Dossiers, offene Annahmen und Entscheidungen beim Menschen. Dieses Rezept übersetzt das in eine einfache Fixture-Vorprüfung.</p></article><article class="card"><h3>CTA</h3><p>Wenn ein synthetisches Fixture nicht reicht und ein echter Prozess geprüft werden soll: <a href="/contact/">Kontakt zu Felix Mertens</a> aufnehmen und Datenraum, Rollen und Freigabegrenzen klären.</p></article></div><h2>Prinzip</h2><p>Das Script ruft keinen externen Dienst auf. Es liest ein synthetisches JSON-Fixture, markiert potenziell riskante Muster, zählt Fragen und erwartete Beobachtungen und erzeugt ein kleines Review-Ergebnis. Erst wenn diese Ebene sauber ist, lohnt sich eine echte Analyseumgebung.</p><div class="code"><pre>node examples/lens-fixture-check.js</pre></div><h2>Minimalbeispiel</h2><div class="code"><pre>const fixture = JSON.parse(fs.readFileSync('examples/lens-synthetic-doc.json', 'utf8'));
+const riskTerms = [/Kundennummer/i, /Zählpunkt/i, /IBAN/i, /Vertrag/i];
+const findings = riskTerms.filter((term) =&gt; term.test(fixture.text || '')).map(String);
+console.log({
+  documentType: fixture.document_type,
+  synthetic: fixture.contains_real_customer_data === false,
+  questionCount: fixture.questions.length,
+  expectedObservationCount: fixture.expected_observations.length,
+  riskTermHits: findings
+});</pre></div><p class="note warn">Dieses Rezept ist technische Orientierung. Es ersetzt keine Datenschutz-, Rechts- oder Fachprüfung und trifft keine Aussage zur Eignung eines konkreten Dokuments.</p></div></section></main><footer class="footer"><div class="wrap">Open Source · JavaScript · Energiewirtschaft · gepflegt von STROMDAO. Praxisbeispiele verwenden synthetische Daten und ersetzen keine rechtliche Prüfung.</div></footer></body></html>
