@@ -3,8 +3,15 @@
   <title>energy.js.org Praxisnotizen</title>
   <link href="https://energy.js.org/feed.xml" rel="self" />
   <link href="https://energy.js.org/" />
-  <updated>2026-08-28T10:01:12+02:00</updated>
+  <updated>2026-09-01T10:00:54+02:00</updated>
   <id>https://energy.js.org/</id>
+  <entry>
+    <title>EDIFACT-Segmente mit einer technischen Checkliste prüfen</title>
+    <link href="https://energy.js.org/recipes/edifact-segment-checklist.html" />
+    <id>https://energy.js.org/recipes/edifact-segment-checklist.html</id>
+    <updated>2026-09-01T10:00:54+02:00</updated>
+    <summary>Ein kleines JavaScript-Beispiel prüft synthetische EDIFACT-Segmente vor der fachlichen Interpretation.</summary>
+  </entry>
   <entry>
     <title>CernionLENS Fixtures vor der Dokumentanalyse prüfen</title>
     <link href="https://energy.js.org/recipes/lens-synthetic-fixtures.html" />

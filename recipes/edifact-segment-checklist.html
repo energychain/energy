@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="de" data-bs-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EDIFACT-Segmente mit einer technischen Checkliste prüfen</title>
+<meta name="description" content="Ein JavaScript-Rezept prüft synthetische EDIFACT-Segmente auf grobe Struktur, Umschlag und Wiederholungen – ohne fachliche Interpretation.">
+<link rel="canonical" href="https://energy.js.org/recipes/edifact-segment-checklist.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="EDIFACT-Segmente mit einer technischen Checkliste prüfen">
+<meta property="og:description" content="Ein JavaScript-Rezept prüft synthetische EDIFACT-Segmente auf grobe Struktur, Umschlag und Wiederholungen – ohne fachliche Interpretation.">
+<meta property="og:url" content="https://energy.js.org/recipes/edifact-segment-checklist.html">
+<meta property="og:image" content="https://energy.js.org/assets/img/Icon%20SD_512.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/Icon%20SD_32.png">
+<link rel="stylesheet" href="/assets/css/energy-practice.css">
+<script defer data-domain="energy.js.org" src="https://stats.corrently.cloud/js/script.js"></script>
+</head>
+<body><nav class="nav"><div class="wrap"><a class="brand" href="/">energy.js.org</a><div class="links"><a href="/recipes/">Rezepte</a><a href="/examples/">Beispiele</a><a href="/mako-notes/">MaKo-Notizen</a><a href="/cet/">CET</a><a href="/lens/">CernionLENS</a><a href="/willi-mako/">Willi-Mako</a><a href="/stack/">Stack</a><a href="/contact/">Kontakt</a></div></div></nav><main><section class="section"><div class="wrap"><div class="crumbs"><a href="/recipes/">Rezepte</a> / EDIFACT-Checkliste</div><h1>EDIFACT-Segmente mit einer technischen Checkliste prüfen</h1><p class="lead">Bevor ein MaKo-Team über fachliche Bedeutung spricht, lohnt sich ein kleiner neutraler Vorflug: Ist die Nachricht überhaupt als Segmentfolge prüfbar?</p><div class="grid"><article class="card"><h3>Was wird geprüft?</h3><p>Das Beispiel schaut nur auf technische Struktur: Segment-Ende, Start-/Ende-Tags, Segmentanzahl aus <code>UNT</code>, doppelte Referenzen und auffällige Leersegmente.</p></article><article class="card"><h3>Was wird nicht geprüft?</h3><p>Keine BDEW-Auslegung, keine Fristbewertung, keine Prozessentscheidung und keine Aussage, ob eine Nachricht fachlich korrekt ist.</p></article></div><div class="code"><pre>const result = checklist(syntheticMessage);
+console.log(result.ok ? "technisch prüfbar" : "prüfen", result.findings);</pre></div><p>Der Nutzen liegt in der Trennung: Erst eine reproduzierbare technische Sicht erzeugen, dann mit Fachwissen, Anwendungshandbuch oder Tooling weiterarbeiten. So bleibt klar, ob ein Problem aus Syntax, Datenbezug oder Prozesslogik kommt.</p><p><a class="btn" href="/examples/edifact-segment-checklist.js">Beispielskript ansehen</a> <a class="btn" href="/recipes/edifact-segments-to-json.html">Segmentierung zuerst verstehen</a></p></div></section></main><footer class="footer"><div class="wrap">Open Source · JavaScript · Energiewirtschaft · gepflegt von STROMDAO. Praxisbeispiele verwenden synthetische Daten und ersetzen keine rechtliche Prüfung.</div></footer></body></html>
