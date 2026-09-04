@@ -3,8 +3,15 @@
   <title>energy.js.org Praxisnotizen</title>
   <link href="https://energy.js.org/feed.xml" rel="self" />
   <link href="https://energy.js.org/" />
-  <updated>2026-09-01T10:00:54+02:00</updated>
+  <updated>2026-09-04T10:03:16+02:00</updated>
   <id>https://energy.js.org/</id>
+  <entry>
+    <title>Evidence-Dossier als JSON-Status vorbereiten</title>
+    <link href="https://energy.js.org/recipes/evidence-dossier-status.html" />
+    <id>https://energy.js.org/recipes/evidence-dossier-status.html</id>
+    <updated>2026-09-04T10:03:16+02:00</updated>
+    <summary>Ein synthetisches JavaScript-Beispiel macht Evidenz, Annahmen und offene Prüfpunkte als JSON-Status sichtbar.</summary>
+  </entry>
   <entry>
     <title>EDIFACT-Segmente mit einer technischen Checkliste prüfen</title>
     <link href="https://energy.js.org/recipes/edifact-segment-checklist.html" />

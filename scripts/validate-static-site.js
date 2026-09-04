@@ -3,10 +3,10 @@ const path = require('path');
 const root = path.resolve(__dirname, '..');
 const required = [
   'index.html', 'recipes/index.html', 'recipes/klaerfall-json-queue.html',
-  'recipes/cet-openwebui-provider.html', 'recipes/edifact-segment-checklist.html', 'recipes/edifact-segments-to-json.html',
+  'recipes/cet-openwebui-provider.html', 'recipes/evidence-dossier-status.html', 'recipes/edifact-segment-checklist.html', 'recipes/edifact-segments-to-json.html',
   'recipes/willi-mako-question-script.html', 'recipes/willi-mako-intent-dry-run.html',
   'recipes/lens-synthetic-fixtures.html', 'examples/index.html',
-  'examples/klaerfall-queue.js', 'examples/edifact-segment-checklist.js', 'examples/willi-mako-intent-dry-run.js',
+  'examples/klaerfall-queue.js', 'examples/evidence-dossier-status.js', 'examples/edifact-segment-checklist.js', 'examples/willi-mako-intent-dry-run.js',
   'examples/lens-fixture-check.js', 'mako-notes/index.html',
   'cet/index.html', 'lens/index.html', 'willi-mako/index.html', 'stack/index.html',
   'contact/index.html', 'sitemap.xml', 'robots.txt', 'llms.txt', 'feed.xml',

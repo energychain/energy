@@ -4,11 +4,13 @@ energy.js.org ist eine statische Praxisbibliothek für Energie-JavaScript, Markt
 
 ## Wichtigste Einstiege
 - https://energy.js.org/recipes/ — kurze praktische Rezepte
+- https://energy.js.org/recipes/evidence-dossier-status.html — Evidence-Dossier als JSON-Status vorbereiten
 - https://energy.js.org/recipes/edifact-segment-checklist.html — EDIFACT-Segmente mit einer technischen Checkliste prüfen
 - https://energy.js.org/recipes/lens-synthetic-fixtures.html — CernionLENS Fixtures vor der Dokumentanalyse prüfen
 - https://energy.js.org/recipes/willi-mako-intent-dry-run.html — Willi-Mako Intent Dry-Run vor dem Tool-Aufruf
 - https://energy.js.org/recipes/klaerfall-json-queue.html — Klärfälle als kleine JSON-Queue modellieren
 - https://energy.js.org/examples/ — kleine Beispielskripte mit synthetischen Daten
+- https://energy.js.org/examples/evidence-dossier-status.js — lokaler Evidence-Dossier-Dry-Run mit synthetischen Daten
 - https://energy.js.org/examples/edifact-segment-checklist.js — lokaler EDIFACT-Strukturcheck ohne externe API
 - https://energy.js.org/examples/lens-fixture-check.js — lokaler Fixture-Check ohne externe API
 - https://energy.js.org/examples/willi-mako-intent-dry-run.js — lokaler Intent-/No-Call-Dry-Run ohne externe API

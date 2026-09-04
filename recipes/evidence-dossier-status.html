@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="de" data-bs-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Evidence-Dossier als JSON-Status vorbereiten</title>
+<meta name="description" content="Ein public-safe JavaScript-Rezept, um Evidenz, Annahmen und offene Prüfpunkte vor einer fachlichen Entscheidung sichtbar zu machen.">
+<link rel="canonical" href="https://energy.js.org/recipes/evidence-dossier-status.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Evidence-Dossier als JSON-Status vorbereiten">
+<meta property="og:description" content="Ein lokales JavaScript-Muster für prüfbare Arbeitslagen mit synthetischen Daten.">
+<meta property="og:url" content="https://energy.js.org/recipes/evidence-dossier-status.html">
+<meta property="og:image" content="https://energy.js.org/assets/img/Icon%20SD_512.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/Icon%20SD_32.png">
+<link rel="stylesheet" href="/assets/css/energy-practice.css">
+<script defer data-domain="energy.js.org" src="https://stats.corrently.cloud/js/script.js"></script>
+</head>
+<body><nav class="nav"><div class="wrap"><a class="brand" href="/">energy.js.org</a><div class="links"><a href="/recipes/">Rezepte</a><a href="/examples/">Beispiele</a><a href="/mako-notes/">MaKo-Notizen</a><a href="/cet/">CET</a><a href="/lens/">CernionLENS</a><a href="/willi-mako/">Willi-Mako</a><a href="/stack/">Stack</a><a href="/contact/">Kontakt</a></div></div></nav><main><section class="section"><div class="wrap"><div class="crumbs"><a href="/recipes/">Rezepte</a> / Evidence-Dossier</div><h1>Evidence-Dossier als JSON-Status vorbereiten</h1><p class="lead">Agentische Energiearbeit beginnt nicht mit der automatischen Entscheidung. Sie beginnt mit einer belastbaren Arbeitslage: Welche Evidenz liegt vor, welche Annahmen sind offen und wo bleibt ein menschlicher Prüfpunkt?</p><div class="grid"><article class="card"><h3>Suchintention</h3><p><strong>Evidence-Dossier JavaScript</strong>: ein kleines, lokales Muster für Teams, die Fachfragen erst als prüfbaren Status erfassen möchten, bevor ein Tool oder eine Entscheidung ins Spiel kommt.</p></article><article class="card"><h3>Public-safe Evidenz</h3><p>Die Cernion-Timeline vom 1. September 2026 formuliert die öffentliche These, dass agentische Arbeit zuerst eine belastbare Evidenzlage braucht. Das CET-README beschreibt Dossiers, Evidenz, Gaps und HITL-Grenzen als Kernmuster.</p></article><article class="card"><h3>CTA</h3><p>Wenn aus dem Muster ein kontrollierter Integrationspfad werden soll: <a href="/contact/">Felix Mertens</a> kann die fachliche Einordnung übernehmen.</p></article></div><h2>Prinzip</h2><p>Das Beispiel erzeugt aus synthetischen Daten eine kleine Statuskarte. Es zählt Evidenz, listet offene Annahmen und gibt bewusst <em>nicht entscheidungsreif</em> zurück, solange Prüfpunkte fehlen.</p><div class="code"><pre>node examples/evidence-dossier-status.js</pre></div><h2>Minimalbeispiel</h2><div class="code"><pre>const dossier = {
+  id: "ED-001",
+  thema: "Synthetische Netzanschluss-Prüffrage",
+  evidenzen: [
+    { id: "EV-1", quelle: "synthetisches-formular", status: "vorhanden" },
+    { id: "EV-2", quelle: "annahmen-notiz", status: "offen" }
+  ],
+  annahmen: [
+    { id: "A-1", text: "Beispielwert gesetzt", status: "prüfen" }
+  ]
+};
+
+const openEvidence = dossier.evidenzen.filter((item) =&gt; item.status !== "vorhanden");
+const openAssumptions = dossier.annahmen.filter((item) =&gt; item.status !== "bestätigt");
+
+console.log({
+  dossierId: dossier.id,
+  decisionReadiness: openEvidence.length || openAssumptions.length
+    ? "nicht-entscheidungsreif"
+    : "reviewbereit",
+  openEvidence: openEvidence.map((item) =&gt; item.id),
+  openAssumptions: openAssumptions.map((item) =&gt; item.id)
+});</pre></div><h2>Warum das nützlich ist</h2><ul><li><strong>Prüfbar:</strong> Quellenstatus und Annahmen werden als Daten geführt, nicht nur als Fließtext.</li><li><strong>LLM-sicherer:</strong> Ein Agent kann auf offene Evidenz verweisen, statt fehlende Fakten zu ergänzen.</li><li><strong>Governance-tauglich:</strong> Das Ergebnis bleibt ein Arbeitsstand und keine automatische Zusage.</li></ul><p class="note warn">Dieses Rezept ist technische Orientierung mit synthetischen Daten. Es ist keine Rechtsberatung, keine Netzanschluss-, Vertrags- oder Prozesszusage und ersetzt keine fachliche Prüfung.</p><p><a class="btn" href="/examples/evidence-dossier-status.js">Beispielskript ansehen</a></p></div></section></main><footer class="footer"><div class="wrap">Open Source · JavaScript · Energiewirtschaft · gepflegt von STROMDAO. Praxisbeispiele verwenden synthetische Daten und ersetzen keine rechtliche Prüfung.</div></footer></body></html>
