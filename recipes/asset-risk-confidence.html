@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="de" data-bs-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Asset-Risiko-Confidence als JSON prüfen</title>
+<meta name="description" content="Ein public-safe JavaScript-Rezept, um synthetische Asset-Hinweise, Confidence Scores und nächste Klärungsschritte sichtbar zu machen.">
+<link rel="canonical" href="https://energy.js.org/recipes/asset-risk-confidence.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Asset-Risiko-Confidence als JSON prüfen">
+<meta property="og:description" content="Ein lokales JavaScript-Muster für Asset-Risiko-Hinweise mit synthetischen Daten.">
+<meta property="og:url" content="https://energy.js.org/recipes/asset-risk-confidence.html">
+<meta property="og:image" content="https://energy.js.org/assets/img/Icon%20SD_512.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/Icon%20SD_32.png">
+<link rel="stylesheet" href="/assets/css/energy-practice.css">
+<script defer data-domain="energy.js.org" src="https://stats.corrently.cloud/js/script.js"></script>
+</head>
+<body><nav class="nav"><div class="wrap"><a class="brand" href="/">energy.js.org</a><div class="links"><a href="/recipes/">Rezepte</a><a href="/examples/">Beispiele</a><a href="/mako-notes/">MaKo-Notizen</a><a href="/cet/">CET</a><a href="/lens/">CernionLENS</a><a href="/willi-mako/">Willi-Mako</a><a href="/stack/">Stack</a><a href="/contact/">Kontakt</a></div></div></nav><main><section class="section"><div class="wrap"><div class="crumbs"><a href="/recipes/">Rezepte</a> / Asset-Risiko</div><h1>Asset-Risiko-Confidence als JSON prüfen</h1><p class="lead">Historisch gewachsene Asset-Daten sind selten sofort entscheidungsreif. Dieses Rezept zeigt, wie ein kleines JavaScript-Script synthetische Hinweise, Confidence Scores und nächste Klärungsschritte trennt.</p><div class="grid"><article class="card"><h3>Suchintention</h3><p><strong>Asset Risiko Confidence Score JavaScript</strong>: Teams möchten Datensätze nicht automatisch bewerten, sondern Plausibilitätslücken und Prüfschritte sichtbar machen.</p></article><article class="card"><h3>Public-safe Evidenz</h3><p>Die Cernion-Timeline beschreibt den Asset-Risiko-Scan als kontrollierten, read-only Einstieg: Datenlücken, mögliche Betriebs- oder Investitionsrisiken und nächste Klärungsschritte werden als Dossier-Aufgabe geführt.</p></article><article class="card"><h3>CTA</h3><p>Wenn aus dem Muster ein belastbarer Fachprozess werden soll: <a href="/contact/">Felix Mertens</a> kann den Übergang von Demo-Logik zu geprüfter Arbeitslage einordnen.</p></article></div><h2>Prinzip</h2><p>Das Beispiel verwendet keine echten Netzdaten. Es markiert synthetische Assets mit Confidence-Werten, trennt Datenqualität von Risikoannahmen und gibt nur einen nächsten sicheren Prüfschritt aus.</p><div class="code"><pre>node examples/asset-risk-confidence.js</pre></div><h2>Minimalbeispiel</h2><div class="code"><pre>const assets = [
+  { id: "A-101", typ: "station", confidence: 0.92, hinweise: [] },
+  { id: "A-204", typ: "leitung", confidence: 0.58, hinweise: ["baujahr-fehlt"] }
+];
+
+const findings = assets.map((asset) =&gt; ({
+  assetId: asset.id,
+  status: asset.confidence &gt;= 0.8 ? "plausibel" : "klaerbedarf",
+  nextStep: asset.confidence &gt;= 0.8
+    ? "als Arbeitsannahme dokumentieren"
+    : "Datenlücke prüfen, bevor Risiko bewertet wird"
+}));
+
+console.log(findings);</pre></div><h2>Warum das nützlich ist</h2><ul><li><strong>Datenqualität vor Risiko:</strong> Ein niedriger Confidence-Wert ist noch kein Schadensnachweis, sondern ein Hinweis auf Klärbedarf.</li><li><strong>Auditierbar:</strong> Jede Auffälligkeit bekommt eine Grenze und einen nächsten Schritt.</li><li><strong>LLM-sicherer:</strong> Agenten können auf fehlende Evidenz verweisen, statt Risiken zu erfinden.</li></ul><p class="note warn">Dieses Rezept ist technische Orientierung mit synthetischen Daten. Es ist keine Betreiberbewertung, keine Sicherheitsanalyse, keine Investitionsempfehlung und ersetzt keine fachliche Prüfung.</p><p><a class="btn" href="/examples/asset-risk-confidence.js">Beispielskript ansehen</a></p></div></section></main><footer class="footer"><div class="wrap">Open Source · JavaScript · Energiewirtschaft · gepflegt von STROMDAO. Praxisbeispiele verwenden synthetische Daten und ersetzen keine rechtliche Prüfung.</div></footer></body></html>
