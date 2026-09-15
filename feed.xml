@@ -3,8 +3,15 @@
   <title>energy.js.org Praxisnotizen</title>
   <link href="https://energy.js.org/feed.xml" rel="self" />
   <link href="https://energy.js.org/" />
-  <updated>2026-09-08T10:00:00+02:00</updated>
+  <updated>2026-09-15T10:00:00+02:00</updated>
   <id>https://energy.js.org/</id>
+  <entry>
+    <title>MCP Tool-Manifest vor Agentenaufrufen prüfen</title>
+    <link href="https://energy.js.org/recipes/mcp-tool-manifest-dry-run.html" />
+    <id>https://energy.js.org/recipes/mcp-tool-manifest-dry-run.html</id>
+    <updated>2026-09-15T10:00:00+02:00</updated>
+    <summary>Ein synthetisches JavaScript-Beispiel prüft Tool-Zweck, Datenklasse und No-Call-Regeln vor einem Agentenaufruf.</summary>
+  </entry>
   <entry>
     <title>Asset-Risiko-Confidence als JSON prüfen</title>
     <link href="https://energy.js.org/recipes/asset-risk-confidence.html" />

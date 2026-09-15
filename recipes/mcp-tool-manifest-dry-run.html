@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="de" data-bs-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MCP Tool-Manifest vor Agentenaufrufen prüfen</title>
+<meta name="description" content="Ein public-safe JavaScript-Rezept, um synthetische MCP-Tool-Manifeste vor Energie-Agentenaufrufen auf Zweck, Grenze und No-Call-Regeln zu prüfen.">
+<link rel="canonical" href="https://energy.js.org/recipes/mcp-tool-manifest-dry-run.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="MCP Tool-Manifest vor Agentenaufrufen prüfen">
+<meta property="og:description" content="Ein lokales JavaScript-Muster für MCP-Tool-Grenzen mit synthetischen Energie-Use-Cases.">
+<meta property="og:url" content="https://energy.js.org/recipes/mcp-tool-manifest-dry-run.html">
+<meta property="og:image" content="https://energy.js.org/assets/img/Icon%20SD_512.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/Icon%20SD_32.png">
+<link rel="stylesheet" href="/assets/css/energy-practice.css">
+<script defer data-domain="energy.js.org" src="https://stats.corrently.cloud/js/script.js"></script>
+</head>
+<body><nav class="nav"><div class="wrap"><a class="brand" href="/">energy.js.org</a><div class="links"><a href="/recipes/">Rezepte</a><a href="/examples/">Beispiele</a><a href="/mako-notes/">MaKo-Notizen</a><a href="/cet/">CET</a><a href="/lens/">CernionLENS</a><a href="/willi-mako/">Willi-Mako</a><a href="/stack/">Stack</a><a href="/contact/">Kontakt</a></div></div></nav><main><section class="section"><div class="wrap"><div class="crumbs"><a href="/recipes/">Rezepte</a> / MCP Tool-Manifest</div><h1>MCP Tool-Manifest vor Agentenaufrufen prüfen</h1><p class="lead">Bevor ein Energie-Agent ein Tool aufruft, sollte sichtbar sein, wofür das Tool gedacht ist, welche Eingaben erlaubt sind und wann bewusst kein Aufruf stattfinden darf. Dieses Rezept modelliert diese Grenze als kleines JavaScript-Dry-Run.</p><div class="grid"><article class="card"><h3>Suchintention</h3><p><strong>MCP Tool Manifest Energie JavaScript</strong>: Teams möchten Agenten nicht blind mit Fachtools verbinden, sondern Zweck, Datenklasse und No-Call-Regeln vor dem ersten Aufruf prüfen.</p></article><article class="card"><h3>Public-safe Evidenz</h3><p>Cernion beschreibt öffentliche REST/MCP-Integrationen und kontrollierte API-Token als Einstieg. Für eine Praxisbibliothek reicht ein synthetisches Manifest, das keine echten Systeme oder Zugangsdaten enthält.</p></article><article class="card"><h3>CTA</h3><p>Wenn aus dem Manifest ein geprüfter Integrationspfad werden soll: <a href="/contact/">Felix Mertens</a> kann die Grenze zwischen Demo, Test-Token und produktiver Fachintegration einordnen.</p></article></div><h2>Prinzip</h2><p>Das Beispiel ruft kein Tool auf. Es prüft nur, ob ein synthetischer Request zum erlaubten Zweck, zur Datenklasse und zu den No-Call-Regeln des Manifests passt.</p><div class="code"><pre>node examples/mcp-tool-manifest-dry-run.js</pre></div><h2>Minimalbeispiel</h2><div class="code"><pre>const manifest = {
+  tool: "synthetic.grid.asset.lookup",
+  purpose: "read_only_asset_context",
+  allowedData: ["synthetic", "anonymized"],
+  noCallIf: ["contains_personal_data", "asks_for_binding_decision"]
+};
+
+const request = {
+  purpose: "read_only_asset_context",
+  dataClass: "synthetic",
+  flags: ["demo"]
+};
+
+const allowed = manifest.purpose === request.purpose
+  &amp;&amp; manifest.allowedData.includes(request.dataClass)
+  &amp;&amp; !request.flags.some((flag) =&gt; manifest.noCallIf.includes(flag));
+
+console.log({ allowed });</pre></div><h2>Warum das nützlich ist</h2><ul><li><strong>Tool-Grenzen vor Tool-Aufruf:</strong> Der Dry-Run dokumentiert, wann ein Agent bewusst nicht weitergeht.</li><li><strong>Public-safe:</strong> Manifest und Request sind synthetisch; es gibt keine Tokens, Kundendaten oder Systemverbindungen.</li><li><strong>Auditierbar:</strong> Der Output erklärt Grund, Status und nächsten sicheren Schritt statt nur true/false.</li></ul><p class="note warn">Dieses Rezept ist technische Orientierung mit synthetischen Daten. Es ist keine Freigabe für produktive Systemanbindungen, keine Rechts- oder Prozesszusage und ersetzt keine fachliche Prüfung.</p><p><a class="btn" href="/examples/mcp-tool-manifest-dry-run.js">Beispielskript ansehen</a></p></div></section></main><footer class="footer"><div class="wrap">Open Source · JavaScript · Energiewirtschaft · gepflegt von STROMDAO. Praxisbeispiele verwenden synthetische Daten und ersetzen keine rechtliche Prüfung.</div></footer></body></html>
