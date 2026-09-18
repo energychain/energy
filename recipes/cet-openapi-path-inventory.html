@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="de" data-bs-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CET OpenAPI öffentlich vorsortieren</title>
+<meta name="description" content="Ein public-safe JavaScript-Rezept, um die öffentliche Cernion OpenAPI nach Pfaden, Methoden und Tags zu zählen, bevor ein Token- oder Integrationspfad entsteht.">
+<link rel="canonical" href="https://energy.js.org/recipes/cet-openapi-path-inventory.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="CET OpenAPI öffentlich vorsortieren">
+<meta property="og:description" content="Ein lokales JavaScript-Muster für die read-only Orientierung in der öffentlichen Cernion OpenAPI.">
+<meta property="og:url" content="https://energy.js.org/recipes/cet-openapi-path-inventory.html">
+<meta property="og:image" content="https://energy.js.org/assets/img/Icon%20SD_512.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/Icon%20SD_32.png">
+<link rel="stylesheet" href="/assets/css/energy-practice.css">
+<script defer data-domain="energy.js.org" src="https://stats.corrently.cloud/js/script.js"></script>
+</head>
+<body><nav class="nav"><div class="wrap"><a class="brand" href="/">energy.js.org</a><div class="links"><a href="/recipes/">Rezepte</a><a href="/examples/">Beispiele</a><a href="/mako-notes/">MaKo-Notizen</a><a href="/cet/">CET</a><a href="/lens/">CernionLENS</a><a href="/willi-mako/">Willi-Mako</a><a href="/stack/">Stack</a><a href="/contact/">Kontakt</a></div></div></nav><main><section class="section"><div class="wrap"><div class="crumbs"><a href="/recipes/">Rezepte</a> / CET OpenAPI Inventar</div><h1>CET OpenAPI öffentlich vorsortieren</h1><p class="lead">Bevor ein CET-Token oder ein MCP-/REST-Test vorbereitet wird, hilft ein nüchternes Inventar: Welche Pfade gibt es öffentlich im OpenAPI-Schema, welche Methoden tauchen auf und welche Themen-Tags dominieren?</p><div class="grid"><article class="card"><h3>Suchintention</h3><p><strong>Cernion OpenAPI JavaScript auswerten</strong>: Entwickler:innen wollen erst verstehen, welche read-only Orientierung die öffentliche Swagger/OpenAPI liefert, ohne sofort Zugangsdaten oder Fachaufrufe zu verwenden.</p></article><article class="card"><h3>Public-safe Evidenz</h3><p>cernion.de verweist auf Swagger UI und OpenAPI JSON als technische Referenz. Dieses Rezept nutzt nur die öffentliche Schema-Datei und erzeugt ein lokales Inventar ohne Bearer Token.</p></article><article class="card"><h3>CTA</h3><p>Wenn aus der Inventarliste ein echter Testpfad werden soll: <a href="/contact/">Felix Mertens</a> kann klären, ob Swagger-Orientierung, CET-Token oder fachliche Sichtung der nächste sichere Schritt ist.</p></article></div><h2>Prinzip</h2><p>Das Beispiel liest das OpenAPI JSON, zählt Pfade und Operationen, gruppiert Tags und markiert vorsichtig, welche Operationen rein methodisch nach <code>GET</code> aussehen. Es führt keine geschützten Endpunkte aus.</p><div class="code"><pre>node examples/cet-openapi-path-inventory.js</pre></div><h2>Minimalbeispiel</h2><div class="code"><pre>const specUrl = "https://api.cernion.de/api/openapi.json";
+const spec = await fetch(specUrl).then((response) =&gt; response.json());
+const operations = Object.entries(spec.paths).flatMap(([path, methods]) =&gt;
+  Object.entries(methods).map(([method, operation]) =&gt; ({
+    method: method.toUpperCase(),
+    path,
+    tags: operation.tags || ["untagged"]
+  }))
+);
+
+console.log({
+  title: spec.info?.title,
+  version: spec.info?.version,
+  paths: Object.keys(spec.paths).length,
+  operations: operations.length,
+  getOperations: operations.filter((op) =&gt; op.method === "GET").length
+});</pre></div><h2>Warum das nützlich ist</h2><ul><li><strong>Orientierung vor Token:</strong> Teams sehen zuerst Themenbereiche und Methodenmuster, bevor sie Auth, Daten oder Integration anfassen.</li><li><strong>Public-safe:</strong> Es werden keine Kundendaten, keine Secrets und keine geschützten Fachaufrufe verarbeitet.</li><li><strong>Reproduzierbar:</strong> Der Output nennt Schema-Version, Pfadzahl, Operationen und Top-Tags als kleines Prüfprotokoll.</li></ul><p class="note warn">GET im OpenAPI-Schema bedeutet nicht automatisch fachliche Freigabe oder produktive Leseberechtigung. Dieses Rezept ist technische Orientierung und ersetzt keinen Token-, Datenschutz-, Vertrags- oder Fachprozess-Check.</p><p><a class="btn" href="/examples/cet-openapi-path-inventory.js">Beispielskript ansehen</a></p></div></section></main><footer class="footer"><div class="wrap">Open Source · JavaScript · Energiewirtschaft · gepflegt von STROMDAO. Praxisbeispiele verwenden synthetische Daten und ersetzen keine rechtliche Prüfung.</div></footer></body></html>

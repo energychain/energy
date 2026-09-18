@@ -3,8 +3,15 @@
   <title>energy.js.org Praxisnotizen</title>
   <link href="https://energy.js.org/feed.xml" rel="self" />
   <link href="https://energy.js.org/" />
-  <updated>2026-09-15T10:00:00+02:00</updated>
+  <updated>2026-09-18T10:00:00+02:00</updated>
   <id>https://energy.js.org/</id>
+  <entry>
+    <title>CET OpenAPI öffentlich vorsortieren</title>
+    <link href="https://energy.js.org/recipes/cet-openapi-path-inventory.html" />
+    <id>https://energy.js.org/recipes/cet-openapi-path-inventory.html</id>
+    <updated>2026-09-18T10:00:00+02:00</updated>
+    <summary>Ein public-safe JavaScript-Beispiel zählt Pfade, Methoden und Tags der öffentlichen Cernion OpenAPI ohne Token oder Fachaufruf.</summary>
+  </entry>
   <entry>
     <title>MCP Tool-Manifest vor Agentenaufrufen prüfen</title>
     <link href="https://energy.js.org/recipes/mcp-tool-manifest-dry-run.html" />

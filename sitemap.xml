@@ -113,4 +113,12 @@
     <loc>https://energy.js.org/examples/mcp-tool-manifest-dry-run.js</loc>
     <lastmod>2026-09-15</lastmod>
   </url>
+  <url>
+    <loc>https://energy.js.org/recipes/cet-openapi-path-inventory.html</loc>
+    <lastmod>2026-09-18</lastmod>
+  </url>
+  <url>
+    <loc>https://energy.js.org/examples/cet-openapi-path-inventory.js</loc>
+    <lastmod>2026-09-18</lastmod>
+  </url>
 </urlset>
