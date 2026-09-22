@@ -20,5 +20,6 @@ Examples must use synthetic data. Do not publish customer data, secrets, private
 
 ```bash
 npm run validate
+node examples/cet-capability-boundary-matrix.js
 node examples/edifact-segments.js
 ```

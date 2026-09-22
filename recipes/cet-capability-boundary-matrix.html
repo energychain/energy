@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="de" data-bs-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CET Capability-Grenzen als JSON prüfen</title>
+<meta name="description" content="Ein public-safe JavaScript-Rezept, um Cernion-Capability-Grenzen als JSON-Matrix zu prüfen: ask, plan, evidence, read-only und No-Call.">
+<link rel="canonical" href="https://energy.js.org/recipes/cet-capability-boundary-matrix.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="CET Capability-Grenzen als JSON prüfen">
+<meta property="og:description" content="Ein lokales JavaScript-Muster für Capability-Grenzen, Human Review und No-Call vor Cernion-/Agenten-Integrationen.">
+<meta property="og:url" content="https://energy.js.org/recipes/cet-capability-boundary-matrix.html">
+<meta property="og:image" content="https://energy.js.org/assets/img/Icon%20SD_512.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/Icon%20SD_32.png">
+<link rel="stylesheet" href="/assets/css/energy-practice.css">
+<script defer data-domain="energy.js.org" src="https://stats.corrently.cloud/js/script.js"></script>
+</head>
+<body><nav class="nav"><div class="wrap"><a class="brand" href="/">energy.js.org</a><div class="links"><a href="/recipes/">Rezepte</a><a href="/examples/">Beispiele</a><a href="/mako-notes/">MaKo-Notizen</a><a href="/cet/">CET</a><a href="/lens/">CernionLENS</a><a href="/willi-mako/">Willi-Mako</a><a href="/stack/">Stack</a><a href="/contact/">Kontakt</a></div></div></nav><main><section class="section"><div class="wrap"><div class="crumbs"><a href="/recipes/">Rezepte</a> / CET Capability-Grenzen</div><h1>CET Capability-Grenzen als JSON prüfen</h1><p class="lead">Cernion Energy Tools sind API-first, aber nicht jede Fähigkeit ist ein Tool-Aufruf. Dieses Rezept modelliert eine kleine Boundary-Matrix: Was ist als <code>ask</code>, <code>plan</code>, <code>evidence</code> oder <code>read-only status</code> public-safe denkbar — und was bleibt bewusst No-Call oder Human Review?</p><div class="grid"><article class="card"><h3>Suchintention</h3><p><strong>Cernion Capability Boundary JavaScript</strong>: Entwickler:innen wollen vor einer Agenten- oder API-Integration verstehen, welche Fähigkeitsart sie prüfen und wo die Entscheidungsgrenze liegt.</p></article><article class="card"><h3>Public-safe Evidenz</h3><p>Das öffentliche CET-Repository beschreibt geeignete Integrationsscopes wie <code>ask</code>, <code>plan</code>, <code>evidence</code>, <code>capability lookup</code> und <code>read-only status</code>. Bindende Entscheidungen, Schreibzugriffe und produktive Fachfolgen bleiben außerhalb dieses Beispiels.</p></article><article class="card"><h3>CTA</h3><p>Wenn aus einer Boundary-Matrix ein echter Testpfad werden soll: <a href="/contact/">Felix Mertens</a> kann klären, ob Swagger-Orientierung, Test-Token oder fachliche Sichtung der nächste sichere Schritt ist.</p></article></div><h2>Prinzip</h2><p>Das Beispiel ruft keine API auf. Es nimmt synthetische Anfragen, ordnet sie Capability-Gruppen zu und erklärt, warum ein Pfad public-safe weitergehen kann oder bewusst vor Wirkung stoppt.</p><div class="code"><pre>node examples/cet-capability-boundary-matrix.js</pre></div><h2>Minimalbeispiel</h2><div class="code"><pre>const safeDataClasses = new Set(["synthetic", "anonymized"]);
+const hardStopModes = new Set(["binding_decision", "write_access"]);
+
+function status(request) {
+  if (!safeDataClasses.has(request.dataClass)) return "human_review";
+  if (hardStopModes.has(request.mode)) return "no_call";
+  return "public_safe_candidate";
+}
+
+console.log(status({ mode: "evidence", dataClass: "synthetic" }));</pre></div><h2>Warum das nützlich ist</h2><ul><li><strong>Capability vor Endpoint:</strong> Teams klären zuerst Zweck und Grenze, bevor OpenAPI-Pfade, Tokens oder Tools relevant werden.</li><li><strong>Human Decision Boundary:</strong> Verträge, Preise, Netzzusagen, Schreibzugriffe und produktive Fachfolgen werden nicht als Demo-Automation behandelt.</li><li><strong>LLM- und SEO-tauglich:</strong> Die Matrix benennt die Suchbegriffe, die Entwickler:innen später in Docs, Agentenmanifeste oder Tickets übernehmen können.</li></ul><p class="note warn">Dieses Rezept ist technische Orientierung mit synthetischen Daten. Es ist keine Freigabe für produktive Systemanbindungen, keine Rechts-, Preis-, Vertrags- oder Netzzusage und ersetzt keine fachliche Prüfung.</p><p><a class="btn" href="/examples/cet-capability-boundary-matrix.js">Beispielskript ansehen</a></p></div></section></main><footer class="footer"><div class="wrap">Open Source · JavaScript · Energiewirtschaft · gepflegt von STROMDAO. Praxisbeispiele verwenden synthetische Daten und ersetzen keine rechtliche Prüfung.</div></footer></body></html>

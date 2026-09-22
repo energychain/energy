@@ -5,6 +5,7 @@ energy.js.org ist eine statische Praxisbibliothek für Energie-JavaScript, Markt
 ## Wichtigste Einstiege
 - https://energy.js.org/recipes/ — kurze praktische Rezepte
 - https://energy.js.org/recipes/cet-openapi-path-inventory.html — CET OpenAPI öffentlich vorsortieren
+- https://energy.js.org/recipes/cet-capability-boundary-matrix.html — CET Capability-Grenzen als JSON prüfen
 - https://energy.js.org/recipes/mcp-tool-manifest-dry-run.html — MCP Tool-Manifest vor Agentenaufrufen prüfen
 - https://energy.js.org/recipes/evidence-dossier-status.html — Evidence-Dossier als JSON-Status vorbereiten
 - https://energy.js.org/recipes/asset-risk-confidence.html — Asset-Risiko-Confidence als JSON prüfen
@@ -14,6 +15,7 @@ energy.js.org ist eine statische Praxisbibliothek für Energie-JavaScript, Markt
 - https://energy.js.org/recipes/klaerfall-json-queue.html — Klärfälle als kleine JSON-Queue modellieren
 - https://energy.js.org/examples/ — kleine Beispielskripte mit synthetischen Daten
 - https://energy.js.org/examples/cet-openapi-path-inventory.js — lokales OpenAPI-Pfad-Inventar ohne Token oder Fachaufruf
+- https://energy.js.org/examples/cet-capability-boundary-matrix.js — lokale Capability-Boundary-Matrix ohne API-Aufruf
 - https://energy.js.org/examples/mcp-tool-manifest-dry-run.js — lokaler MCP-Tool-Manifest-Dry-Run ohne externe API
 - https://energy.js.org/examples/evidence-dossier-status.js — lokaler Evidence-Dossier-Dry-Run mit synthetischen Daten
 - https://energy.js.org/examples/asset-risk-confidence.js — lokaler Asset-Confidence-Dry-Run mit synthetischen Daten
