@@ -3,8 +3,15 @@
   <title>energy.js.org Praxisnotizen</title>
   <link href="https://energy.js.org/feed.xml" rel="self" />
   <link href="https://energy.js.org/" />
-  <updated>2026-09-22T10:00:00+02:00</updated>
+  <updated>2026-09-25T10:00:00+02:00</updated>
   <id>https://energy.js.org/</id>
+  <entry>
+    <title>CET Decision-Frame vor dem Agentenlauf prüfen</title>
+    <link href="https://energy.js.org/recipes/cet-decision-frame-preflight.html" />
+    <id>https://energy.js.org/recipes/cet-decision-frame-preflight.html</id>
+    <updated>2026-09-25T10:00:00+02:00</updated>
+    <summary>Ein synthetisches JavaScript-Envelope macht Ziel, Evidenz, Lücken, Risiko und nächsten sicheren Gate vor Agentenläufen sichtbar.</summary>
+  </entry>
   <entry>
     <title>CET Capability-Grenzen als JSON prüfen</title>
     <link href="https://energy.js.org/recipes/cet-capability-boundary-matrix.html" />
