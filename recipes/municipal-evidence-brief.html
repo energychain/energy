@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="de" data-bs-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kommunalen Energie-Brief als JSON vorbereiten</title>
+<meta name="description" content="Ein public-safe JavaScript-Rezept, um kommunale Energiefragen mit synthetischer Evidenz, Lücken und nächstem Prüfschritt als JSON-Brief zu strukturieren.">
+<link rel="canonical" href="https://energy.js.org/recipes/municipal-evidence-brief.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Kommunalen Energie-Brief als JSON vorbereiten">
+<meta property="og:description" content="Ein lokales JavaScript-Muster für kommunale Energie-Prüffragen: Evidenz, Lücken, Risiko und nächster sicherer Schritt ohne Produktivdaten.">
+<meta property="og:url" content="https://energy.js.org/recipes/municipal-evidence-brief.html">
+<meta property="og:image" content="https://energy.js.org/assets/img/Icon%20SD_512.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/Icon%20SD_32.png">
+<link rel="stylesheet" href="/assets/css/energy-practice.css">
+<script defer data-domain="energy.js.org" src="https://stats.corrently.cloud/js/script.js"></script>
+</head>
+<body><nav class="nav"><div class="wrap"><a class="brand" href="/">energy.js.org</a><div class="links"><a href="/recipes/">Rezepte</a><a href="/examples/">Beispiele</a><a href="/mako-notes/">MaKo-Notizen</a><a href="/cet/">CET</a><a href="/lens/">CernionLENS</a><a href="/willi-mako/">Willi-Mako</a><a href="/stack/">Stack</a><a href="/contact/">Kontakt</a></div></div></nav><main><section class="section"><div class="wrap"><div class="crumbs"><a href="/recipes/">Rezepte</a> / Kommunaler Energie-Brief</div><h1>Kommunalen Energie-Brief als JSON vorbereiten</h1><p class="lead">Kommunale Energiefragen beginnen selten mit einer vollständigen Datenlage. Dieses Rezept zeigt, wie ein kleines JavaScript-Script synthetische Prüffragen zu Haushalt, Liegenschaften, Energy Sharing oder Netzkommunikation in einen nachvollziehbaren Brief sortiert — ohne echte Personen-, Kunden- oder Betriebsdaten.</p><div class="grid"><article class="card"><h3>Suchintention</h3><p><strong>kommunale Energiewende JSON Evidenz Brief</strong>: Entwickler:innen und Fachleute wollen aus einer groben Frage einen prüfbaren Arbeitsstand machen, bevor Zahlen, Beschlüsse oder Systemdaten ins Spiel kommen.</p></article><article class="card"><h3>Public-safe Evidenz</h3><p>Die öffentlichen Cernion-Seiten beschreiben kommunale Lagebilder, Evidenzgrenzen und Human-Decision-Boundaries. Corrently.io führt kommunale Energiewende-Inhalte als Orientierungs- und Prüfrahmen, nicht als Rechts- oder Beschlussberatung. Dieses Rezept nutzt daraus nur die generische Methodik.</p></article><article class="card"><h3>CTA</h3><p>Wenn aus einem synthetischen Brief ein echter Prüfpfad werden soll: <a href="/contact/">Felix Mertens</a> kann Datenlage, sichere Testgrenze und nächsten Fachschritt einordnen.</p></article></div><h2>Prinzip</h2><p>Der Brief trennt <em>Frage</em>, <em>öffentliche oder synthetische Evidenz</em>, <em>Lücken</em>, <em>Wirkungsgrenze</em> und <em>nächsten sicheren Schritt</em>. Das Ergebnis ist keine Entscheidungsvorlage, sondern eine technische Vorstrukturierung für die nächste Befassung.</p><div class="code"><pre>node examples/municipal-evidence-brief.js</pre></div><h2>Minimalbeispiel</h2><div class="code"><pre>const topic = {
+  id: "KOM-001",
+  frage: "Welche kommunalen Liegenschaften eignen sich für eine erste Stromlagebild-Prüfung?",
+  evidence: ["synthetische Liegenschaftsliste", "öffentliche Methodik"],
+  gaps: ["keine Messwerte", "keine Beschlusslage"],
+  requestedEffect: "orientation"
+};
+
+console.log(buildBrief(topic).nextGate);
+// "fachliche Erstbefassung vorbereiten"</pre></div><h2>Was das Beispiel sichtbar macht</h2><ul><li><strong>Evidenzklasse:</strong> Öffentliche Methodik und synthetische Daten sind public-safe; echte Haushalts-, Vertrags- oder Messdaten bleiben außerhalb des Beispiels.</li><li><strong>Lückenstatus:</strong> Fehlende Messwerte oder Beschlusslagen werden als offene Punkte markiert, nicht geschätzt.</li><li><strong>Grenze:</strong> Der Brief erzeugt keinen Beschluss, keine Rechtsprüfung, keine Netz- oder Tarifzusage und keine Budgetempfehlung.</li><li><strong>Nächster Gate:</strong> Das Script schlägt nur eine sichere nächste Befassung oder eine Review-Grenze vor.</li></ul><p class="note warn">Dieses Rezept ist technische Orientierung mit synthetischen Daten. Es ist keine Rechts-, Vergabe-, Preis-, Beschluss-, Netzanschluss- oder Betreiberberatung und ersetzt keine fachliche Prüfung.</p><p><a class="btn" href="/examples/municipal-evidence-brief.js">Beispielskript ansehen</a></p></div></section></main><footer class="footer"><div class="wrap">Open Source · JavaScript · Energiewirtschaft · gepflegt von STROMDAO. Praxisbeispiele verwenden synthetische Daten und ersetzen keine rechtliche Prüfung.</div></footer></body></html>

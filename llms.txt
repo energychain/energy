@@ -4,6 +4,7 @@ energy.js.org ist eine statische Praxisbibliothek für Energie-JavaScript, Markt
 
 ## Wichtigste Einstiege
 - https://energy.js.org/recipes/ — kurze praktische Rezepte
+- https://energy.js.org/recipes/municipal-evidence-brief.html — Kommunalen Energie-Brief als JSON vorbereiten
 - https://energy.js.org/recipes/cet-decision-frame-preflight.html — CET Decision-Frame vor dem Agentenlauf prüfen
 - https://energy.js.org/recipes/cet-openapi-path-inventory.html — CET OpenAPI öffentlich vorsortieren
 - https://energy.js.org/recipes/cet-capability-boundary-matrix.html — CET Capability-Grenzen als JSON prüfen
@@ -15,6 +16,7 @@ energy.js.org ist eine statische Praxisbibliothek für Energie-JavaScript, Markt
 - https://energy.js.org/recipes/willi-mako-intent-dry-run.html — Willi-Mako Intent Dry-Run vor dem Tool-Aufruf
 - https://energy.js.org/recipes/klaerfall-json-queue.html — Klärfälle als kleine JSON-Queue modellieren
 - https://energy.js.org/examples/ — kleine Beispielskripte mit synthetischen Daten
+- https://energy.js.org/examples/municipal-evidence-brief.js — lokaler kommunaler Evidence-Brief-Dry-Run ohne echte Daten
 - https://energy.js.org/examples/cet-decision-frame-preflight.js — lokaler Decision-Frame-Preflight ohne externe API
 - https://energy.js.org/examples/cet-openapi-path-inventory.js — lokales OpenAPI-Pfad-Inventar ohne Token oder Fachaufruf
 - https://energy.js.org/examples/cet-capability-boundary-matrix.js — lokale Capability-Boundary-Matrix ohne API-Aufruf
