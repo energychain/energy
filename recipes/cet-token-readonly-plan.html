@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="de" data-bs-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CET Token-Start als read-only Plan prüfen</title>
+<meta name="description" content="Ein token-sicheres JavaScript-Rezept bereitet die ersten read-only CET-Prüfschritte als Plan vor, ohne Secrets auszugeben oder Fachendpunkte aufzurufen.">
+<link rel="canonical" href="https://energy.js.org/recipes/cet-token-readonly-plan.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="CET Token-Start als read-only Plan prüfen">
+<meta property="og:description" content="Lokaler CET-Startplan für read-only Orientierung: Token vorhanden, Endpunkte sortiert, Grenzen dokumentiert, keine Secrets im Output.">
+<meta property="og:url" content="https://energy.js.org/recipes/cet-token-readonly-plan.html">
+<meta property="og:image" content="https://energy.js.org/assets/img/Icon%20SD_512.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/Icon%20SD_32.png">
+<link rel="stylesheet" href="/assets/css/energy-practice.css">
+<script defer data-domain="energy.js.org" src="https://stats.corrently.cloud/js/script.js"></script>
+</head>
+<body><nav class="nav"><div class="wrap"><a class="brand" href="/">energy.js.org</a><div class="links"><a href="/recipes/">Rezepte</a><a href="/examples/">Beispiele</a><a href="/mako-notes/">MaKo-Notizen</a><a href="/cet/">CET</a><a href="/lens/">CernionLENS</a><a href="/willi-mako/">Willi-Mako</a><a href="/stack/">Stack</a><a href="/contact/">Kontakt</a></div></div></nav><main><section class="section"><div class="wrap"><div class="crumbs"><a href="/recipes/">Rezepte</a> / CET Token-Startplan</div><h1>CET Token-Start als read-only Plan prüfen</h1><p class="lead">Wer einen CET-Token anfordert, sollte nicht mit einem Fachaufruf beginnen. Dieses Rezept erstellt zuerst einen lokalen Prüfplan: Ist ein Token nur als Umgebungskontext markiert, welche öffentlichen/read-only Orientierungspfade wären geeignet und welche Grenzen bleiben No-Call?</p><div class="grid"><article class="card"><h3>Suchintention</h3><p><strong>CET Token JavaScript Quickstart read-only</strong>: Entwickler:innen wollen die ersten fünf Minuten nach Token-Erhalt vorbereiten, ohne Token in Logs, Tickets oder Chatverläufe zu kopieren.</p></article><article class="card"><h3>Public-safe Evidenz</h3><p>Die öffentliche Cernion-Token-Seite beschreibt den gehosteten Zugang zu REST API und MCP Service und nennt read-only Übersichten wie Capabilities, Sidecar Tools und MCP Tools als erste Orientierung. Dieses Rezept ruft sie bewusst nicht automatisch auf.</p></article><article class="card"><h3>CTA</h3><p>Wenn aus dem Plan ein echter Use Case wird: <a href="/contact/">Felix Mertens</a> kann einordnen, ob Swagger-Orientierung, Test-Token oder fachliche Sichtung der nächste sichere Schritt ist.</p></article></div><h2>Prinzip</h2><p>Das Script prüft nur lokale Eingaben und erzeugt einen Request-Plan mit Platzhaltern. Es druckt niemals den Token, führt keine geschützten Fachaufrufe aus und behandelt Schreib-, Vertrags-, Preis-, Tarif-, Abrechnungs- oder Netzzusagen als No-Call.</p><div class="code"><pre>CET_TOKEN=*** node examples/cet-token-readonly-plan.js</pre></div><h2>Minimalbeispiel</h2><div class="code"><pre>const safePaths = [
+  "/api/agent-manifest/capabilities",
+  "/api/agent-sidecar/tools",
+  "/api/agent-sidecar/mcp/tools"
+];
+
+console.log({
+  tokenSeen: Boolean(process.env.CET_TOKEN),
+  tokenPrinted: false,
+  plannedRequests: safePaths.map((path) =&gt; ({ method: "GET", path }))
+});</pre></div><h2>Warum das nützlich ist</h2><ul><li><strong>Secret-Hygiene:</strong> Der Token bleibt in der Umgebung und erscheint nicht im Protokoll.</li><li><strong>Read-only zuerst:</strong> Der Plan beginnt mit Orientierungsendpunkten, nicht mit einem produktiven Fachprozess.</li><li><strong>Gate sichtbar:</strong> Ein echter API-Aufruf wird erst nach bewusster Freigabe oder lokalem <code>--execute</code>-Umbau ergänzt.</li></ul><p class="note warn">Dieses Rezept ist technische Orientierung. Es ist keine Zugangszusage, keine Datenschutz-, Rechts-, Preis-, Vertrags-, Tarif-, Abrechnungs- oder Betriebsfreigabe.</p><p><a class="btn" href="/examples/cet-token-readonly-plan.js">Beispielskript ansehen</a></p></div></section></main><footer class="footer"><div class="wrap">Open Source · JavaScript · Energiewirtschaft · gepflegt von STROMDAO. Praxisbeispiele verwenden synthetische Daten und ersetzen keine rechtliche Prüfung.</div></footer></body></html>

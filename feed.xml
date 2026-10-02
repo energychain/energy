@@ -3,8 +3,15 @@
   <title>energy.js.org Praxisnotizen</title>
   <link href="https://energy.js.org/feed.xml" rel="self" />
   <link href="https://energy.js.org/" />
-  <updated>2026-09-29T10:00:00+02:00</updated>
+  <updated>2026-10-02T10:00:00+02:00</updated>
   <id>https://energy.js.org/</id>
+  <entry>
+    <title>CET Token-Start als read-only Plan prüfen</title>
+    <link href="https://energy.js.org/recipes/cet-token-readonly-plan.html" />
+    <id>https://energy.js.org/recipes/cet-token-readonly-plan.html</id>
+    <updated>2026-10-02T10:00:00+02:00</updated>
+    <summary>Ein token-sicheres JavaScript-Beispiel bereitet read-only CET-Orientierungspfade vor, ohne Secrets auszugeben oder Fachendpunkte aufzurufen.</summary>
+  </entry>
   <entry>
     <title>Kommunalen Energie-Brief als JSON vorbereiten</title>
     <link href="https://energy.js.org/recipes/municipal-evidence-brief.html" />

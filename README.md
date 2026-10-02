@@ -20,6 +20,7 @@ Examples must use synthetic data. Do not publish customer data, secrets, private
 
 ```bash
 npm run validate
+node examples/cet-token-readonly-plan.js
 node examples/municipal-evidence-brief.js
 node examples/cet-decision-frame-preflight.js
 node examples/cet-capability-boundary-matrix.js
