@@ -3,8 +3,15 @@
   <title>energy.js.org Praxisnotizen</title>
   <link href="https://energy.js.org/feed.xml" rel="self" />
   <link href="https://energy.js.org/" />
-  <updated>2026-10-02T10:00:00+02:00</updated>
+  <updated>2026-10-06T10:00:00+02:00</updated>
   <id>https://energy.js.org/</id>
+  <entry>
+    <title>Willi-Mako Klärfallakte als JSON vorbereiten</title>
+    <link href="https://energy.js.org/recipes/willi-mako-case-file.html" />
+    <id>https://energy.js.org/recipes/willi-mako-case-file.html</id>
+    <updated>2026-10-06T10:00:00+02:00</updated>
+    <summary>Ein synthetisches JavaScript-Beispiel sortiert MaKo-Klärfälle nach Evidenz, Annahmen, Rückfragen und No-Action-Grenzen.</summary>
+  </entry>
   <entry>
     <title>CET Token-Start als read-only Plan prüfen</title>
     <link href="https://energy.js.org/recipes/cet-token-readonly-plan.html" />

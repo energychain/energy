@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="de" data-bs-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Willi-Mako Klärfallakte als JSON vorbereiten</title>
+<meta name="description" content="Ein public-safe JavaScript-Rezept bereitet eine synthetische MaKo-Klärfallakte mit Evidenz, Annahmen, Rückfragen und No-Action-Grenzen vor.">
+<link rel="canonical" href="https://energy.js.org/recipes/willi-mako-case-file.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Willi-Mako Klärfallakte als JSON vorbereiten">
+<meta property="og:description" content="Lokaler Dry-Run für synthetische MaKo-Klärfälle: Fallakte, Evidenzstatus, offene Rückfragen und menschliche Entscheidungsgrenze als JSON.">
+<meta property="og:url" content="https://energy.js.org/recipes/willi-mako-case-file.html">
+<meta property="og:image" content="https://energy.js.org/assets/img/Icon%20SD_512.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/Icon%20SD_32.png">
+<link rel="stylesheet" href="/assets/css/energy-practice.css">
+<script defer data-domain="energy.js.org" src="https://stats.corrently.cloud/js/script.js"></script>
+</head>
+<body><nav class="nav"><div class="wrap"><a class="brand" href="/">energy.js.org</a><div class="links"><a href="/recipes/">Rezepte</a><a href="/examples/">Beispiele</a><a href="/mako-notes/">MaKo-Notizen</a><a href="/cet/">CET</a><a href="/lens/">CernionLENS</a><a href="/willi-mako/">Willi-Mako</a><a href="/stack/">Stack</a><a href="/contact/">Kontakt</a></div></div></nav><main><section class="section"><div class="wrap"><div class="crumbs"><a href="/recipes/">Rezepte</a> / Willi-Mako Klärfallakte</div><h1>Willi-Mako Klärfallakte als JSON vorbereiten</h1><p class="lead">Bevor ein MaKo-Fachcoach oder ein echter Prozesskontext ins Spiel kommt, hilft eine synthetische Fallakte: Ausgangsfrage, Marktrolle, Evidenzstatus, Annahmen, offene Rückfragen und No-Action-Grenzen stehen lesbar in einem JSON-Objekt.</p><div class="grid"><article class="card"><h3>Suchintention</h3><p><strong>Willi Mako Klärfall JavaScript Beispiel</strong>: Entwickler:innen und MaKo-Teams wollen sehen, wie ein Fall strukturiert werden kann, ohne echte Kundendaten, EDIFACT-Nachrichten oder Marktpartner-Kommunikation zu verwenden.</p></article><article class="card"><h3>Public-safe Evidenz</h3><p>Die öffentliche Willi-Mako-Seite empfiehlt synthetische oder anonymisierte Ersttests, Fallakten mit offenen Punkten und eine klare menschliche Entscheidungsgrenze. Dieses Rezept bildet nur diese Struktur lokal nach.</p></article><article class="card"><h3>CTA</h3><p>Wenn aus der Trockenübung ein echter Test wird: <a href="/contact/">Felix Mertens</a> kann einordnen, ob synthetischer Klärfall, browser-lokaler Sanitizer, Willi-Zugang oder CET-Token der passende nächste Schritt ist.</p></article></div><h2>Prinzip</h2><p>Das Beispiel ruft keinen Willi-Mako-Endpunkt und keine Cernion-API auf. Es sortiert eine künstliche Ausgangslage in eine Fallakte, die bewusst keine produktive Marktkommunikation auslöst.</p><div class="code"><pre>node examples/willi-mako-case-file.js</pre></div><h2>Minimalbeispiel</h2><div class="code"><pre>const syntheticCase = {
+  role: "Lieferant",
+  processContext: "GPKE Klärfall / Stammdatenrückfrage",
+  question: "Welche Rückfrage sollte vor einer Prozessantwort fachlich geklärt werden?",
+  incomingSignal: { containsRealCustomerData: false, containsEdifactPayload: false }
+};
+
+console.log({
+  publicSafe: true,
+  noActionBoundaries: ["keine produktive Marktkommunikation", "Human Review"],
+  suggestedHumanNextStep: "synthetische Fallakte intern prüfen"
+});</pre></div><h2>Warum das nützlich ist</h2><ul><li><strong>Fall statt Bauchgefühl:</strong> Das Team sieht, welche Evidenz fehlt und welche Annahmen gerade nur Arbeitshypothesen sind.</li><li><strong>Sichere Datenkante:</strong> Öffentliche Beispiele bleiben synthetisch; echte Lieferstellen-, Kunden-, Marktpartner- oder EDIFACT-Daten gehören nicht in den Dry-Run.</li><li><strong>Menschliche Grenze:</strong> Rückfragen, Kommunikation und fachliche Bewertung bleiben bewusst beim verantwortlichen Team.</li></ul><p class="note warn">Dieses Rezept ist technische Strukturierungshilfe. Es ist keine Rechtsberatung, keine Marktkommunikationsfreigabe, keine Prozess-, Frist-, Preis-, Vertrags- oder SLA-Zusage.</p><p><a class="btn" href="/examples/willi-mako-case-file.js">Beispielskript ansehen</a></p></div></section></main><footer class="footer"><div class="wrap">Open Source · JavaScript · Energiewirtschaft · gepflegt von STROMDAO. Praxisbeispiele verwenden synthetische Daten und ersetzen keine rechtliche Prüfung.</div></footer></body></html>
