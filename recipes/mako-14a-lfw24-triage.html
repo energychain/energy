@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="de" data-bs-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MaKo, §14a und LFW24 als Triage-JSON vorbereiten</title>
+<meta name="description" content="Ein public-safe JavaScript-Rezept sortiert MaKo-, §14a- und LFW24-Fragen vor dem Erstgespräch in Rollen, Evidenz, Datenkanten und nächste sichere Gates.">
+<link rel="canonical" href="https://energy.js.org/recipes/mako-14a-lfw24-triage.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="MaKo, §14a und LFW24 als Triage-JSON vorbereiten">
+<meta property="og:description" content="Lokaler Dry-Run für synthetische Energieprozess-Fragen: Rollen, Evidenz, sensible Datenkante und nächster sicherer Prüfschritt als JSON.">
+<meta property="og:url" content="https://energy.js.org/recipes/mako-14a-lfw24-triage.html">
+<meta property="og:image" content="https://energy.js.org/assets/img/Icon%20SD_512.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/Icon%20SD_32.png">
+<link rel="stylesheet" href="/assets/css/energy-practice.css">
+<script defer data-domain="energy.js.org" src="https://stats.corrently.cloud/js/script.js"></script>
+</head>
+<body><nav class="nav"><div class="wrap"><a class="brand" href="/">energy.js.org</a><div class="links"><a href="/recipes/">Rezepte</a><a href="/examples/">Beispiele</a><a href="/mako-notes/">MaKo-Notizen</a><a href="/cet/">CET</a><a href="/lens/">CernionLENS</a><a href="/willi-mako/">Willi-Mako</a><a href="/stack/">Stack</a><a href="/contact/">Kontakt</a></div></div></nav><main><section class="section"><div class="wrap"><div class="crumbs"><a href="/recipes/">Rezepte</a> / MaKo §14a LFW24 Triage</div><h1>MaKo, §14a und LFW24 als Triage-JSON vorbereiten</h1><p class="lead">Wenn Marktkommunikation, steuerbare Verbrauchseinrichtungen und 24-Stunden-Lieferantenwechsel gleichzeitig auf dem Tisch liegen, ist die erste technische Aufgabe nicht der API-Aufruf. Zuerst sollte klar werden: Welche Rolle fragt, welche Evidenz ist öffentlich oder synthetisch, welche Daten bleiben draußen und welcher nächste Gate ist sicher?</p><div class="grid"><article class="card"><h3>Suchintention</h3><p><strong>MaKo §14a LFW24 JavaScript Triage</strong>: Entwickler:innen und Fachbereiche wollen eine konkrete Struktur, um Prozessfragen zu sortieren, ohne echte Kundendaten, EDIFACT-Nachrichten oder Systemexporte in ein Experiment zu ziehen.</p></article><article class="card"><h3>Public-safe Evidenz</h3><p>Die Cernion-Erstdiagnose zu MaKo, §14a und LFW24 beschreibt genau diese Grenze: zuerst Rollen-, Quellen- und Datenlage klären, keine Kundendaten im Erstkontakt, keine Rechts-, Fristen-, Preis- oder Integrationszusage. Dieses Rezept bildet nur die Triage-Struktur lokal nach.</p></article><article class="card"><h3>CTA</h3><p>Wenn die Triage mehr als eine Trockenübung wird: <a href="/contact/">Felix Mertens</a> kann einordnen, ob ein synthetischer Klärfall, Willi-Mako-Kontext, CET-Token oder eine fachliche Sichtung der passende nächste Schritt ist.</p></article></div><h2>Prinzip</h2><p>Das Beispiel ruft keine Cernion-, Willi-Mako- oder Marktkommunikations-API auf. Es nimmt synthetische Eingangssignale und erzeugt daraus ein JSON-Objekt mit Rollenbild, Themenclustern, Evidenzlücken, No-Action-Grenzen und einem menschlichen nächsten Gate.</p><div class="code"><pre>node examples/mako-14a-lfw24-triage.js</pre></div><h2>Minimalbeispiel</h2><div class="code"><pre>const signal = {
+  role: "VNB",
+  topics: ["MaKo", "§14a", "LFW24"],
+  containsRealCustomerData: false,
+  containsEdifactPayload: false
+};
+
+console.log({
+  publicSafe: true,
+  nextGate: "20-Minuten-Erstdiagnose oder interne Arbeitsliste",
+  noAction: ["keine echte Kundendatenverarbeitung", "keine produktive Kommunikation"]
+});</pre></div><h2>Warum das nützlich ist</h2><ul><li><strong>Gemeinsame Lage statt Themen-Silo:</strong> MaKo, §14a und LFW24 bleiben getrennte Fachthemen, können aber dieselben Engpässe bei Rollen, Stammdaten, Fristen und Nachweisen berühren.</li><li><strong>Datensparsame Arbeitskante:</strong> Die Triage erzwingt synthetische oder öffentliche Evidenz und markiert echte MaLo-/MeLo-, Kunden-, EDIFACT- und Systemdaten als No-Go.</li><li><strong>Nächster sicherer Schritt:</strong> Das Ergebnis ist keine Entscheidung, sondern eine Arbeitsliste: beobachten, interne Klärung, synthetischer Klärfall, CET-read-only-Orientierung oder Gespräch mit Felix.</li></ul><p class="note warn">Dieses Rezept ist technische Strukturierungshilfe. Es ist keine Rechtsberatung, keine Marktkommunikationsfreigabe, keine Fristen-, Compliance-, Preis-, Vertrags-, Integrations- oder SLA-Zusage.</p><p>Öffentliche Kontextquelle: <a href="https://cernion.de/mako-14a-lfw24-diagnose">Cernion-Erstdiagnose zu MaKo, §14a und LFW24</a>.</p><p><a class="btn" href="/examples/mako-14a-lfw24-triage.js">Beispielskript ansehen</a></p></div></section></main><footer class="footer"><div class="wrap">Open Source · JavaScript · Energiewirtschaft · gepflegt von STROMDAO. Praxisbeispiele verwenden synthetische Daten und ersetzen keine rechtliche Prüfung.</div></footer></body></html>

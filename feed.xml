@@ -3,8 +3,15 @@
   <title>energy.js.org Praxisnotizen</title>
   <link href="https://energy.js.org/feed.xml" rel="self" />
   <link href="https://energy.js.org/" />
-  <updated>2026-10-06T10:00:00+02:00</updated>
+  <updated>2026-10-09T10:00:00+02:00</updated>
   <id>https://energy.js.org/</id>
+  <entry>
+    <title>MaKo, §14a und LFW24 als Triage-JSON vorbereiten</title>
+    <link href="https://energy.js.org/recipes/mako-14a-lfw24-triage.html" />
+    <id>https://energy.js.org/recipes/mako-14a-lfw24-triage.html</id>
+    <updated>2026-10-09T10:00:00+02:00</updated>
+    <summary>Ein synthetisches JavaScript-Beispiel sortiert MaKo-, §14a- und LFW24-Fragen nach Rolle, Evidenz, Datenkante und nächstem sicheren Gate.</summary>
+  </entry>
   <entry>
     <title>Willi-Mako Klärfallakte als JSON vorbereiten</title>
     <link href="https://energy.js.org/recipes/willi-mako-case-file.html" />
