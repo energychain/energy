@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="de" data-bs-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Corrently MCP Toolliste als JSON inventarisieren</title>
+<meta name="description" content="Ein public-safe JavaScript-Rezept liest das öffentliche Corrently MCP Tool-Manifest und erstellt eine lokale Toolliste ohne Token, Kundendaten oder Fachaufruf.">
+<link rel="canonical" href="https://energy.js.org/recipes/corrently-mcp-tools-inventory.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Corrently MCP Toolliste als JSON inventarisieren">
+<meta property="og:description" content="Öffentliche MCP-Toolliste lesen, Eingabeschemata zusammenfassen und No-Call-Grenzen dokumentieren.">
+<meta property="og:url" content="https://energy.js.org/recipes/corrently-mcp-tools-inventory.html">
+<meta property="og:image" content="https://energy.js.org/assets/img/Icon%20SD_512.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/Icon%20SD_32.png">
+<link rel="stylesheet" href="/assets/css/energy-practice.css">
+<script defer data-domain="energy.js.org" src="https://stats.corrently.cloud/js/script.js"></script>
+</head>
+<body><nav class="nav"><div class="wrap"><a class="brand" href="/">energy.js.org</a><div class="links"><a href="/recipes/">Rezepte</a><a href="/examples/">Beispiele</a><a href="/mako-notes/">MaKo-Notizen</a><a href="/cet/">CET</a><a href="/lens/">CernionLENS</a><a href="/willi-mako/">Willi-Mako</a><a href="/stack/">Stack</a><a href="/contact/">Kontakt</a></div></div></nav><main><section class="section"><div class="wrap"><div class="crumbs"><a href="/recipes/">Rezepte</a> / Corrently MCP Toolliste</div><h1>Corrently MCP Toolliste als JSON inventarisieren</h1><p class="lead">Öffentliche MCP-Manifeste sind nützlich, aber sie sind noch kein Freifahrtschein für Agentenaufrufe. Dieses Rezept liest nur die Toolliste, fasst Eingabeschemata zusammen und markiert, wo Token, echte Daten oder fachliche Entscheidungen draußen bleiben.</p><div class="grid"><article class="card"><h3>Suchintention</h3><p><strong>Corrently MCP Tools JavaScript</strong>: Entwickler:innen möchten sehen, welche öffentlichen Energie-Tools existieren und welche Eingaben erwartet werden, bevor ein Agent tatsächlich ein Tool nutzt.</p></article><article class="card"><h3>Public-safe Evidenz</h3><p>Die öffentliche Corrently API stellt unter <a href="https://api.corrently.io/v2.0/mcp/tools">/v2.0/mcp/tools</a> ein MCP-Toolmanifest bereit. Dieses Rezept liest nur Metadaten: Toolnamen, Beschreibungen und Input-Schemata.</p></article><article class="card"><h3>CTA</h3><p>Wenn aus der Toolliste ein kontrollierter CET-, MCP- oder Willi-Mako-Testpfad werden soll: <a href="/contact/">Felix Mertens</a> kann Demo, Test-Token und produktive Grenze fachlich einordnen.</p></article></div><h2>Prinzip</h2><p>Das Beispiel ruft keine Fachfunktion auf und sendet keinen Token. Es erstellt ein Manifest-Inventar für Review, Dokumentation und Agenten-Preflight.</p><div class="code"><pre>node examples/corrently-mcp-tools-inventory.js</pre></div><h2>Minimalbeispiel</h2><div class="code"><pre>const endpoint = "https://api.corrently.io/v2.0/mcp/tools";
+const manifest = await fetch(endpoint).then((response) =&gt; response.json());
+const tools = manifest.tools.map((tool) =&gt; ({
+  name: tool.name,
+  required: tool.inputSchema?.required || [],
+  hasOptionalToken: Boolean(tool.inputSchema?.properties?.token),
+  boundary: "Manifest-Inventar; kein Tool-Aufruf"
+}));
+console.log(JSON.stringify({ source: endpoint, tools }, null, 2));</pre></div><h2>Warum das nützlich ist</h2><ul><li><strong>Toolliste vor Toollauf:</strong> Agenten sehen zuerst, welche Eingaben ein Tool erwartet, statt sofort fachliche Aktionen zu starten.</li><li><strong>Token-Hygiene:</strong> Optionale Token-Felder werden als Sicherheitskante sichtbar; das Beispiel gibt keine Secrets aus.</li><li><strong>No-Action-Grenze:</strong> Marktdaten-, CO₂-, GSI- oder Solar-Tools bleiben in diesem Rezept reine Manifest-Metadaten.</li></ul><p class="note warn">Dieses Rezept ist technische Orientierung. Es ist keine Zusage zur API-Verfügbarkeit, keine Preis-, Lizenz-, Vertrags-, Rechts- oder Integrationsaussage und ersetzt keine fachliche Prüfung vor produktiver Nutzung.</p><p>Öffentliche Kontextquelle: <a href="https://api.corrently.io/v2.0/mcp/tools">Corrently MCP Toolmanifest</a>.</p><p><a class="btn" href="/examples/corrently-mcp-tools-inventory.js">Beispielskript ansehen</a></p></div></section></main><footer class="footer"><div class="wrap">Open Source · JavaScript · Energiewirtschaft · gepflegt von STROMDAO. Praxisbeispiele verwenden synthetische Daten und ersetzen keine rechtliche Prüfung.</div></footer></body></html>

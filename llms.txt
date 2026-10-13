@@ -3,6 +3,7 @@
 energy.js.org ist eine statische Praxisbibliothek für Energie-JavaScript, Marktkommunikation, EDIFACT, Cernion Energy Tools, CernionLENS und Willi-Mako.
 
 ## Wichtigste Einstiege
+- https://energy.js.org/recipes/corrently-mcp-tools-inventory.html — Corrently MCP Toolliste als JSON inventarisieren
 - https://energy.js.org/recipes/ — kurze praktische Rezepte
 - https://energy.js.org/recipes/mako-14a-lfw24-triage.html — MaKo, §14a und LFW24 als Triage-JSON vorbereiten
 - https://energy.js.org/recipes/willi-mako-case-file.html — Willi-Mako Klärfallakte als JSON vorbereiten
@@ -19,6 +20,7 @@ energy.js.org ist eine statische Praxisbibliothek für Energie-JavaScript, Markt
 - https://energy.js.org/recipes/willi-mako-intent-dry-run.html — Willi-Mako Intent Dry-Run vor dem Tool-Aufruf
 - https://energy.js.org/recipes/klaerfall-json-queue.html — Klärfälle als kleine JSON-Queue modellieren
 - https://energy.js.org/examples/ — kleine Beispielskripte mit synthetischen Daten
+- https://energy.js.org/examples/corrently-mcp-tools-inventory.js — öffentliches Corrently MCP-Manifest als lokales Inventar ohne Token oder Fachaufruf
 - https://energy.js.org/examples/mako-14a-lfw24-triage.js — lokale MaKo-/§14a-/LFW24-Triage ohne echte Daten oder API-Aufruf
 - https://energy.js.org/examples/willi-mako-case-file.js — lokaler Klärfallakten-Dry-Run ohne echte Daten oder API-Aufruf
 - https://energy.js.org/examples/cet-token-readonly-plan.js — lokaler CET-Token-Plan ohne Secret-Ausgabe und ohne API-Aufruf

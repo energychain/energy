@@ -3,8 +3,15 @@
   <title>energy.js.org Praxisnotizen</title>
   <link href="https://energy.js.org/feed.xml" rel="self" />
   <link href="https://energy.js.org/" />
-  <updated>2026-10-09T10:00:00+02:00</updated>
+  <updated>2026-10-13T10:00:00+02:00</updated>
   <id>https://energy.js.org/</id>
+  <entry>
+    <title>Corrently MCP Toolliste als JSON inventarisieren</title>
+    <link href="https://energy.js.org/recipes/corrently-mcp-tools-inventory.html" />
+    <id>https://energy.js.org/recipes/corrently-mcp-tools-inventory.html</id>
+    <updated>2026-10-13T10:00:00+02:00</updated>
+    <summary>Ein public-safe JavaScript-Beispiel liest das öffentliche Corrently MCP-Toolmanifest und erstellt ein Review-Inventar ohne Token oder Fachaufruf.</summary>
+  </entry>
   <entry>
     <title>MaKo, §14a und LFW24 als Triage-JSON vorbereiten</title>
     <link href="https://energy.js.org/recipes/mako-14a-lfw24-triage.html" />
