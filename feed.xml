@@ -3,8 +3,15 @@
   <title>energy.js.org Praxisnotizen</title>
   <link href="https://energy.js.org/feed.xml" rel="self" />
   <link href="https://energy.js.org/" />
-  <updated>2026-10-13T10:00:00+02:00</updated>
+  <updated>2026-10-16T10:00:00+02:00</updated>
   <id>https://energy.js.org/</id>
+  <entry>
+    <title>CET Projektakten-Relationsgraph lokal prüfen</title>
+    <link href="https://energy.js.org/recipes/cet-project-graph-review.html" />
+    <id>https://energy.js.org/recipes/cet-project-graph-review.html</id>
+    <updated>2026-10-16T10:00:00+02:00</updated>
+    <summary>Ein synthetisches JavaScript-Beispiel prüft einen Projektgraph-Snapshot auf Evidenzlücken, schwache Kanten und ungültige Referenzen.</summary>
+  </entry>
   <entry>
     <title>Corrently MCP Toolliste als JSON inventarisieren</title>
     <link href="https://energy.js.org/recipes/corrently-mcp-tools-inventory.html" />

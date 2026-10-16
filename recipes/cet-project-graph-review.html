@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="de" data-bs-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CET Projektakten-Relationsgraph lokal prüfen</title>
+<meta name="description" content="Ein public-safe JavaScript-Rezept prüft einen synthetischen CET-Projektakten-Relationsgraph auf Evidenzlücken, schwache Kanten und ungültige Referenzen.">
+<link rel="canonical" href="https://energy.js.org/recipes/cet-project-graph-review.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="CET Projektakten-Relationsgraph lokal prüfen">
+<meta property="og:description" content="Synthetischen Relationsgraph als lokalen Snapshot prüfen, bevor aus Kanten fachliche Schlüsse entstehen.">
+<meta property="og:url" content="https://energy.js.org/recipes/cet-project-graph-review.html">
+<meta property="og:image" content="https://energy.js.org/assets/img/Icon%20SD_512.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/Icon%20SD_32.png">
+<link rel="stylesheet" href="/assets/css/energy-practice.css">
+<script defer data-domain="energy.js.org" src="https://stats.corrently.cloud/js/script.js"></script>
+</head>
+<body><nav class="nav"><div class="wrap"><a class="brand" href="/">energy.js.org</a><div class="links"><a href="/recipes/">Rezepte</a><a href="/examples/">Beispiele</a><a href="/mako-notes/">MaKo-Notizen</a><a href="/cet/">CET</a><a href="/lens/">CernionLENS</a><a href="/willi-mako/">Willi-Mako</a><a href="/stack/">Stack</a><a href="/contact/">Kontakt</a></div></div></nav><main><section class="section"><div class="wrap"><div class="crumbs"><a href="/recipes/">Rezepte</a> / CET Projektakten-Relationsgraph</div><h1>CET Projektakten-Relationsgraph lokal prüfen</h1><p class="lead">Ein Relationsgraph kann Zusammenhänge zwischen Objekten, Datensätzen und Notizen sichtbar machen. Vor jeder fachlichen Nutzung sollte aber prüfbar sein, ob Kanten gültige Referenzen, eine bekannte Relation, Evidenz und ein nachvollziehbares Gewicht besitzen.</p><div class="grid"><article class="card"><h3>Suchintention</h3><p><strong>Projektakten Relationsgraph JavaScript prüfen</strong>: Entwickler:innen möchten einen Graph-Snapshot technisch kontrollieren, ohne echte Akten hochzuladen oder aus einer Kante sofort eine Entscheidung abzuleiten.</p></article><article class="card"><h3>Public-safe Evidenz</h3><p>Die öffentliche CET-Dokumentation beschreibt einen Projektakten-Relationsgraph mit Knoten, gewichteten Kanten, Evidenz und begrenzten Lesewegen. Dieses Rezept nutzt daraus nur das allgemeine Datenmuster und vollständig synthetische Beispieldaten.</p></article><article class="card"><h3>CTA</h3><p>Wenn aus einem lokalen Graph-Review ein kontrollierter Projektakten-Test werden soll: <a href="/contact/">Felix Mertens</a> kann Datenklasse, Testumfang und Systemgrenze fachlich einordnen.</p></article></div><h2>Prinzip</h2><p>Das Beispiel prüft einen lokalen JSON-Snapshot. Es markiert unbekannte Relationen, fehlende Knotenreferenzen, ungültige Gewichte, Evidenzlücken und Kanten unterhalb einer bewusst gesetzten Review-Schwelle.</p><div class="code"><pre>node examples/cet-project-graph-review.js</pre></div><h2>Minimalbeispiel</h2><div class="code"><pre>const report = reviewProjectGraph(graph, 0.6);
+console.log(JSON.stringify({
+  totals: report.totals,
+  reviewQueue: report.reviewQueue,
+  boundary: report.noActionBoundary
+}, null, 2));</pre></div><h2>Was der Report leistet</h2><ul><li><strong>Referenzen prüfen:</strong> Jede Kante muss auf vorhandene Knoten zeigen.</li><li><strong>Evidenz sichtbar halten:</strong> Eine Relation ohne Evidenz landet in der Review-Queue.</li><li><strong>Schwache Kanten nicht verstecken:</strong> Ein Gewicht unter der lokalen Schwelle wird als Klärpunkt ausgegeben.</li><li><strong>Wirkungsgrenze dokumentieren:</strong> Das Ergebnis ist ein technischer Vorflug, keine automatische Fach-, Rechts- oder Betriebsentscheidung.</li></ul><p class="note warn">Das Skript ist ein lokaler Dry-Run mit synthetischen Daten. Es bestätigt weder die Richtigkeit eines realen Projektgraphen noch API-Verfügbarkeit, Produktionsreife oder fachliche Eignung.</p><p>Öffentliche Kontextquelle: <a href="https://github.com/energychain/cernion-energy-tools/blob/main/docs/projektakte.md#relationsgraph-886">Cernion Energy Tools – Projektakte / Relationsgraph</a>.</p><p><a class="btn" href="/examples/cet-project-graph-review.js">Beispielskript ansehen</a></p></div></section></main><footer class="footer"><div class="wrap">Open Source · JavaScript · Energiewirtschaft · gepflegt von STROMDAO. Praxisbeispiele verwenden synthetische Daten und ersetzen keine rechtliche Prüfung.</div></footer></body></html>
