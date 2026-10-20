@@ -3,8 +3,15 @@
   <title>energy.js.org Praxisnotizen</title>
   <link href="https://energy.js.org/feed.xml" rel="self" />
   <link href="https://energy.js.org/" />
-  <updated>2026-10-16T10:00:00+02:00</updated>
+  <updated>2026-10-20T10:00:00+02:00</updated>
   <id>https://energy.js.org/</id>
+  <entry>
+    <title>CET llm.txt Cluster-Manifest lokal prüfen</title>
+    <link href="https://energy.js.org/recipes/cet-llm-cluster-preflight.html" />
+    <id>https://energy.js.org/recipes/cet-llm-cluster-preflight.html</id>
+    <updated>2026-10-20T10:00:00+02:00</updated>
+    <summary>Ein synthetisches JavaScript-Beispiel inventarisiert CET-Clusterköpfe und read-only Auflösungspfade, bevor ein vollständiger API-Vertrag geprüft wird.</summary>
+  </entry>
   <entry>
     <title>CET Projektakten-Relationsgraph lokal prüfen</title>
     <link href="https://energy.js.org/recipes/cet-project-graph-review.html" />

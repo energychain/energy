@@ -185,4 +185,12 @@
     <loc>https://energy.js.org/examples/cet-project-graph-review.js</loc>
     <lastmod>2026-10-16</lastmod>
   </url>
+  <url>
+    <loc>https://energy.js.org/recipes/cet-llm-cluster-preflight.html</loc>
+    <lastmod>2026-10-20</lastmod>
+  </url>
+  <url>
+    <loc>https://energy.js.org/examples/cet-llm-cluster-preflight.js</loc>
+    <lastmod>2026-10-20</lastmod>
+  </url>
 </urlset>
