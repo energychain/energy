@@ -20,6 +20,7 @@ Examples must use synthetic data. Do not publish customer data, secrets, private
 
 ```bash
 npm run validate
+node examples/cet-project-admin-overview.js
 node examples/mako-14a-lfw24-triage.js
 node examples/cet-project-graph-review.js
 node examples/willi-mako-case-file.js
