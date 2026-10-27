@@ -3,8 +3,15 @@
   <title>energy.js.org Praxisnotizen</title>
   <link href="https://energy.js.org/feed.xml" rel="self" />
   <link href="https://energy.js.org/" />
-  <updated>2026-10-23T10:00:00+02:00</updated>
+  <updated>2026-10-27T10:00:00+01:00</updated>
   <id>https://energy.js.org/</id>
+  <entry>
+    <title>CET OpenAI-kompatiblen Provider mit Prüfsatz abnehmen</title>
+    <link href="https://energy.js.org/recipes/cet-openwebui-provider.html" />
+    <id>https://energy.js.org/recipes/cet-openwebui-provider.html</id>
+    <updated>2026-10-27T10:00:00+01:00</updated>
+    <summary>Ein public-safe JavaScript-Beispiel prüft synthetische Modelllisten und Chat-Antworten lokal, bevor ein erlaubter Endpoint-Test beginnt.</summary>
+  </entry>
   <entry>
     <title>CET Projektakten-Verwaltungsübersicht lokal prüfen</title>
     <link href="https://energy.js.org/recipes/cet-project-admin-overview.html" />

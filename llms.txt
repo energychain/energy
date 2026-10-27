@@ -3,6 +3,7 @@
 energy.js.org ist eine statische Praxisbibliothek für Energie-JavaScript, Marktkommunikation, EDIFACT, Cernion Energy Tools, CernionLENS und Willi-Mako.
 
 ## Wichtigste Einstiege
+- https://energy.js.org/recipes/cet-openwebui-provider.html — CET OpenAI-kompatiblen Provider mit synthetischem Prüfsatz abnehmen
 - https://energy.js.org/recipes/cet-project-admin-overview.html — CET Projektakten-Verwaltungsübersicht lokal prüfen
 - https://energy.js.org/recipes/cet-llm-cluster-preflight.html — CET llm.txt Cluster-Manifest lokal prüfen
 - https://energy.js.org/recipes/cet-project-graph-review.html — CET Projektakten-Relationsgraph lokal prüfen
@@ -23,6 +24,7 @@ energy.js.org ist eine statische Praxisbibliothek für Energie-JavaScript, Markt
 - https://energy.js.org/recipes/willi-mako-intent-dry-run.html — Willi-Mako Intent Dry-Run vor dem Tool-Aufruf
 - https://energy.js.org/recipes/klaerfall-json-queue.html — Klärfälle als kleine JSON-Queue modellieren
 - https://energy.js.org/examples/ — kleine Beispielskripte mit synthetischen Daten
+- https://energy.js.org/examples/cet-openai-provider-acceptance.js — lokaler Provider-Formtest ohne Netzwerkzugriff oder Token
 - https://energy.js.org/examples/cet-project-admin-overview.js — lokaler Review einer synthetischen read-only Projektaktenübersicht ohne Löschaktion
 - https://energy.js.org/examples/cet-llm-cluster-preflight.js — lokaler Cluster-Preflight ohne API-Aufruf, Token oder Endpunkt-Raten
 - https://energy.js.org/examples/cet-project-graph-review.js — lokaler Projektgraph-Review mit synthetischen Daten und ohne API-Aufruf
