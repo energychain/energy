@@ -3,6 +3,8 @@
 energy.js.org ist eine statische Praxisbibliothek für Energie-JavaScript, Marktkommunikation, EDIFACT, Cernion Energy Tools, CernionLENS und Willi-Mako.
 
 ## Wichtigste Einstiege
+- https://energy.js.org/recipes/versioned-data-quality-catalog.html — Datenqualitätsregeln als versionierten JavaScript-Prüfkatalog organisieren
+- https://energy.js.org/examples/versioned-data-quality-catalog.js — lokaler Datenqualitäts-Dry-Run mit synthetischen Energiedaten
 - https://energy.js.org/recipes/cet-openwebui-provider.html — CET OpenAI-kompatiblen Provider mit synthetischem Prüfsatz abnehmen
 - https://energy.js.org/recipes/cet-project-admin-overview.html — CET Projektakten-Verwaltungsübersicht lokal prüfen
 - https://energy.js.org/recipes/cet-llm-cluster-preflight.html — CET llm.txt Cluster-Manifest lokal prüfen

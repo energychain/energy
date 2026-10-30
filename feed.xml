@@ -3,8 +3,15 @@
   <title>energy.js.org Praxisnotizen</title>
   <link href="https://energy.js.org/feed.xml" rel="self" />
   <link href="https://energy.js.org/" />
-  <updated>2026-10-27T10:00:00+01:00</updated>
+  <updated>2026-10-30T10:00:00+01:00</updated>
   <id>https://energy.js.org/</id>
+  <entry>
+    <title>Datenqualitätsregeln als versionierten JavaScript-Prüfkatalog organisieren</title>
+    <link href="https://energy.js.org/recipes/versioned-data-quality-catalog.html" />
+    <id>https://energy.js.org/recipes/versioned-data-quality-catalog.html</id>
+    <updated>2026-10-30T10:00:00+01:00</updated>
+    <summary>Ein public-safe JavaScript-Beispiel prüft synthetische Energiedaten mit benannten Regeln und dokumentiert Katalogversion sowie Klärhinweise.</summary>
+  </entry>
   <entry>
     <title>CET OpenAI-kompatiblen Provider mit Prüfsatz abnehmen</title>
     <link href="https://energy.js.org/recipes/cet-openwebui-provider.html" />

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="de" data-bs-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Datenqualitätsregeln als versionierten JavaScript-Prüfkatalog organisieren</title>
+<meta name="description" content="Ein public-safe JavaScript-Beispiel prüft synthetische Energiedaten mit einem versionierten Regelkatalog und erzeugt nachvollziehbare Klärhinweise.">
+<link rel="canonical" href="https://energy.js.org/recipes/versioned-data-quality-catalog.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Datenqualitätsregeln als versionierten JavaScript-Prüfkatalog organisieren">
+<meta property="og:description" content="Synthetische Messdaten lokal gegen benannte, versionierte Regeln prüfen.">
+<meta property="og:url" content="https://energy.js.org/recipes/versioned-data-quality-catalog.html">
+<meta property="og:image" content="https://energy.js.org/assets/img/Icon%20SD_512.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/Icon%20SD_32.png">
+<link rel="stylesheet" href="/assets/css/energy-practice.css">
+<script defer data-domain="energy.js.org" src="https://stats.corrently.cloud/js/script.js"></script>
+</head>
+<body><nav class="nav"><div class="wrap"><a class="brand" href="/">energy.js.org</a><div class="links"><a href="/recipes/">Rezepte</a><a href="/examples/">Beispiele</a><a href="/mako-notes/">MaKo-Notizen</a><a href="/cet/">CET</a><a href="/lens/">CernionLENS</a><a href="/willi-mako/">Willi-Mako</a><a href="/stack/">Stack</a><a href="/contact/">Kontakt</a></div></div></nav><main><section class="section"><div class="wrap"><div class="crumbs"><a href="/recipes/">Rezepte</a> / Versionierter Prüfkatalog</div><h1>Datenqualitätsregeln als versionierten JavaScript-Prüfkatalog organisieren</h1><p class="lead">Kleine Datenregeln werden leichter überprüfbar, wenn jede Regel eine stabile ID, Schwere, Meldung und gemeinsam dokumentierte Katalogversion besitzt. Das Beispiel trennt technische Vorprüfung, Klärhinweis und fachliche Freigabe.</p><div class="grid"><article class="card"><h3>Suchintention</h3><p><strong>Datenqualitätsregeln JavaScript Energiedaten</strong>: Wie lassen sich Messdaten mit nachvollziehbaren, versionierten Regeln prüfen?</p></article><article class="card"><h3>Praktische Nutzenfrage</h3><p>Welche Regel hat einen Datensatz beanstandet, unter welcher Katalogversion und mit welchem nächsten Status?</p></article><article class="card"><h3>Prüfgrenze</h3><p>Der lokale Check erkennt nur definierte Strukturmerkmale. Er korrigiert nichts und ersetzt weder fachliche Prüfung noch Prozessfreigabe.</p></article></div><h2>Lokaler Dry-Run</h2><div class="code"><pre>node examples/versioned-data-quality-catalog.js</pre></div><p>Das Skript arbeitet ausschließlich mit synthetischen Datensätzen und prüft:</p><ul class="list"><li>ob eine Serien-ID vorhanden ist,</li><li>ob der Zeitstempel eine Zeitzone oder einen Offset trägt,</li><li>ob der Messwert eine endliche Zahl ist,</li><li>ob die Einheit im kleinen Beispielkatalog bekannt ist.</li></ul><h2>Was im Ergebnis erhalten bleibt</h2><p>Jeder Lauf nennt Katalog-ID, Version und Gültigkeitsdatum. Beanstandungen referenzieren die auslösende Regel-ID. Der Status <code>clarification_required</code> markiert Klärbedarf; er löst keine automatische Änderung aus.</p><div class="code"><pre>{
+  "catalog": {
+    "id": "meter-reading-intake",
+    "version": "2026-10-30.1",
+    "ruleCount": 4
+  },
+  "sourceClass": "synthetic-local-fixture",
+  "networkCalls": 0
+}</pre></div><h2>Von der Regel zur Arbeitslage</h2><ol class="list"><li>Regel-ID und Zweck fachlich benennen.</li><li>Schwere und Meldung im Team reviewen.</li><li>Katalogänderungen versionieren, statt bestehende Ergebnisse still umzudeuten.</li><li>Beanstandungen als Klärhinweise übergeben.</li><li>Freigabe oder Korrektur in einem separaten Prozessschritt entscheiden.</li></ol><p class="note warn">Beispielwerte sind synthetisch. Grenzwerte, Einheiten und Prozessfolgen müssen für den konkreten Datenbestand fachlich festgelegt werden.</p><p><a class="btn" href="/examples/versioned-data-quality-catalog.js">Beispielskript öffnen</a></p><h2>Public-safe Evidenz</h2><p>Ausgangspunkt ist der öffentliche Cernion-Beitrag <a href="https://cernion.de/timeline/2026-10-29-datenqualitaetsregeln-versionierter-pruefkatalog/">„Datenqualität operationalisieren“</a>. Dieses Rezept abstrahiert die dort beschriebene Praxisidee auf einen lokalen JavaScript-Dry-Run.</p><p>Wenn aus dem Prüfkatalog ein kontrollierter Integrationsreview werden soll, kann <a href="/contact/">Felix Mertens</a> die technische und fachliche Prüfgrenze einordnen.</p></div></section></main><footer class="footer"><div class="wrap">Open Source · JavaScript · Energiewirtschaft · gepflegt von STROMDAO. Praxisbeispiele verwenden synthetische Daten und ersetzen keine rechtliche Prüfung.</div></footer></body></html>
