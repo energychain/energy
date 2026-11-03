@@ -20,6 +20,7 @@ Examples must use synthetic data. Do not publish customer data, secrets, private
 
 ```bash
 npm run validate
+node examples/vdmi-role-proposal-preflight.js
 node examples/cet-openai-provider-acceptance.js
 node examples/versioned-data-quality-catalog.js
 node examples/cet-project-admin-overview.js

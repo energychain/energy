@@ -3,8 +3,15 @@
   <title>energy.js.org Praxisnotizen</title>
   <link href="https://energy.js.org/feed.xml" rel="self" />
   <link href="https://energy.js.org/" />
-  <updated>2026-10-30T10:00:00+01:00</updated>
+  <updated>2026-11-03T10:00:00+01:00</updated>
   <id>https://energy.js.org/</id>
+  <entry>
+    <title>VDMI-Rollenvorschläge mit JavaScript vorprüfen</title>
+    <link href="https://energy.js.org/recipes/vdmi-role-proposal-preflight.html" />
+    <id>https://energy.js.org/recipes/vdmi-role-proposal-preflight.html</id>
+    <updated>2026-11-03T10:00:00+01:00</updated>
+    <summary>Ein public-safe JavaScript-Beispiel prüft synthetische Rollenvorschläge auf VDMI-Code, Evidenzbasis und menschliche Bestätigung, ohne Rechte oder Fachaktionen auszulösen.</summary>
+  </entry>
   <entry>
     <title>Datenqualitätsregeln als versionierten JavaScript-Prüfkatalog organisieren</title>
     <link href="https://energy.js.org/recipes/versioned-data-quality-catalog.html" />

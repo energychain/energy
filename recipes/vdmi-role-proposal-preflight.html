@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="de" data-bs-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VDMI-Rollenvorschläge mit JavaScript vorprüfen</title>
+<meta name="description" content="Ein public-safe JavaScript-Beispiel prüft synthetische VDMI-Rollenvorschläge auf Rollencode, Evidenzbasis und menschliche Bestätigung.">
+<link rel="canonical" href="https://energy.js.org/recipes/vdmi-role-proposal-preflight.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="VDMI-Rollenvorschläge mit JavaScript vorprüfen">
+<meta property="og:description" content="Synthetische Verantwortlichkeitsvorschläge lokal prüfen, ohne Rechte zu vergeben oder Fachaktionen auszulösen.">
+<meta property="og:url" content="https://energy.js.org/recipes/vdmi-role-proposal-preflight.html">
+<meta property="og:image" content="https://energy.js.org/assets/img/Icon%20SD_512.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/Icon%20SD_32.png">
+<link rel="stylesheet" href="/assets/css/energy-practice.css">
+<script defer data-domain="energy.js.org" src="https://stats.corrently.cloud/js/script.js"></script>
+</head>
+<body><nav class="nav"><div class="wrap"><a class="brand" href="/">energy.js.org</a><div class="links"><a href="/recipes/">Rezepte</a><a href="/examples/">Beispiele</a><a href="/mako-notes/">MaKo-Notizen</a><a href="/cet/">CET</a><a href="/lens/">CernionLENS</a><a href="/willi-mako/">Willi-Mako</a><a href="/stack/">Stack</a><a href="/contact/">Kontakt</a></div></div></nav><main><section class="section"><div class="wrap"><div class="crumbs"><a href="/recipes/">Rezepte</a> / VDMI-Rollenvorschläge</div><h1>VDMI-Rollenvorschläge mit JavaScript vorprüfen</h1><p class="lead">Verantwortlichkeiten werden nachvollziehbarer, wenn ein Vorschlag seine Funktion, den VDMI-Rollencode, die Evidenzbasis und den Bestätigungsstatus getrennt ausweist. Das Beispiel prüft diese Form lokal mit rein synthetischen Daten.</p><div class="grid"><article class="card"><h3>Suchintention</h3><p><strong>VDMI Rollenmatrix JavaScript prüfen</strong>: Wie lassen sich Verantwortlichkeitsvorschläge technisch validieren, bevor Menschen sie fachlich bestätigen?</p></article><article class="card"><h3>Praktische Nutzenfrage</h3><p>Ist der Rollencode gültig, besitzt der Vorschlag eine sichtbare Grundlage und bleibt klar, dass daraus weder Zugriff noch Ausführung folgt?</p></article><article class="card"><h3>Prüfgrenze</h3><p>Der Dry-Run bewertet nur die Darstellungsform. Er bestimmt keine Organisation, vergibt keine Rechte und ersetzt keine fachliche Rollenklärung.</p></article></div><h2>Lokaler Dry-Run</h2><div class="code"><pre>node examples/vdmi-role-proposal-preflight.js</pre></div><p>Das Skript prüft vier synthetische Vorschläge auf:</p><ul class="list"><li>einen bekannten VDMI-Code <code>V</code>, <code>D</code>, <code>M</code> oder <code>I</code>,</li><li>mindestens einen nachvollziehbaren Hinweis in der Evidenzbasis,</li><li>einen Confidence-Wert zwischen 0 und 1,</li><li>die getrennte Kennzeichnung von Vorschlag und menschlicher Bestätigung.</li></ul><h2>Beispielausgabe</h2><div class="code"><pre>{
+  "functionId": "meter-data-quality",
+  "proposedRole": "D",
+  "status": "proposal_requires_human_confirmation",
+  "basisCount": 2,
+  "grantsAccess": false,
+  "triggersExecution": false
+}</pre></div><h2>Vom Signal zur prüfbaren Rollenklärung</h2><ol class="list"><li>Funktion und konkreten Verantwortlichkeitsbedarf benennen.</li><li>Vorschlag und seine Grundlage getrennt speichern.</li><li>Ungültige Codes oder fehlende Basis als Klärfall markieren.</li><li>Die betroffene Rolle durch einen Menschen bestätigen oder korrigieren lassen.</li><li>Zugriff, Freigabe und Prozessausführung in separaten Governance-Schritten behandeln.</li></ol><p class="note warn">VDMI-Zuordnungen sind organisationsspezifisch. Ein technischer Vorschlag ist keine Berechtigung, keine Rangfolge und keine fachlich bindende Entscheidung.</p><p><a class="btn" href="/examples/vdmi-role-proposal-preflight.js">Beispielskript öffnen</a></p><h2>Public-safe Evidenz</h2><p>Das öffentliche Repository der <a href="https://github.com/energychain/cernion-energy-tools">Cernion Energy Tools</a> beschreibt VDMI-Governance, dossiersichere Verantwortlichkeitsdarstellungen und ausdrücklich getrennte menschliche Prüfgates. Das Rezept übersetzt diese dokumentierte Grenze in einen lokalen Formtest ohne API-Aufruf.</p><p>Wenn aus dem Muster ein kontrollierter Integrationsreview werden soll, kann <a href="/contact/">Felix Mertens</a> die technische und fachliche Prüfgrenze einordnen.</p></div></section></main><footer class="footer"><div class="wrap">Open Source · JavaScript · Energiewirtschaft · gepflegt von STROMDAO. Praxisbeispiele verwenden synthetische Daten und ersetzen keine rechtliche Prüfung.</div></footer></body></html>
