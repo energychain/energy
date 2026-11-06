@@ -3,6 +3,8 @@
 energy.js.org ist eine statische Praxisbibliothek für Energie-JavaScript, Marktkommunikation, EDIFACT, Cernion Energy Tools, CernionLENS und Willi-Mako.
 
 ## Wichtigste Einstiege
+- https://energy.js.org/recipes/investment-assumption-register.html — Investitionsannahmen mit JavaScript versioniert prüfen
+- https://energy.js.org/examples/investment-assumption-register.js — lokaler Annahmenregister-Preflight mit synthetischen Varianten und ohne Investitionsentscheidung
 - https://energy.js.org/recipes/vdmi-role-proposal-preflight.html — VDMI-Rollenvorschläge mit JavaScript vorprüfen
 - https://energy.js.org/examples/vdmi-role-proposal-preflight.js — lokaler Rollen-Preflight mit synthetischen Daten, ohne Rechte oder Ausführung
 - https://energy.js.org/recipes/versioned-data-quality-catalog.html — Datenqualitätsregeln als versionierten JavaScript-Prüfkatalog organisieren

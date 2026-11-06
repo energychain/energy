@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="de" data-bs-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Investitionsannahmen mit JavaScript versioniert prüfen</title>
+<meta name="description" content="Ein lokales JavaScript-Beispiel prüft ein synthetisches Annahmenregister für Investitionsvarianten auf Quelle, Status, Gültigkeit und Sensitivität.">
+<link rel="canonical" href="https://energy.js.org/recipes/investment-assumption-register.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Investitionsannahmen mit JavaScript versioniert prüfen">
+<meta property="og:description" content="Ein schlankes Annahmenregister macht Varianten und wirkungsstarke Unsicherheiten technisch nachvollziehbar.">
+<meta property="og:url" content="https://energy.js.org/recipes/investment-assumption-register.html">
+<meta property="og:image" content="https://energy.js.org/assets/img/Icon%20SD_512.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/Icon%20SD_32.png">
+<link rel="stylesheet" href="/assets/css/energy-practice.css">
+<script defer data-domain="energy.js.org" src="https://stats.corrently.cloud/js/script.js"></script>
+</head>
+<body><nav class="nav"><div class="wrap"><a class="brand" href="/">energy.js.org</a><div class="links"><a href="/recipes/">Rezepte</a><a href="/examples/">Beispiele</a><a href="/mako-notes/">MaKo-Notizen</a><a href="/cet/">CET</a><a href="/lens/">CernionLENS</a><a href="/willi-mako/">Willi-Mako</a><a href="/stack/">Stack</a><a href="/contact/">Kontakt</a></div></div></nav><main><section class="section"><div class="wrap"><div class="crumbs"><a href="/recipes/">Rezepte</a> / Annahmenregister</div><h1>Investitionsannahmen mit JavaScript versioniert prüfen</h1><p class="lead">Varianten lassen sich besser vergleichen, wenn Annahmen nicht nur als Zahlen erscheinen. Dieses lokale Beispiel hält Quelle, Qualitätsstatus, Gültigkeit, Verantwortung und Sensitivitätskorridor getrennt fest.</p><div class="grid"><article class="card"><h3>Suchintention</h3><p><strong>Annahmenregister Investitionsplanung JavaScript</strong>: Wie kann ein kleines Script Planungsannahmen auf Vollständigkeit und Vergleichbarkeit prüfen?</p></article><article class="card"><h3>Praktische Nutzenfrage</h3><p>Welche Annahmen sind ausreichend beschrieben – und welche Unsicherheit sollte zuerst geklärt werden, weil sie die Variantenrangfolge verändern könnte?</p></article><article class="card"><h3>Prüfgrenze</h3><p>Das Script prüft Struktur und Kennzeichnung. Es berechnet keine reale Wirtschaftlichkeit, genehmigt kein Budget und trifft keine regulatorische oder unternehmerische Entscheidung.</p></article></div><h2>Lokaler Dry-Run</h2><div class="code"><pre>node examples/investment-assumption-register.js</pre></div><p>Der synthetische Snapshot prüft je Annahme:</p><ul class="list"><li>Bezeichnung, Wert und Einheit,</li><li>Quelle und Qualitätsstatus,</li><li>Gültigkeit für bekannte Varianten,</li><li>eine verantwortliche Rolle für die nächste Aktualisierung,</li><li>einen plausibel geordneten Sensitivitätskorridor.</li></ul><h2>Beispielausgabe</h2><div class="code"><pre>{
+  "id": "annual-demand-growth",
+  "qualityStatus": "scenario",
+  "priority": "clarify_first",
+  "findings": [],
+  "readyForComparison": true
+}</pre></div><h2>Vom Zahlenblatt zum prüfbaren Zeitstand</h2><ol class="list"><li>Entscheidungsfrage und betrachtete Varianten benennen.</li><li>Jede Annahme mit Quelle, Status und Gültigkeit erfassen.</li><li>Den Snapshot versionieren, statt alte Werte still zu überschreiben.</li><li>Für wirkungsstarke Annahmen einen unteren und oberen Wert testen.</li><li>Gezielt dort nachschärfen, wo sich die Rangfolge verändern kann.</li></ol><p class="note warn">Ein Sensitivitätskorridor beschreibt eine Prüfspanne, keine Prognose und keine Zusage. Reale Werte, Bewertungsmethoden und Entscheidungen brauchen den jeweils zuständigen fachlichen Review.</p><p><a class="btn" href="/examples/investment-assumption-register.js">Beispielskript öffnen</a></p><h2>Public-safe Evidenz</h2><p>Der öffentliche Cernion-Beitrag <a href="https://cernion.de/timeline/2026-11-06-investitionsentscheidungen-annahmenregister/">„Regulierte Investitionsentscheidungen: Ein Annahmenregister schafft Vergleichbarkeit“</a> beschreibt sechs Kernfelder und die Priorisierung unsicherer Annahmen nach Ergebniswirkung. Das Rezept übersetzt diese Methodik in einen lokalen Formtest mit rein synthetischen Daten.</p><p>Wenn aus dem Muster ein kontrollierter Integrationsreview werden soll, kann <a href="/contact/">Felix Mertens</a> die technische und fachliche Prüfgrenze einordnen.</p></div></section></main><footer class="footer"><div class="wrap">Open Source · JavaScript · Energiewirtschaft · gepflegt von STROMDAO. Praxisbeispiele verwenden synthetische Daten und ersetzen keine rechtliche Prüfung.</div></footer></body></html>
