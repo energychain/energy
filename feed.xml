@@ -3,8 +3,15 @@
   <title>energy.js.org Praxisnotizen</title>
   <link href="https://energy.js.org/feed.xml" rel="self" />
   <link href="https://energy.js.org/" />
-  <updated>2026-11-06T10:00:00+01:00</updated>
+  <updated>2026-11-10T10:00:00+01:00</updated>
   <id>https://energy.js.org/</id>
+  <entry>
+    <title>EOG-Szenarien mit JavaScript als Vergleichsprotokoll prüfen</title>
+    <link href="https://energy.js.org/recipes/eog-scenario-comparison-protocol.html" />
+    <id>https://energy.js.org/recipes/eog-scenario-comparison-protocol.html</id>
+    <updated>2026-11-10T10:00:00+01:00</updated>
+    <summary>Ein public-safe JavaScript-Beispiel vergleicht zwei synthetische EOG-Snapshots und dokumentiert Baseline, Annahmenänderungen, Gründe und Ergebnisdelta.</summary>
+  </entry>
   <entry>
     <title>Investitionsannahmen mit JavaScript versioniert prüfen</title>
     <link href="https://energy.js.org/recipes/investment-assumption-register.html" />

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="de" data-bs-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EOG-Szenarien mit JavaScript als Vergleichsprotokoll prüfen</title>
+<meta name="description" content="Ein lokales JavaScript-Beispiel vergleicht zwei synthetische EOG-Szenario-Snapshots und dokumentiert geänderte Annahmen, Gründe und Ergebnisdelta.">
+<link rel="canonical" href="https://energy.js.org/recipes/eog-scenario-comparison-protocol.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="EOG-Szenarien mit JavaScript als Vergleichsprotokoll prüfen">
+<meta property="og:description" content="Ein kleines Vergleichsprotokoll macht sichtbar, was sich zwischen zwei Szenario-Versionen geändert hat.">
+<meta property="og:url" content="https://energy.js.org/recipes/eog-scenario-comparison-protocol.html">
+<meta property="og:image" content="https://energy.js.org/assets/img/Icon%20SD_512.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/Icon%20SD_32.png">
+<link rel="stylesheet" href="/assets/css/energy-practice.css">
+<script defer data-domain="energy.js.org" src="https://stats.corrently.cloud/js/script.js"></script>
+</head>
+<body><nav class="nav"><div class="wrap"><a class="brand" href="/">energy.js.org</a><div class="links"><a href="/recipes/">Rezepte</a><a href="/examples/">Beispiele</a><a href="/mako-notes/">MaKo-Notizen</a><a href="/cet/">CET</a><a href="/lens/">CernionLENS</a><a href="/willi-mako/">Willi-Mako</a><a href="/stack/">Stack</a><a href="/contact/">Kontakt</a></div></div></nav><main><section class="section"><div class="wrap"><div class="crumbs"><a href="/recipes/">Rezepte</a> / EOG-Vergleichsprotokoll</div><h1>EOG-Szenarien mit JavaScript als Vergleichsprotokoll prüfen</h1><p class="lead">Wenn zwei Szenario-Ergebnisse voneinander abweichen, hilft zuerst eine einfache technische Frage: Welche Annahmen wurden zwischen Baseline und Variante tatsächlich geändert – und ist jeder Schritt begründet?</p><div class="grid"><article class="card"><h3>Suchintention</h3><p><strong>EOG Szenarien vergleichen JavaScript</strong>: Wie lassen sich Baseline, Variantenänderungen und Ergebnisdelta reproduzierbar dokumentieren?</p></article><article class="card"><h3>Praktische Nutzenfrage</h3><p>Kann ein Review erkennen, ob ein Ergebnisunterschied aus benannten Annahmen stammt oder ob sich der Vergleichsvertrag unbemerkt verändert hat?</p></article><article class="card"><h3>Prüfgrenze</h3><p>Das Script prüft Versionen, Änderungsgründe und den Ergebnisvertrag. Es bewertet weder reale EOG-Methodik noch Wirtschaftlichkeit und empfiehlt keine Investition.</p></article></div><h2>Lokaler Dry-Run</h2><div class="code"><pre>node examples/eog-scenario-comparison-protocol.js</pre></div><p>Das synthetische Beispiel prüft:</p><ul class="list"><li>ob Baseline und Variante dieselbe Szenario-ID verwenden,</li><li>ob die Variante ihre Ausgangsversion nennt,</li><li>ob der Zeitstand nachvollziehbar fortgeschrieben wurde,</li><li>ob Kennzahl und Einheit vergleichbar bleiben,</li><li>ob jede geänderte Annahme einen Änderungsgrund besitzt.</li></ul><h2>Beispielausgabe</h2><div class="code"><pre>{
+  "comparison": "v1-&gt;v2",
+  "changedAssumptions": [
+    "annualDemandGrowthPct",
+    "implementationYears"
+  ],
+  "resultDelta": { "value": -7, "unit": "points" },
+  "findings": [],
+  "reproducibleComparison": true
+}</pre></div><h2>Ein kleiner, belastbarer Prüfpfad</h2><ol class="list"><li>Baseline unverändert als eigenen Snapshot aufbewahren.</li><li>Je Variante nur bewusst geänderte Annahmen fortschreiben.</li><li>Für jede Änderung Grund und Quelle am Zeitstand notieren.</li><li>Kennzahl, Einheit und Berechnungsvertrag stabil halten.</li><li>Ergebnisdelta erst danach fachlich interpretieren.</li></ol><p class="note warn">Ein reproduzierbares Vergleichsprotokoll macht Unterschiede nachvollziehbar. Es beweist nicht, dass Annahmen richtig sind, und ersetzt keine fachliche, regulatorische oder wirtschaftliche Befassung.</p><p><a class="btn" href="/examples/eog-scenario-comparison-protocol.js">Beispielskript öffnen</a></p><h2>Public-safe Evidenz</h2><p>Der öffentliche Cernion-Beitrag <a href="https://cernion.de/timeline/2026-11-10-eog-szenarien-vergleichsprotokoll/">„EOG-Szenarien nachvollziehbar vergleichen: ein kleines Protokoll für belastbare Varianten“</a> empfiehlt, Baseline, bewusste Änderungen und Ergebnisexporte getrennt zu dokumentieren. Dieses Rezept übersetzt den Ansatz in einen lokalen Formtest mit ausschließlich synthetischen Werten.</p><p>Wenn das Muster für einen kontrollierten technischen Review eingeordnet werden soll, ist <a href="/contact/">Felix Mertens</a> der dezente Kontaktweg.</p></div></section></main><footer class="footer"><div class="wrap">Open Source · JavaScript · Energiewirtschaft · gepflegt von STROMDAO. Praxisbeispiele verwenden synthetische Daten und ersetzen keine rechtliche Prüfung.</div></footer></body></html>
