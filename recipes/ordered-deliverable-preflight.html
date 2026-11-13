@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="de" data-bs-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Technische Lieferobjekte mit JavaScript vorprüfen</title>
+<meta name="description" content="Ein lokaler JavaScript-Preflight prüft ein synthetisches Markdown-Lieferobjekt auf bestellte Abschnitte, Reihenfolge, Evidenzhinweise und Review-Grenze.">
+<link rel="canonical" href="https://energy.js.org/recipes/ordered-deliverable-preflight.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Technische Lieferobjekte mit JavaScript vorprüfen">
+<meta property="og:description" content="Ein kleiner Formtest trennt Strukturtreue von fachlicher Prüfung.">
+<meta property="og:url" content="https://energy.js.org/recipes/ordered-deliverable-preflight.html">
+<meta property="og:image" content="https://energy.js.org/assets/img/Icon%20SD_512.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/Icon%20SD_32.png">
+<link rel="stylesheet" href="/assets/css/energy-practice.css">
+<script defer data-domain="energy.js.org" src="https://stats.corrently.cloud/js/script.js"></script>
+</head>
+<body><nav class="nav"><div class="wrap"><a class="brand" href="/">energy.js.org</a><div class="links"><a href="/recipes/">Rezepte</a><a href="/examples/">Beispiele</a><a href="/mako-notes/">MaKo-Notizen</a><a href="/cet/">CET</a><a href="/lens/">CernionLENS</a><a href="/willi-mako/">Willi-Mako</a><a href="/stack/">Stack</a><a href="/contact/">Kontakt</a></div></div></nav><main><section class="section"><div class="wrap"><div class="crumbs"><a href="/recipes/">Rezepte</a> / Lieferobjekt-Preflight</div><h1>Technische Lieferobjekte mit JavaScript vorprüfen</h1><p class="lead">Ein ausführlicher Markdown-Arbeitsstand kann vollständig lesbar bleiben und trotzdem maschinell auf die bestellte Form geprüft werden. Der Preflight kontrolliert Struktur – die fachliche Bewertung bleibt beim Review.</p><div class="grid"><article class="card"><h3>Suchintention</h3><p><strong>Markdown Lieferobjekt Checkliste JavaScript</strong>: Wie prüfe ich, ob ein technischer Arbeitsstand alle bestellten Abschnitte in der richtigen Reihenfolge enthält?</p></article><article class="card"><h3>Praktische Nutzenfrage</h3><p>Kann ein Review sofort erkennen, ob Ziel, Voraussetzungen, Vorgehen, Prüfergebnis und offene Punkte vollständig sind?</p></article><article class="card"><h3>Prüfgrenze</h3><p>Das Script prüft Formmerkmale und lokale Evidenzhinweise. Es bewertet keine fachliche Richtigkeit und erteilt keine Freigabe.</p></article></div><h2>Lokaler Dry-Run</h2><div class="code"><pre>node examples/ordered-deliverable-preflight.js</pre></div><p>Das synthetische Beispiel prüft:</p><ul class="list"><li>ob alle bestellten Überschriften vorhanden sind,</li><li>ob ihre Reihenfolge dem Auftrag entspricht,</li><li>ob mindestens ein lokaler Evidenzhinweis genannt wird,</li><li>ob offene Punkte ausdrücklich sichtbar bleiben,</li><li>ob eine klare Review- und Wirkungsgrenze notiert ist.</li></ul><h2>Beispielausgabe</h2><div class="code"><pre>{
+  "missingSections": [],
+  "orderMatches": true,
+  "evidenceReferences": [
+    "fixture://synthetic-deliverable-v1"
+  ],
+  "hasReviewBoundary": true,
+  "findings": [],
+  "formReadyForHumanReview": true
+}</pre></div><h2>Ein kleiner, belastbarer Prüfpfad</h2><ol class="list"><li>Bestellte Bestandteile vor dem Schreiben als explizite Liste erfassen.</li><li>Den Arbeitsstand frei und lesbar als Markdown schreiben.</li><li>Struktur, Evidenzhinweise und offene Punkte lokal prüfen.</li><li>Formfehler korrigieren, ohne Fachinhalte automatisch umzudeuten.</li><li>Quellenqualität und Schlussfolgerungen anschließend menschlich bewerten.</li></ol><p class="note warn">Formtreue ist kein Qualitätsbeweis. Ein vollständiges Dokument kann fachlich falsch sein; ein technischer Preflight ersetzt deshalb weder Quellenprüfung noch Freigabe.</p><p><a class="btn" href="/examples/ordered-deliverable-preflight.js">Beispielskript öffnen</a></p><h2>Public-safe Evidenz</h2><p>Die öffentliche Entwicklung der <a href="https://github.com/energychain/cernion-energy-tools/commit/e726aab92e1d1c42537cd749b34c7399e087648e">Cernion Energy Tools</a> trennt bei geordneten Lieferobjekten die frei lesbare Ausarbeitung von nachgelagerten Form- und Artefaktprüfungen. Dieses Rezept abstrahiert das Muster als rein lokalen JavaScript-Preflight mit synthetischem Markdown.</p><p>Wenn das Muster für einen kontrollierten technischen Review eingeordnet werden soll, ist <a href="/contact/">Felix Mertens</a> der dezente Kontaktweg.</p></div></section></main><footer class="footer"><div class="wrap">Open Source · JavaScript · Energiewirtschaft · gepflegt von STROMDAO. Praxisbeispiele verwenden synthetische Daten und ersetzen keine rechtliche Prüfung.</div></footer></body></html>

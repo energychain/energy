@@ -3,6 +3,8 @@
 energy.js.org ist eine statische Praxisbibliothek für Energie-JavaScript, Marktkommunikation, EDIFACT, Cernion Energy Tools, CernionLENS und Willi-Mako.
 
 ## Wichtigste Einstiege
+- https://energy.js.org/recipes/ordered-deliverable-preflight.html — technische Markdown-Lieferobjekte mit JavaScript vorprüfen
+- https://energy.js.org/examples/ordered-deliverable-preflight.js — lokaler Formtest mit synthetischem Markdown und ohne Freigabewirkung
 - https://energy.js.org/recipes/eog-scenario-comparison-protocol.html — EOG-Szenarien mit JavaScript als Vergleichsprotokoll prüfen
 - https://energy.js.org/examples/eog-scenario-comparison-protocol.js — lokaler Snapshot-Vergleich mit synthetischen Annahmen und ohne Investitionsentscheidung
 - https://energy.js.org/recipes/investment-assumption-register.html — Investitionsannahmen mit JavaScript versioniert prüfen
