@@ -10,7 +10,7 @@ const required = [
   'examples/lens-fixture-check.js', 'mako-notes/index.html',
   'cet/index.html', 'lens/index.html', 'willi-mako/index.html', 'stack/index.html',
   'contact/index.html', 'sitemap.xml', 'robots.txt', 'llms.txt', 'feed.xml',
-  'assets/css/energy-practice.css'
+  'assets/css/energy-practice.css', 'assets/js/web-to-dialogue.js'
 ];
 const missing = required.filter((file) => !fs.existsSync(path.join(root, file)));
 if (missing.length) {
@@ -25,6 +25,14 @@ for (const rel of modernHtmlFiles) {
   if (!text.includes('https://stats.corrently.cloud/js/script.js')) bad.push(`${rel} missing plausible`);
   if (!text.includes('<link rel="canonical"')) bad.push(`${rel} missing canonical`);
   if (!text.includes('href="/assets/css/energy-practice.css"')) bad.push(`${rel} missing shared stylesheet`);
+  if (!text.includes('src="/assets/js/web-to-dialogue.js"')) bad.push(`${rel} missing WebToDialogue bridge`);
+}
+const contact = fs.readFileSync(path.join(root, 'contact/index.html'), 'utf8');
+if (contact.includes('mailto:')) bad.push('contact page must use the canonical WebToDialogue transition, not mailto');
+if (!contact.includes('data-energyjs-dialogue-link')) bad.push('contact page missing contextual dialogue link');
+const dialogueScript = fs.readFileSync(path.join(root, 'assets/js/web-to-dialogue.js'), 'utf8');
+for (const marker of ['energy.js.org', 'energyjs_recipe_question', '#WebToDialogue', 'dialogue_start', 'source_path']) {
+  if (!dialogueScript.includes(marker)) bad.push(`WebToDialogue bridge missing ${marker}`);
 }
 const sitemap = fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8');
 for (const rel of modernHtmlFiles) {

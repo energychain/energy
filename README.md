@@ -12,6 +12,7 @@ The site is maintained as a non-promotional practice library:
 - small runnable examples under `/examples/`
 - MaKo notes under `/mako-notes/`
 - practical CET, CernionLENS and Willi-Mako entry points
+- contextual, PII-free `#WebToDialogue` transitions from recipes to Felix via the canonical Cernion intake
 - static SEO/LLM hygiene via `sitemap.xml`, `robots.txt`, `llms.txt` and `feed.xml`
 
 Examples must use synthetic data. Do not publish customer data, secrets, private names, raw inbox content or binding legal/commercial claims.

@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "apply:web-dialogue": "node scripts/apply-web-to-dialogue.js",
     "validate": "node scripts/validate-static-site.js"
   },
   "dependencies": {

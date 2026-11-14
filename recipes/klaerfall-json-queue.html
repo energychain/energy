@@ -14,6 +14,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/Icon%20SD_32.png">
 <link rel="stylesheet" href="/assets/css/energy-practice.css">
 <script defer data-domain="energy.js.org" src="https://stats.corrently.cloud/js/script.js"></script>
+<script defer src="/assets/js/web-to-dialogue.js"></script>
 </head>
 <body><nav class="nav"><div class="wrap"><a class="brand" href="/">energy.js.org</a><div class="links"><a href="/recipes/">Rezepte</a><a href="/examples/">Beispiele</a><a href="/mako-notes/">MaKo-Notizen</a><a href="/cet/">CET</a><a href="/lens/">CernionLENS</a><a href="/willi-mako/">Willi-Mako</a><a href="/stack/">Stack</a><a href="/contact/">Kontakt</a></div></div></nav><main><section class="section"><div class="wrap"><div class="crumbs"><a href="/recipes/">Rezepte</a> / Klärfall-Queue</div><h1>Klärfälle als kleine JSON-Queue modellieren</h1><p class="lead">Wenn eine Fachfrage noch nicht entscheidungsreif ist, hilft oft keine größere Antwort, sondern eine kleinere Struktur: Was ist offen, wer prüft, welche Evidenz liegt vor?</p><p>Dieses Rezept abstrahiert das Cernion-Timeline-Muster einer Klärfall-Moderationsqueue in ein neutrales JavaScript-Beispiel. Es nutzt ausschließlich synthetische Daten und trifft keine fachliche oder rechtliche Entscheidung.</p><div class="code"><pre>const queue = [
   {
