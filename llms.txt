@@ -3,6 +3,8 @@
 energy.js.org ist eine statische Praxisbibliothek für Energie-JavaScript, Marktkommunikation, EDIFACT, Cernion Energy Tools, CernionLENS und Willi-Mako.
 
 ## Wichtigste Einstiege
+- https://energy.js.org/recipes/mako-deadline-data-quality-triage.html — MaKo-Zeit- und Datenqualitätssignale mit JavaScript getrennt vorsortieren
+- https://energy.js.org/examples/mako-deadline-data-quality-triage.js — lokale synthetische Triage ohne Fristberechnung, EDIFACT-Interpretation oder Nachrichtenaustausch
 - https://energy.js.org/recipes/ordered-deliverable-preflight.html — technische Markdown-Lieferobjekte mit JavaScript vorprüfen
 - https://energy.js.org/examples/ordered-deliverable-preflight.js — lokaler Formtest mit synthetischem Markdown und ohne Freigabewirkung
 - https://energy.js.org/recipes/eog-scenario-comparison-protocol.html — EOG-Szenarien mit JavaScript als Vergleichsprotokoll prüfen
