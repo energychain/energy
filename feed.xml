@@ -3,8 +3,15 @@
   <title>energy.js.org Praxisnotizen</title>
   <link href="https://energy.js.org/feed.xml" rel="self" />
   <link href="https://energy.js.org/" />
-  <updated>2026-11-17T10:00:00+01:00</updated>
+  <updated>2026-11-20T10:00:00+01:00</updated>
   <id>https://energy.js.org/</id>
+  <entry>
+    <title>KI-Empfehlungen mit JavaScript nachvollziehbar zurückziehen</title>
+    <link href="https://energy.js.org/recipes/cet-recommendation-ledger.html" />
+    <id>https://energy.js.org/recipes/cet-recommendation-ledger.html</id>
+    <updated>2026-11-20T10:00:00+01:00</updated>
+    <summary>Ein public-safe JavaScript-Beispiel prüft synthetische Empfehlungen auf stabile IDs, explizite Rücknahme, Ersetzung und Schutz vor stillem Wiederauftauchen.</summary>
+  </entry>
   <entry>
     <title>MaKo-Frist und Datenqualität mit JavaScript getrennt prüfen</title>
     <link href="https://energy.js.org/recipes/mako-deadline-data-quality-triage.html" />
