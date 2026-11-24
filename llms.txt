@@ -3,6 +3,8 @@
 energy.js.org ist eine statische Praxisbibliothek für Energie-JavaScript, Marktkommunikation, EDIFACT, Cernion Energy Tools, CernionLENS und Willi-Mako.
 
 ## Wichtigste Einstiege
+- https://energy.js.org/recipes/cet-evidence-exposure-preflight.html — Arbeitsbelege und zitierbare Quellen vor einem sichtbaren KI-Fallback trennen
+- https://energy.js.org/examples/cet-evidence-exposure-preflight.js — lokaler synthetischer Exposure-Preflight ohne Datenschutz- oder Freigabeversprechen
 - https://energy.js.org/recipes/cet-recommendation-ledger.html — KI-Empfehlungen mit stabilen IDs nachvollziehbar zurückziehen oder ersetzen
 - https://energy.js.org/examples/cet-recommendation-ledger.js — lokaler synthetischer Ledger-Preflight ohne Fachentscheidung oder Ausführung
 - https://energy.js.org/recipes/mako-deadline-data-quality-triage.html — MaKo-Zeit- und Datenqualitätssignale mit JavaScript getrennt vorsortieren

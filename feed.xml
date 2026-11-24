@@ -3,8 +3,15 @@
   <title>energy.js.org Praxisnotizen</title>
   <link href="https://energy.js.org/feed.xml" rel="self" />
   <link href="https://energy.js.org/" />
-  <updated>2026-11-20T10:00:00+01:00</updated>
+  <updated>2026-11-24T10:00:00+01:00</updated>
   <id>https://energy.js.org/</id>
+  <entry>
+    <title>Arbeitsbelege und zitierbare Quellen mit JavaScript trennen</title>
+    <link href="https://energy.js.org/recipes/cet-evidence-exposure-preflight.html" />
+    <id>https://energy.js.org/recipes/cet-evidence-exposure-preflight.html</id>
+    <updated>2026-11-24T10:00:00+01:00</updated>
+    <summary>Ein public-safe JavaScript-Beispiel trennt synthetische zitierbare Fundstellen von internen Arbeitsbelegen und prüft den sichtbaren Fallback auf Exposure-Leaks.</summary>
+  </entry>
   <entry>
     <title>KI-Empfehlungen mit JavaScript nachvollziehbar zurückziehen</title>
     <link href="https://energy.js.org/recipes/cet-recommendation-ledger.html" />

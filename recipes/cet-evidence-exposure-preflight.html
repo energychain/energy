@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="de" data-bs-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arbeitsbelege und zitierbare Quellen mit JavaScript trennen</title>
+<meta name="description" content="Ein lokaler JavaScript-Preflight trennt synthetische, zitierbare Fundstellen von internen Arbeitsbelegen, bevor ein Fallback-Text entsteht.">
+<link rel="canonical" href="https://energy.js.org/recipes/cet-evidence-exposure-preflight.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Arbeitsbelege und zitierbare Quellen mit JavaScript trennen">
+<meta property="og:description" content="Ein synthetischer Evidenzvertrag verhindert, dass interne Zwischenschritte ungeprüft in einen menschlich sichtbaren Fallback geraten.">
+<meta property="og:url" content="https://energy.js.org/recipes/cet-evidence-exposure-preflight.html">
+<meta property="og:image" content="https://energy.js.org/assets/img/Icon%20SD_512.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/Icon%20SD_32.png">
+<link rel="stylesheet" href="/assets/css/energy-practice.css">
+<script defer data-domain="energy.js.org" src="https://stats.corrently.cloud/js/script.js"></script>
+<script defer src="/assets/js/web-to-dialogue.js"></script>
+</head>
+<body><nav class="nav"><div class="wrap"><a class="brand" href="/">energy.js.org</a><div class="links"><a href="/recipes/">Rezepte</a><a href="/examples/">Beispiele</a><a href="/mako-notes/">MaKo-Notizen</a><a href="/cet/">CET</a><a href="/lens/">CernionLENS</a><a href="/willi-mako/">Willi-Mako</a><a href="/stack/">Stack</a><a href="/contact/">Kontakt</a></div></div></nav><main><section class="section"><div class="wrap"><div class="crumbs"><a href="/recipes/">Rezepte</a> / CET-Evidenzgrenze</div><h1>Arbeitsbelege und zitierbare Quellen mit JavaScript trennen</h1><p class="lead">Ein Antwortmodell darf mehr Arbeitsmaterial sehen als ein Mensch im technischen Fallback. Ein kleiner Evidenzvertrag markiert deshalb vor der Ausgabe, welche Fundstellen zitierbar sind und welche Zwischenschritte ausschließlich der Verarbeitung dienen.</p><div class="grid"><article class="card"><h3>Suchintention</h3><p><strong>KI Fallback Quellen Arbeitsbelege trennen JavaScript</strong>: Wie verhindere ich, dass interne Suchprotokolle oder Zwischenbefunde ungeprüft in einer sichtbaren Ersatzantwort landen?</p></article><article class="card"><h3>Praktische Nutzenfrage</h3><p>Kann ein Team lokal prüfen, dass nur als zitierbar markierte Fundstellen in den Fallback gelangen und Arbeitsbelege trotzdem für einen technischen Review erhalten bleiben?</p></article><article class="card"><h3>Prüfgrenze</h3><p>Das Script prüft nur Kennzeichnung und Ausgabegrenze synthetischer Einträge. Es erkennt keine vertraulichen Inhalte und ersetzt keine Datenschutz- oder Berechtigungsprüfung.</p></article></div><h2>Lokaler Dry-Run</h2><div class="code"><pre>node examples/cet-evidence-exposure-preflight.js</pre></div><p>Das Beispiel prüft:</p><ul class="list"><li>stabile und eindeutige Evidenz-IDs,</li><li>Quelle, Titel und Inhalt je synthetischer Fundstelle,</li><li>die expliziten Klassen <code>citable</code> und <code>working-only</code>,</li><li>einen menschlich sichtbaren Fallback ausschließlich aus zitierbaren Fundstellen,</li><li>einen nachgelagerten Exposure-Review gegen versehentlich ausgegebene Arbeitsbelege.</li></ul><h2>Beispielausgabe</h2><div class="code"><pre>{
+  "contractValid": true,
+  "counts": {
+    "citable": 2,
+    "working-only": 2
+  },
+  "leakingEvidence": [],
+  "fallbackSafeByContract": true
+}</pre></div><h2>Ein kleiner, belastbarer Prüfpfad</h2><ol class="list"><li>Jede Fundstelle vor der Ausgabe mit stabiler ID, Quelle und Exposure-Klasse versehen.</li><li>Fallback-Texte ausschließlich aus <code>citable</code>-Einträgen erzeugen.</li><li><code>working-only</code>-Einträge für Diagnose und Review behalten, aber nicht ungeprüft rendern.</li><li>Den fertigen Text erneut gegen alle Arbeitsbelege prüfen.</li><li>Unbekannte oder fehlende Exposure-Klassen als Fehler behandeln, statt einen Standard anzunehmen.</li></ol><p class="note warn">Eine saubere Ausgabegrenze reduziert versehentliche Vermischung. Sie beweist weder, dass eine zitierbare Fundstelle fachlich richtig oder öffentlich ist, noch dass der Gesamtprozess Datenschutz, Berechtigung, Compliance oder Produktivreife erfüllt.</p><p><a class="btn" href="/examples/cet-evidence-exposure-preflight.js">Beispielskript öffnen</a></p><h2>Public-safe Evidenz</h2><p>Der öffentliche CET-Commit <a href="https://github.com/energychain/cernion-energy-tools/commit/f79675fa125a3ac2d851ca140294e6e2dc36100c">„fallback without working evidence“</a> trennt zitierbare Quellen von Arbeitsbelegen, die nur für das Antwortmodell bestimmt sind. Dieses Rezept abstrahiert die Ausgabegrenze in ein lokales Beispiel mit ausschließlich synthetischen Daten.</p><p>Wenn das Muster für einen kontrollierten technischen Review eingeordnet werden soll, ist <a href="/contact/">Felix Mertens</a> der dezente Kontaktweg.</p></div></section></main><footer class="footer"><div class="wrap">Open Source · JavaScript · Energiewirtschaft · gepflegt von STROMDAO. Praxisbeispiele verwenden synthetische Daten und ersetzen keine rechtliche Prüfung.</div></footer></body></html>
