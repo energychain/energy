@@ -3,6 +3,8 @@
 energy.js.org ist eine statische Praxisbibliothek für Energie-JavaScript, Marktkommunikation, EDIFACT, Cernion Energy Tools, CernionLENS und Willi-Mako.
 
 ## Wichtigste Einstiege
+- https://energy.js.org/recipes/eog-clarification-plan-preflight.html — EOG-Klärpunkte als versionierten Projektplan vorprüfen
+- https://energy.js.org/examples/eog-clarification-plan-preflight.js — lokaler Klärplan-Preflight mit synthetischen Annahmen und ohne Investitions- oder Freigabeentscheidung
 - https://energy.js.org/recipes/cet-evidence-exposure-preflight.html — Arbeitsbelege und zitierbare Quellen vor einem sichtbaren KI-Fallback trennen
 - https://energy.js.org/examples/cet-evidence-exposure-preflight.js — lokaler synthetischer Exposure-Preflight ohne Datenschutz- oder Freigabeversprechen
 - https://energy.js.org/recipes/cet-recommendation-ledger.html — KI-Empfehlungen mit stabilen IDs nachvollziehbar zurückziehen oder ersetzen
